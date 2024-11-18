@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff; /* پس‌زمینه برای تم روشن */
+  --background: #ffefef; /* پس‌زمینه برای تم روشن */
   --foreground: #333333; /* متن برای تم روشن */
   --primary: #3a8857;    /* رنگ اصلی */
   --secondary: #28303e;  /* رنگ ثانویه */

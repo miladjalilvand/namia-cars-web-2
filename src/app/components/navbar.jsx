@@ -4,6 +4,15 @@ import { useRouter,usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useTheme } from "next-themes";
+import { IoMdSearch } from "react-icons/io";
+
+const links = [
+  { name: "خانه", url: "/" },
+  { name: "محصولات", url: "products" },
+  { name: "شرایط فروش", url: "services" },
+  { name: "قطعات", url: "contact" },
+  { name: "تماس با ما ", url: "contact" }
+];
 
 export default function NavbarCustom(){
 const {theme,setTheme}=useTheme();
@@ -58,9 +67,45 @@ const changeTheme=()=>{
 
              transition={{ duration: 0.5, ease: "circInOut" }}
         
-             className="fixed z-40 flex flex-col w-full bg-redc opacity-90 min-h-screen md:w-1/3">
+             className="fixed z-40 flex flex-col justify-between
+              w-full bg-redc opacity-90 min-h-screen md:w-1/3">
+                <div className="flex-col"><div className="mt-12 ml-2 mr-2 
+  flex items-center bg-black p-2
+   bg-opacity-60 rounded-sm ">
+  <IoMdSearch color="white" size={24} />
+  <input
+    type="text"
+    placeholder="جستجو"
+    className="bg-transparent rounded-sm text-blue-50 
+     placeholder-blue-50 focus:outline-none ml-2 w-full"
+  />
 
-              some links
+
+</div>
+
+<div className="flex flex-col items-center text-white font-extrabold space-y-2 pt-2">
+                {/* <div className="cursor-pointer" onClick={() => pushin('about')}>about</div> */}
+               {isOpen && links.map((val , key)=>(
+   <motion.div
+   initial={{opacity:0.1}}
+   animate={{opacity:1}}
+   transition={{duration:1.5}}
+   key={key} 
+   className="cursor-pointer" onClick={() => pushin(val.url)}>{val.name}
+   </motion.div>
+               ))}
+              </div>
+</div>
+
+
+                
+
+
+              <div className="flex flex-row ">
+           <div className="m-4 text-white cursor-pointer">طرح تعویض</div>
+            <div className="m-4 text-white cursor-pointer">تست درایو</div>
+            <div className="m-4 text-white cursor-pointer">وبلاگ</div>
+           </div>
             </motion.div>
               
               <div className="flex flex-row justify-between  mr-12 h-full ">
