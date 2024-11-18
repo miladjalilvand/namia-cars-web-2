@@ -3,14 +3,21 @@
 @tailwind utilities;
 
 :root {
-  /* Your default theme */
-  --background: white;
-  --foreground: black;
+  --background: #ffffff; /* پس‌زمینه برای تم روشن */
+  --foreground: #333333; /* متن برای تم روشن */
+  --primary: #3a8857;    /* رنگ اصلی */
+  --secondary: #28303e;  /* رنگ ثانویه */
+  --danger: #ef4444;   
+  --redc :   #d51717;  /* رنگ خطر */
 }
 
 [data-theme='dark'] {
   --background: black;
-  --foreground: white;
+  --foreground: rgb(255, 196, 58);
+  --primary: #f647c2;    /* رنگ اصلی در حالت تاریک */
+  --secondary: #6c9bff;  /* رنگ ثانویه در حالت تاریک */
+  --danger: #dc2626; 
+  --redc :   #b43535;  /* رنگ خطر در حالت تاریک */
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -23,4 +30,11 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+
 }
+::-webkit-scrollbar {
+  background-color: #6c9bff;
+
+  display: none;
+}
+
