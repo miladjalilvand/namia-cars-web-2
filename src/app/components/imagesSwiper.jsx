@@ -5,6 +5,8 @@ import Image from "next/image";
 
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import "swiper/css";
+import { motion } from "framer-motion";
+import MotD from "./ItemHome";
 
 const images = [
   "/assets/1.jpg",
@@ -91,13 +93,17 @@ export default function ImageSlider() {
           onCircleClick={handleCircleClick}
         />
       </div>
-      <div className="hidden md:flex w-1/2 h-full items-center justify-center">
-        b
+      <div
+      
+      className="hidden md:flex w-1/2 h-full items-center justify-center">
+       <Title value={`تصویر ${currentImage + 1}`} />
       </div>
     </div>
   );
 }
-
+function Title({ value }) {
+  return <MotD params={value} key={value} />;
+}
 function CursorImage({ currentIndex, onCircleClick }) {
   return (
     <ul className="flex flex-row md:flex-col -space-x-px justify-center items-center p-6">

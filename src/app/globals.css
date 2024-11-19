@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffefef; /* پس‌زمینه برای تم روشن */
+  --background: #e4e4e4; /* پس‌زمینه برای تم روشن */
   --foreground: #333333; /* متن برای تم روشن */
   --primary: #3a8857;    /* رنگ اصلی */
   --secondary: #28303e;  /* رنگ ثانویه */
@@ -12,7 +12,7 @@
 }
 
 [data-theme='dark'] {
-  --background: black;
+  --background: rgb(32, 31, 31);
   --foreground: rgb(255, 196, 58);
   --primary: #f647c2;    /* رنگ اصلی در حالت تاریک */
   --secondary: #6c9bff;  /* رنگ ثانویه در حالت تاریک */
