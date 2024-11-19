@@ -23,6 +23,12 @@ const [isOpen , setOpen]=useState(false);
 
 const router = useRouter();
 
+const pushin=(path)=>{
+  router.push(path);
+  setOpen(false);
+
+}
+
 const currentPath = usePathname();
 
 const handleClick =()=>{
