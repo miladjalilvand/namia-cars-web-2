@@ -29,6 +29,11 @@ const handleClick =()=>{
   setOpen(!isOpen);
 }
 
+const toggleThemeMenu =() =>{
+  theme ==="light"?setTheme("dark"):setTheme("light");
+  setOpen(false);
+}
+
 const changeTheme=()=>{
   theme === "light" ? setTheme("dark") : setTheme("light")
 }
@@ -71,7 +76,15 @@ const changeTheme=()=>{
         
              className="fixed z-40 flex flex-col justify-between
               w-full bg-redc opacity-90 min-h-screen md:w-1/3">
-                <div className="flex-col"><div className="mt-12 ml-2 mr-2 
+                <div className="flex-col">
+                  
+                  <div  className="flex flex-row-2 justify-between md:hidden ">
+
+                    <div></div>
+                    <div className="cursor-pointer" onClick={()=>toggleThemeMenu()}>theme</div>
+
+                  </div>
+                  <div className="mt-12 ml-2 mr-2 
   flex items-center bg-black p-2
    bg-opacity-60 rounded-sm ">
   <IoMdSearch color="white" size={24} />
