@@ -32,7 +32,7 @@ const ItemSlidesImage = () => {
           }
         });
       },
-      { threshold: 0.57 }
+      { threshold: 0.69 }
     );
 
     itemRefs.current.forEach((ref) => ref && observer.observe(ref));

@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import { IoMdSearch } from "react-icons/io";
+import ModalWithTabs from './tabModal';
+import ButtonContact from "./buttonContact";
 
 const links = [
   { name: "خانه", url: "/" },
@@ -16,7 +18,7 @@ const links = [
 
 export default function NavbarCustom(){
 const {theme,setTheme}=useTheme();
-
+const [isModalOpen, setModalOpen] = useState(false);
 const [isOpen , setOpen]=useState(false);
 
 const router = useRouter();
@@ -107,13 +109,20 @@ const changeTheme=()=>{
             <div className="m-4 text-white cursor-pointer">وبلاگ</div>
            </div>
             </motion.div>
-              
+            {  (isOpen && <div onClick={() => handleClick()} className="fixed md:w-screen z-30 md:h-screen bg-black opacity-70"></div>)}
               <div className="flex flex-row justify-between  mr-12 h-full ">
 
                 <div className="border-r-3 border-foreground-100">a</div>
                 <div className="flex flex-row-reverse items-center ">
 
-                  <div className=" h-full w-12 bg-redc cursor-pointer ">b</div>
+                <div className='h-full w-12 bg-redc cursor-pointer' >
+      <button onClick={() => setModalOpen(true)} className="h-full w-full">
+       a
+      </button>
+
+      <ModalWithTabs isOpen={isModalOpen} onClose={() => setModalOpen(false)} />
+    </div>
+ 
                 <div className="hidden md:flex w-12 cursor-pointer"
                 onClick={()=>changeTheme()}
                 >c</div>
