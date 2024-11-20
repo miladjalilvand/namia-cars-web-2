@@ -94,9 +94,11 @@
             <div className="w-1/2">b</div>
           </div>
           <div
-            className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 px-4 gap-4 pt-12 pb-12 ${
-              theme === "light" ? "bg-white" : "bg-black"
-            }`}
+            className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 px-4 gap-4 pt-12 
+              pb-12 `}
+
+              style={{    backgroundColor: theme === 'light' ? '#ffffff' : '#000000', 
+              }}
           >
             {data.map((val, ind) => (
               <div key={ind}>

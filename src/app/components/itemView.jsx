@@ -8,7 +8,7 @@ export default function ItemProducts({ details , theme}) {
       <div className="relative h-1/2 z-10">
       <div className="absolute z-20  left-2 top-2 flex-col ">
       <div>{details.title}</div>
-       {details.status === "sold out" && ( <diV>{details.status}</diV>
+       {details.status === "sold out" && ( <div>{details.status}</div>
 )}
         
         </div>
