@@ -16,10 +16,11 @@ export default function ItemProducts({ details , theme}) {
         
         className="cursor-pointer"
           src={details.img}
-          alt="Product Image"
+          alt={`image ${details.img}`}
           fill // استفاده از حالت fill برای تطابق کامل با والد
           style={{ objectFit: "cover" }} // استفاده از objectFit
-          lazy="true"
+          
+      
         />
       </div>
       

@@ -1,6 +1,7 @@
   "use client"
   import { useTheme } from "next-themes";
   import ItemProducts from "../components/itemView";
+  import { motion } from "framer-motion";
   const data = [
       {
         img: "/assets/1.jpg",
@@ -94,16 +95,22 @@
             <div className="w-1/2">b</div>
           </div>
           <div
-            className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 px-4 gap-4 pt-12 
-              pb-12 `}
 
-              style={{    backgroundColor: theme === 'light' ? '#ffffff' : '#000000', 
-              }}
+         
+            className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 px-4 gap-4 pt-12 
+              pb-12 ${theme==="dark"? "bg-foreground" : "bg-background"} `}
+
+              // style={{   backgroundColor: theme === 'light' ? "rgb(0, 0, 0)" : '#000000', 
+              // }}
           >
             {data.map((val, ind) => (
-              <div key={ind}>
+              <motion.div key={ind}
+               initial={{opacity:0.5 , y:"20%" }}
+          animate={{opacity:1 , y:"0%"}}
+          transition={{duration:(ind+0.5)}}
+          >
                 <ItemProducts details={val} theme={theme} />
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
