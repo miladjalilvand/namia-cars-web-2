@@ -1,7 +1,14 @@
   "use client"
   import { useTheme } from "next-themes";
-  import ItemProducts from "../components/itemView";
+
   import { motion } from "framer-motion";
+import dynamic from "next/dynamic";
+const ItemDynamic = dynamic(()=>import('../components/itemView'),
+{ loading: () => <p>Loading...</p>,}
+);
+// const DynamicHeader = dynamic(() => import('../components/header'), {
+//   loading: () => <p>Loading...</p>,
+// }
   const data = [
       {
         img: "/assets/1.jpg",
@@ -111,7 +118,7 @@
           animate={{opacity:1 , y:"0%"}}
           transition={{duration:(ind+0.5)}}
           >
-                <ItemProducts details={val} theme={theme} />
+                <ItemDynamic details={val} theme={theme} />
               </motion.div>
             ))}
           </div>

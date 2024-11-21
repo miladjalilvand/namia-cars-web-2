@@ -9,6 +9,8 @@ const itemsIndex = [
   alt="تصویر" 
   width={10000} 
   height={240}
+  layout="responsive" 
+  className="pt-0"
   style={{ objectFit: "cover", height: "100%", width: "100%" }} 
    src={'/assets/24.png'}/>)},
    {
@@ -20,7 +22,16 @@ VX</div>
   },
   {
     title:'item3',
-    content:(<div className="bg-blue-500 w-full h-full">milad</div>)
+    content:(<div className="bg-red-600 w-full h-full  md:px-72 flex flex-col ">
+     <div className="flex flex-row items-center justify-between">
+
+     <div className="">a</div>
+     <div className="">b</div>
+     </div>
+     <div className="">a</div>
+     <div className="">b</div>  
+     <div className="">b</div>  
+    </div>)
   },
   {
     title:'item1',
@@ -145,7 +156,7 @@ export default function Item({ params }) {
             ref={(el) => (refs.current[ind] = el)}
             id={`section-${ind}`}
             key={ind}
-            className="flex flex-col mt-10 cursor-pointer h-96 bg-background 
+            className="flex flex-col mt-10 cursor-pointer  bg-background 
              items-center justify-center"
           >
             {val.content}
