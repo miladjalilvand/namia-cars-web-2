@@ -90,7 +90,7 @@
       const { theme } = useTheme();
       return (
         <div className="relative">
-          <div className="bg-blue-700 bottom-0 w-full fixed z-40 flex-row flex">
+          <div className="bg-blue-700 bottom-0 w-full fixed z-20 flex-row flex">
             <div className="w-1/2 bg-orange-700">a</div>
             <div className="w-1/2">b</div>
           </div>
@@ -98,7 +98,9 @@
 
          
             className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 px-4 gap-4 pt-12 
-              pb-12 ${theme==="dark"? "bg-foreground" : "bg-background"} `}
+              pb-12 
+             bg-background
+               `}
 
               // style={{   backgroundColor: theme === 'light' ? "rgb(0, 0, 0)" : '#000000', 
               // }}

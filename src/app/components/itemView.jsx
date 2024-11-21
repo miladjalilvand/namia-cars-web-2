@@ -1,9 +1,14 @@
+"use client"
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function ItemProducts({ details , theme}) {
+
+  const [loadImg,setLoadImg]=useState(false);
+  
   return (
-    <div className="flex flex-col bg-background h-96 rounded-sm ">
+    <div className="flex flex-col bg-gray-400 h-96 rounded-md ">
       {/* بخش تصویر */}
       <div className="relative h-1/2 z-10">
       <div className="absolute z-20  left-2 top-2 flex-col ">
@@ -12,6 +17,9 @@ export default function ItemProducts({ details , theme}) {
 )}
         
         </div>
+        {loadImg && ( <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
+          <div className="animate-spin rounded-full h-12 w-12 border-t-4 border-blue-500"></div>
+        </div>)}
         <Image
         
         className="cursor-pointer"
@@ -19,6 +27,10 @@ export default function ItemProducts({ details , theme}) {
           alt={`image ${details.img}`}
           fill // استفاده از حالت fill برای تطابق کامل با والد
           style={{ objectFit: "cover" }} // استفاده از objectFit
+        // loading="lazy"
+        // placeholder="empty"
+        // onLoad={(e)=>console.log("e:"+e)}
+        // onLoadingComplete={()=>setLoadImg(false)}
           
       
         />

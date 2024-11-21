@@ -2,16 +2,47 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 
+
+
 const itemsIndex = [
-  "item 1",
-  "item 2",
-  "item 3",
-  "item 4",
-  "item 5",
-  "item 6",
-  "item 7",
-  "item 8",
-  "item 9",
+{title:"item1",content :   (<Image 
+  alt="تصویر" 
+  width={10000} 
+  height={240}
+  style={{ objectFit: "cover", height: "100%", width: "100%" }} 
+   src={'/assets/24.png'}/>)},
+   {
+    title:'item1',
+    content:(<div>milad</div>)
+  },
+  {
+    title:'item1',
+    content:(<div>milad</div>)
+  },
+  {
+    title:'item1',
+    content:(<div>milad</div>)
+  },
+  {
+    title:'item1',
+    content:(<div>milad</div>)
+  },
+  {
+    title:'item1',
+    content:(<div>milad</div>)
+  },
+  {
+    title:'item1',
+    content:(<div>milad</div>)
+  },
+  {
+    title:'item1',
+    content:(<div>milad</div>)
+  },
+  {
+    title:'item1',
+    content:(<div>milad</div>)
+  },
 ];
 
 export default function Item({ params }) {
@@ -98,7 +129,7 @@ export default function Item({ params }) {
                 className={`cursor-pointer ${isVis ? "bg-gray-900" : ""}`}
                 onClick={() => scrollToSection(ind)}
               >
-                {val}
+                {val.title}
               </div>
             );
           })}
@@ -113,7 +144,7 @@ export default function Item({ params }) {
             key={ind}
             className="flex flex-col mt-12 cursor-pointer h-96 bg-gray-400 m-1 items-center justify-center"
           >
-            {val}
+            {val.content}
           </div>
         );
       })}
@@ -138,7 +169,7 @@ export default function Item({ params }) {
       <div>isScrolled : {isScrolled ? "True" : "False"}</div>
 
       {isScrolled && (
-        <div className="fixed bottom-0 left-0 w-full h-6 bg-fuchsia-900 flex">
+        <div className="fixeds bottom-0 left-0 w-full h-6 bg-fuchsia-900 flex">
           <div className="w-1/2 bg-red-400 text-center flex items-center justify-center">
             a
           </div>
