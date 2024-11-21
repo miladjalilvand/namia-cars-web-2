@@ -13,11 +13,14 @@ const itemsIndex = [
    src={'/assets/24.png'}/>)},
    {
     title:'item1',
-    content:(<div>milad</div>)
+    content:(<div className="flex flex-col md:px-72 "><div className="text-center font-semibold text-2xl text-red-600">وی ایکس
+VX</div>
+    <div className="pt-9">Xtrim VX یک کراس اوور سایز متوسط لوکس است که توسط زیرمجموعه پریمیوم Chery، Xtrim، در سپتامبر 2020 رونمایی شد. این خودرو بر اساس پلتفرم جدید M3X Chery ساخته شده است و از نظر اندازه بین TX و LX قرار می گیرد. VX از نظر طراحی ظاهری شباهت زیادی به سایر مدل های Xtrim دارد، با جلوپنجره بزرگ و چراغ های LED باریک. فضای داخلی این خودرو نیز جادار و لوکس است و از امکاناتی مانند صندلی های چرمی، سانروف پانوراما و سیستم تهویه مطبوع سه منطقه ای بهره می برد. VX با دو موتور توربوشارژ بنزینی 1.6 و 2.0 لیتری عرضه می شود. موتور 1.6 لیتری 197 اسب بخار قدرت و 290 نیوتن متر گشتاور تولید می کند، در حالی که موتور 2.0 لیتری 261 اسب بخار قدرت و 400 نیوتن متر گشتاور دارد. هر دو موتور به گیربکس اتوماتیک 7 سرعته دوکلاچه متصل می شوند. VX به طیف وسیعی از فناوری های ایمنی و کمک راننده مجهز است، از جمله ترمز اضطراری خودکار، هشدار خروج از خط، هشدار نقطه کور و کروز کنترل تطبیقی.</div>
+    </div>)
   },
   {
-    title:'item1',
-    content:(<div>milad</div>)
+    title:'item3',
+    content:(<div className="bg-blue-500 w-full h-full">milad</div>)
   },
   {
     title:'item1',
@@ -119,14 +122,14 @@ export default function Item({ params }) {
   return (
     <div className="flex flex-col pt-8">
       <div className="fixed overflow-x-auto w-full bg-black text-white z-10">
-        <div className="flex flex-row min-w-max justify-around items-center px-4 h-10">
+        <div className="flex flex-row min-w-max justify-around items-center  h-10">
           {itemsIndex.map((val, ind) => {
             const isVis = visibleItems[ind];
             console.log("isVis:" + isVis);
             return (
               <div
                 key={ind}
-                className={`cursor-pointer ${isVis ? "bg-gray-900" : ""}`}
+                className={`cursor-pointer ${isVis ? "bg-gray-100" : ""}`}
                 onClick={() => scrollToSection(ind)}
               >
                 {val.title}
@@ -142,7 +145,8 @@ export default function Item({ params }) {
             ref={(el) => (refs.current[ind] = el)}
             id={`section-${ind}`}
             key={ind}
-            className="flex flex-col mt-12 cursor-pointer h-96 bg-gray-400 m-1 items-center justify-center"
+            className="flex flex-col mt-12 cursor-pointer h-96 bg-background 
+             items-center justify-center"
           >
             {val.content}
           </div>
