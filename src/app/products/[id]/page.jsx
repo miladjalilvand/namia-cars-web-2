@@ -145,7 +145,7 @@ export default function Item({ params }) {
             ref={(el) => (refs.current[ind] = el)}
             id={`section-${ind}`}
             key={ind}
-            className="flex flex-col mt-12 cursor-pointer h-96 bg-background 
+            className="flex flex-col mt-10 cursor-pointer h-96 bg-background 
              items-center justify-center"
           >
             {val.content}
