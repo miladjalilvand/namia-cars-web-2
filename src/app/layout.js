@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
         <ThemeProvider >
       <NextUIProvider>
 <NavbarCustom/>
-<div className=" overflow-hidden 2xl:px-96 pt-2 md:pt-4">{children} </div> </NextUIProvider>
+<div className=" overflow-hidden  pt-2 md:pt-4">{children} </div> </NextUIProvider>
 
         </ThemeProvider>
       
