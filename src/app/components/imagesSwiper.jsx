@@ -75,15 +75,15 @@ export default function ImageSlider() {
         <div className="absolute bottom-0 left-0 flex z-20">
           <button
             onClick={prevImage}
-            className="bg-red-700 text-white px-4 py-4 hover:bg-gray-800"
-          >
-            <IoIosArrowBack />
+            className="bg-red-700 text-white px-3 py-3 hover:bg-gray-800"
+          ><IoIosArrowForward />
+           
           </button>
           <button
             onClick={nextImage}
-            className="bg-red-700 text-white px-4 py-4 hover:bg-gray-800"
+            className="bg-red-700 text-white px-3 py-3 hover:bg-gray-800"
           >
-            <IoIosArrowForward />
+             <IoIosArrowBack />
           </button>
         </div>
       </div>
@@ -113,8 +113,8 @@ function CursorImage({ currentIndex, onCircleClick }) {
             onClick={() => onCircleClick(ind)}
             className={`rounded-full cursor-pointer m-1 ${
               currentIndex === ind
-                ? "w-4 h-4 bg-gray-600"
-                : "w-3 h-3 bg-gray-300"
+                ? "w-3 h-3 bg-gray-600"
+                : "w-2 h-2 bg-gray-300"
             }`}
           />
         </li>

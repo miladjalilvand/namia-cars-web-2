@@ -9,6 +9,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontSize: {
+        'xxs': '0.625rem', // اندازه 10px
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

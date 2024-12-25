@@ -45,7 +45,7 @@ const changeTheme=()=>{
 }
 
   return (
-    <div className="fixed flex-row w-full z-40 h-12 bg-background  shadow-foreground-200 shadow-sm ">
+    <div className="fixed flex-row w-full z-40 h-9 bg-background  shadow-foreground-200 shadow-sm ">
 
              <div 
               className="flex flex-col  fixed space-y-px pt-4 pr-1 cursor-pointer
@@ -134,7 +134,7 @@ const changeTheme=()=>{
                 <div className="border-r-3 border-foreground-100">a</div>
                 <div className="flex flex-row-reverse items-center ">
 
-                <div className='h-full w-12 bg-redc cursor-pointer' >
+                <div className='h-full w-9 bg-redc cursor-pointer' >
       <button onClick={() => setModalOpen(true)} className="h-full w-full">
        a
       </button>
@@ -147,7 +147,7 @@ const changeTheme=()=>{
                 >c</div>
                 <div className="md:hidden px-3">d</div>
                 <div className="hidden md:flex flex-row-2 px-1 cursor-pointer mx-3"> d + a </div>
-                <div className="rounded-md bg-redc px-2 py-1 cursor-pointer">طرح تعویض</div>
+                <div className="rounded-sm bg-redc 1 cursor-pointer text-xxs px-3 py-1">طرح تعویض</div>
                 </div>
 
               </div>

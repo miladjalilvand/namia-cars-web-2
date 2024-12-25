@@ -5,7 +5,10 @@ import { ThemeProvider } from "next-themes";
 import NavbarCustom from "./components/navbar";
 
 
-
+const vazir = localFont({
+  src: "./fonts/Vazir-FD.woff2",
+  display : "swap"
+});
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -24,9 +27,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html dir="rtl" lang="en" suppressHydrationWarning>
+    <html dir="rtl" lang="fa-IR" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${vazir.className} antialiased`}
       >
         <ThemeProvider >
       <NextUIProvider>

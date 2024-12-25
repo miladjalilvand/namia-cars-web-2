@@ -49,7 +49,7 @@ const ItemSlidesImage = () => {
             key={key}
             ref={(el) => (itemRefs.current[key] = el)}
             className={`flex ${key % 2 === 0 ? "flex-col-reverse pt-5 bg-red-700 text-white" : "flex-col bg-background text-gray-900"} 
-                        md:flex-row items-center justify-around h-screen `}
+                        md:flex-row items-center justify-around md:h-screen `}
             style={{ direction: key % 2 === 0 ? "ltr" : "rtl" }}
           >
             <motion.div
