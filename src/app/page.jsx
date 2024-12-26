@@ -6,7 +6,7 @@ import ImageSlider from "./components/imagesSwiper";
 import ItemSlidesImage from "./components/motionSlide";
 export default function Home() {
   return (
-  <div className="flex flex-col pt-9  ">
+  <div className=" flex-col pt-9  ">
    
    <AnyMot />
     <CarsAnim/>
