@@ -14,24 +14,27 @@ export default function CarsAnim() {
   const [color, setColor] = useState(0); // شروع با رنگ قرمز
 
   const handleClick = (colorPicked) => {
-    setIsMoving(true);
+    if(color != colorPicked){
+      setIsMoving(true);
     setRotation(true);
     setTimeout(() => {
       setColor(colorPicked); // انتخاب رنگ جدید
       setRotation(false);
       setIsMoving(false);
     }, 2000); // بازگشت انیمیشن بعد از 3 ثانیه
+    }
   };
 
   return (
-    <div className=" h-screen w-screen relative overflow-hidden md:hidden" 
+    <motion.div className=" h-[600px] w-screen relative overflow-hidden md:hidden" 
+    initial={{ x: 0 }}
+    animate={{ x: isMoving ? -(window.innerWidth): "0%" }}
+    transition={{ ease: "easeInOut", duration: 2 }}
     >
 
       {/* تصویر ماشین */}
-      <motion.div
-        initial={{ x: 0 }}
-        animate={{ x: isMoving ? "-100%" : "0%" }}
-        transition={{ ease: "easeInOut", duration: 2 }}
+      <div
+       
         className="absolute inset-0"
       >
         <Image
@@ -85,12 +88,12 @@ export default function CarsAnim() {
           />
         </motion.div>
       </div>
-      </motion.div>
+      </div>
       <div className="flex flex-row gap-2 absolute left-3 top-3">
         <div onClick={() => handleClick(0)} className="rounded-full cursor-pointer h-4 w-4 bg-red-600"></div>
         <div onClick={() => handleClick(1)} className="rounded-full cursor-pointer h-4 w-4 bg-black"></div>
         <div onClick={() => handleClick(2)} className="rounded-full cursor-pointer h-4 w-4 bg-white"></div>
       </div>
-    </div>
+    </motion.div>
   );
 }

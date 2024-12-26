@@ -8,11 +8,11 @@ export default function Home() {
   return (
   <div className=" flex-col pt-9  ">
 
+
+<ImageSlider />
    <AnyMot />
     <CarsAnim/>
-{/* <ImageSlider />
-    <CarsPicker/>
-    <ItemSlidesImage/> */}
+    <ItemSlidesImage/>
 
   </div>
   );
