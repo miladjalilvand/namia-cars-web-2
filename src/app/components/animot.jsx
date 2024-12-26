@@ -16,19 +16,21 @@ export default function AnyMot() {
   const [color, setColor] = useState(0); // شروع با رنگ قرمز
 
   const handleClick = (colorPicked) => {
-    setIsMoving(true);
-    setRotation(true);
-    setTimeout(() => {
-      setColor(colorPicked); // انتخاب رنگ جدید
-      setRotation(false);
-      setIsMoving(false);
-    }, 2000); // بازگشت انیمیشن بعد از 3 ثانیه
+if(colorPicked != color){
+  setIsMoving(true);
+  setRotation(true);
+  setTimeout(() => {
+    setColor(colorPicked); // انتخاب رنگ جدید
+    setRotation(false);
+    setIsMoving(false);
+  }, 2000);
+}
   };
 
   return (
     <motion.div className="flex relative w-[1200px] h-[481px] md:w-[900px] md:h-[420px] mx-auto  text-6xl overflow-hidden"
     initial={{ x: 0 }}
-    animate={{ x: isMoving ? -(window.innerWidth/1.5) : "0%" }}
+    animate={{ x: isMoving ? -(window.innerWidth) : "0%" }}
     transition={{ ease: "easeInOut", duration: 2 }}
     >
       {/* تصویر ماشین و چرخ‌ها */}
