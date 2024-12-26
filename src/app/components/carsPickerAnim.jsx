@@ -3,33 +3,40 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
-
+const imageList = [
+  "/assets/gallery/tiggo8pro/Tiggo8PROred.png", 
+  "/assets/gallery/tiggo8pro/PCTiggo8PROblack.png",
+  "/assets/gallery/tiggo8pro/PCTiggo8PROwhite.png",
+];
 export default function CarsAnim() {
   const [rotation, setRotation] = useState(false); // ذخیره مقدار چرخش فعلی
   const [isMoving, setIsMoving] = useState(false);
+  const [color, setColor] = useState(0); // شروع با رنگ قرمز
 
-  const handleClick = () => {
+  const handleClick = (colorPicked) => {
     setIsMoving(true);
-    // const additionalRotation = 1440; // مقدار چرخش برای هر کلیک
-    // setRotation((prev) => prev + additionalRotation); // افزایش مقدار چرخش
     setRotation(true);
     setTimeout(() => {
+      setColor(colorPicked); // انتخاب رنگ جدید
       setRotation(false);
       setIsMoving(false);
-    }, 3000); // بازگشت انیمیشن بعد از 3 ثانیه
+    }, 2000); // بازگشت انیمیشن بعد از 3 ثانیه
   };
+
   return (
-    <div className=" h-screen w-screen relative overflow-hidden md:hidden" onClick={() => handleClick()}>
+    <div className=" h-screen w-screen relative overflow-hidden md:hidden" 
+    >
+
       {/* تصویر ماشین */}
       <motion.div
         initial={{ x: 0 }}
         animate={{ x: isMoving ? "-100%" : "0%" }}
-        transition={{ ease: "easeInOut", duration: 3 }}
+        transition={{ ease: "easeInOut", duration: 2 }}
         className="absolute inset-0"
       >
         <Image
-          src="/assets/gallery/tiggo8pro/Tiggo8PROred.png"
-          alt="Car Image"
+        src={imageList[color]} // انتخاب تصویر بر اساس رنگ
+        alt={`car - ${color}`}
           layout="fill"
           objectFit="contain"
           style={{ position: "absolute", top: "0", left: "0" }}
@@ -45,7 +52,7 @@ export default function CarsAnim() {
           }}
           transition={{
             ease: "easeInOut",
-            duration: 3,
+            duration: 2,
           }}
         >
           <Image
@@ -67,7 +74,7 @@ export default function CarsAnim() {
           }}
           transition={{
             ease: "easeInOut",
-            duration: 3,
+            duration: 2,
           }}
         >
           <Image
@@ -79,7 +86,11 @@ export default function CarsAnim() {
         </motion.div>
       </div>
       </motion.div>
-
+      <div className="flex flex-row gap-2 absolute left-3 top-3">
+        <div onClick={() => handleClick(0)} className="rounded-full cursor-pointer h-4 w-4 bg-red-600"></div>
+        <div onClick={() => handleClick(1)} className="rounded-full cursor-pointer h-4 w-4 bg-black"></div>
+        <div onClick={() => handleClick(2)} className="rounded-full cursor-pointer h-4 w-4 bg-white"></div>
+      </div>
     </div>
   );
 }

@@ -7,7 +7,7 @@ import ItemSlidesImage from "./components/motionSlide";
 export default function Home() {
   return (
   <div className=" flex-col pt-9  ">
-   
+
    <AnyMot />
     <CarsAnim/>
 {/* <ImageSlider />
