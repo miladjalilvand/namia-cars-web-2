@@ -26,13 +26,15 @@ export default function AnyMot() {
   };
 
   return (
-    <div className="flex relative w-[1200px] h-[481px] md:w-[900px] md:h-[420px] mx-auto  text-6xl overflow-hidden">
+    <motion.div className="flex relative w-[1200px] h-[481px] md:w-[900px] md:h-[420px] mx-auto  text-6xl overflow-hidden"
+    initial={{ x: 0 }}
+    animate={{ x: isMoving ? -(window.innerWidth/1.5) : "0%" }}
+    transition={{ ease: "easeInOut", duration: 2 }}
+    >
       {/* تصویر ماشین و چرخ‌ها */}
       <motion.div
         className="absolute w-full h-full  flex items-center justify-center"
-        initial={{ x: 0 }}
-        animate={{ x: isMoving ? "-100%" : "0%" }}
-        transition={{ ease: "easeInOut", duration: 2 }}
+     
       >
         {/* تصویر اصلی ماشین */}
         <div className="relative w-full h-full">
@@ -88,6 +90,6 @@ export default function AnyMot() {
         <div onClick={() => handleClick(1)} className="rounded-full cursor-pointer h-4 w-4 bg-black"></div>
         <div onClick={() => handleClick(2)} className="rounded-full cursor-pointer h-4 w-4 bg-white"></div>
       </div>
-    </div>
+    </motion.div>
   );
 }
