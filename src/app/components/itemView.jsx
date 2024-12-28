@@ -2,15 +2,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { IoIosArrowDown } from "react-icons/io";
 
 export default function ItemProducts({ details , theme}) {
 
   const [loadImg,setLoadImg]=useState(false);
   
   return (
-    <div className="flex flex-col bg-gray-400 h-96 rounded-md ">
+    <div className="flex flex-col bg-background h-96 rounded-md ">
       {/* بخش تصویر */}
-      <div className="relative h-1/2 z-10">
+      <div className="relative h-1/2 z-10 rounded-md">
       <div className="absolute z-20  left-2 top-2 flex-col ">
       <div>{details.title}</div>
        {details.status === "sold out" && ( <div>{details.status}</div>
@@ -22,7 +23,7 @@ export default function ItemProducts({ details , theme}) {
         </div>)}
         <Image
         
-        className="cursor-pointer"
+        className="cursor-pointe rounded-t-md"
           src={details.img}
           alt={`image ${details.img}`}
           fill // استفاده از حالت fill برای تطابق کامل با والد
@@ -37,32 +38,58 @@ export default function ItemProducts({ details , theme}) {
       </div>
       
       {/* بخش متن */}
-      <div className="h-1/2 flex flex-col space-y-2 items-start justify-center text-foreground text-center
-      p-3">
+      <div className="h-fit flex flex-col space-y-2 items-start justify-center text-foreground text-center
+      p-3"
+      style={{   backgroundColor: theme === 'light' ? "#ffffff" : '#363636', 
+      }}
+      >
       <div className="cursor-pointer">  {details.subtitle}</div>
-      <div className="flex w-full flex-row justify-between items-center">
+      <div  className="flex w-full flex-row justify-between items-center">
       <div>آخرین بروزرسانی</div>
-      <div className="bg-gray-300 px-1 ">{details.date}</div>
+      <div style={{   backgroundColor: theme === 'light' ? "#cdcdcd" : '#202020', 
+       }} className=" px-1 "
+      
+      >{details.date}</div>
      
       </div>
-      <div className="flex w-full  bg-gray-300 flex-row justify-between items-center">
-      <div> تیپ {details.title}</div>
+      <div    style={{   backgroundColor: theme === 'light' ? "#cdcdcd" : '#202020', 
+       }} className="flex w-full   flex-row justify-between items-center">
+      <div
+   
+      > تیپ {details.title}</div>
       <div className=" px-1">{details.price}</div>
      
       </div>
      
-      <div className="flex w-full   flex-row justify-between items-center text-red-700">
-      <div className="bg-red-100 cursor-pointer  hover:bg-red-200"> بررسی کامل {details.title}</div>
-      <div className="cursor-pointer px-1 bg-red-100 hover:bg-red-200">شرایط فروش {details.title}</div>
+      <div className="flex w-full   flex-row justify-between items-center "
+       
+      >
+<div
+  className={`cursor-pointer px-2 py-1 transition-colors ${
+    theme === 'light' ? 'bg-[#f5d7d7] text-[#dc2626]' : 'bg-[#dc2626] text-[#f5d7d7]'
+  } hover:bg-red-200 hover:text-white`}
+>
+  بررسی کامل {details.title}
+</div>
+
+<div
+  className={`cursor-pointer px-2 py-1 transition-colors ${
+    theme === 'light' ? 'bg-[#f5d7d7] text-[#dc2626]' : 'bg-[#dc2626] text-[#f5d7d7]'
+  } hover:bg-red-200 hover:text-white`}
+>
+  شرایط فروش {details.title}
+</div>
+
      
       </div>
       <div className="flex w-full flex-row justify-between items-center cursor-pointer pt-4">
       <div>نمودار قیمت </div>
-      <div className=" px-1">^</div>
+      <div className=" px-1">  <Link href={'/products/3'}> 
+       <IoIosArrowDown/></Link>
+     </div>
      
       </div>
-      <Link href={'/products/3'}> link</Link>
-
+    
       </div>
     </div>
   );

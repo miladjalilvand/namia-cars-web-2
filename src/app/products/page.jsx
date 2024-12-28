@@ -97,26 +97,28 @@ const ItemDynamic = dynamic(()=>import('../components/itemView'),
       const { theme } = useTheme();
       return (
         <div className="relative">
-          <div className="bg-blue-700 bottom-0 w-full fixed z-20 flex-row flex">
+          {/* <div className="bg-blue-700 bottom-0 w-full fixed z-20 flex-row flex">
             <div className="w-1/2 bg-orange-700">a</div>
             <div className="w-1/2">b</div>
-          </div>
+          </div> */}
           <div
 
          
             className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 px-4 gap-4 pt-12 
               pb-12 
-             bg-background
+             
+            
                `}
 
-              // style={{   backgroundColor: theme === 'light' ? "rgb(0, 0, 0)" : '#000000', 
-              // }}
+              style={{   backgroundColor: theme === 'light' ? "#eaeaea" : '#000000', 
+              }}
           >
             {data.map((val, ind) => (
               <motion.div key={ind}
-               initial={{opacity:0.5 , y:"20%" }}
-          animate={{opacity:1 , y:"0%"}}
-          transition={{duration:(ind+0.5)}}
+              //  initial={{opacity:0.5 , y:"20%" }}
+              //  whileInView={{opacity:1 , y:"0%" }}
+          // animate={{opacity:1 , y:"0%"}}
+          // transition={{duration:(ind+0.3)}}
           >
                 <ItemDynamic details={val} theme={theme} />
               </motion.div>
