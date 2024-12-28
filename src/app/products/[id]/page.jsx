@@ -181,10 +181,11 @@ export default function Item({ params }) {
         <p>Loading...</p>
       )}
 
-      <div>isScrolled : {isScrolled ? "True" : "False"}</div>
 
-      {isScrolled && (
-        <div className="fixeds bottom-0 left-0 w-full h-6 bg-fuchsia-900 flex">
+      {!isScrolled && (
+        <div className="fixed bottom-0 left-0 w-full h-6 bg-fuchsia-900 flex">
+    
+
           <div className="w-1/2 bg-red-400 text-center flex items-center justify-center">
             a
           </div>
