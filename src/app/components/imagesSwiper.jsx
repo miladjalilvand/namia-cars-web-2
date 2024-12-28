@@ -28,9 +28,15 @@ export default function ImageSlider() {
   }, [currentImage]);
 
   // Next image handler
-  const nextImage = () => {
+
+  const nextImage = () => {    
     if (swiperRef.current && swiperRef.current.swiper) {
       swiperRef.current.swiper.slideNext();
+      if (currentImage === images.length - 1) {
+      setCurrentImage(0); // Reset to the first image
+    } else {
+      setCurrentImage(currentImage + 1); // Move to the next image
+    }
     }
   };
 

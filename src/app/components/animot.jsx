@@ -28,7 +28,7 @@ if(colorPicked != color){
   };
 
   return (
-    <div className="hidden md:flex flex-col justify-center items-center ">
+    <div className="hidden md:flex flex-col h-screen justify-center items-center ">
   <div className="flex flex-row gap-4 m-4">
         <div
           onClick={() => handleClick(0)}
