@@ -29,11 +29,27 @@ if(colorPicked != color){
 
   return (
     <div className="hidden md:flex flex-col justify-center items-center ">
-        <div className="flex flex-row gap-2 p-2  left-3 top-3">
-        <div onClick={() => handleClick(0)} className="rounded-full cursor-pointer h-4 w-4 bg-red-600"></div>
-        <div onClick={() => handleClick(1)} className="rounded-full cursor-pointer h-4 w-4 bg-black"></div>
-        <div onClick={() => handleClick(2)} className="rounded-full cursor-pointer h-4 w-4 bg-white"></div>
+  <div className="flex flex-row gap-4 m-4">
+        <div
+          onClick={() => handleClick(0)}
+          className={`rounded-full cursor-pointer h-4 w-4 bg-red-600 border-2 ${
+            color === 0 ? "border-red-400 scale-125" : ""
+          } transition-transform duration-300`}
+        ></div>
+        <div
+          onClick={() => handleClick(1)}
+          className={`rounded-full cursor-pointer h-4 w-4 bg-black border-2 ${
+            color === 1 ? "border-gray-400 scale-125" : ""
+          } transition-transform duration-300`}
+        ></div>
+        <div
+          onClick={() => handleClick(2)}
+          className={`rounded-full cursor-pointer h-4 w-4 bg-white border-2 ${
+            color === 2 ? "border-gray-400 scale-125" : ""
+          } transition-transform duration-300`}
+        ></div>
       </div>
+
     <motion.div className="relative w-[1200px] h-[481px] md:w-[900px] md:h-[420px] mx-auto  text-6xl overflow-hidden"
     initial={{ x: 0 }}
     animate={{ x: isMoving ? -(window.innerWidth) : "0%" }}
