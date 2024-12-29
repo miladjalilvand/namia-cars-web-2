@@ -25,7 +25,7 @@ const FooterPages = () => {
   }, [lastScrollY]);
     return (
         !isScrolled && (
-            <div className="fixed bottom-0 left-0 w-full h-6 bg-fuchsia-900 flex">
+            <div className="fixed bottom-0 left-0 w-full h-9 bg-fuchsia-900 flex">
         
     
               <div onClick={()=>setModalOpen(true)} 

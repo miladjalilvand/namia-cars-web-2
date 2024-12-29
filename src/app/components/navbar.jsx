@@ -12,7 +12,7 @@ const links = [
   { name: "خانه", url: "/" },
   { name: "محصولات", url: "products" },
   { name: "شرایط فروش", url: "services" },
-  { name: "قطعات", url: "contact" },
+  { name: "قطعات", url: "shop" },
   { name: "تماس با ما ", url: "contact" }
 ];
 

@@ -69,46 +69,18 @@ VX</div>
 
       </div><div>اطلاعات کلی </div>
 
-      <div className="flex flex-row-2 w-screen h-full items-start  justify-center 
+     <div className="flex flex-col gap-y-1" >
+     <div className="flex flex-row-2 w-screen h-full items-start  justify-center 
       gap-x-3 gap-y-3 ">
       
-        <div className="border w-1/3 rounded-sm text-center ">a</div>
-        <div className="border w-1/3 rounded-sm text-center ">a</div>
+        <div className="border w-1/3 bg-gray-600 rounded-sm text-center ">a</div>
+        <div className="border w-1/3 rounded-sm bg-slate-400 text-center ">a</div>
 
 
       </div>
-      <div className="flex flex-row-2 w-screen h-full items-start  justify-center 
-      gap-x-3 gap-y-3 ">
-      
-        <div className="border w-1/3 rounded-sm text-center ">a</div>
-        <div className="border w-1/3 rounded-sm text-center ">a</div>
-        
-
-      </div>
-      <div className="flex flex-row-2 w-screen h-full items-start  justify-center 
-      gap-x-3 gap-y-3 ">
-      
-        <div className="border w-1/3 rounded-sm text-center ">a</div>
-        <div className="border w-1/3 rounded-sm text-center ">a</div>
-        
-
-      </div>
-      <div className="flex flex-row-2 w-screen h-full items-start  justify-center 
-      gap-x-3 gap-y-3 ">
-      
-        <div className="border w-1/3 rounded-sm text-center ">a</div>
-        <div className="border w-1/3 rounded-sm text-center ">a</div>
-        
-
-      </div>
-      <div className="flex flex-row-2 w-screen h-full items-start  justify-center 
-      gap-x-3 gap-y-3 ">
-      
-        <div className="border w-1/3 rounded-sm text-center ">a</div>
-        <div className="border w-1/3 rounded-sm text-center ">a</div>
-        
-
-      </div>
+     
+     </div>
+     
       <Button radius="small" fullWidth>نمایش اطلاعات بیشتر</Button>
 
     </div>)
