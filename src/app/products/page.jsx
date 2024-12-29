@@ -3,6 +3,7 @@
 
   import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
+import TextMotionCustom from "../components/newC/textMotion";
 const ItemDynamic = dynamic(()=>import('../components/itemView'),
 { loading: () => <p>Loading...</p>,}
 );
@@ -96,11 +97,20 @@ const ItemDynamic = dynamic(()=>import('../components/itemView'),
     export default function ProductsPage() {
       const { theme } = useTheme();
       return (
-        <div className="relative">
+        <div className="pt-12">
           {/* <div className="bg-blue-700 bottom-0 w-full fixed z-20 flex-row flex">
             <div className="w-1/2 bg-orange-700">a</div>
             <div className="w-1/2">b</div>
           </div> */}
+        <div className="pb-6 px-3 h-fit w-screen text-center flex flex-row justify-between items-center">
+  <div className="w-1/2 flex justify-center items-center underline">
+    <TextMotionCustom text={"محصولات مدیران خودرو چری و فونیکس"} />
+  </div>
+  <div className="w-1/2 bg-red-700 h-60 flex justify-center items-center">
+  <div className="text-5xl "> همه مدل / همه رنگ / همه سایز </div>
+  </div>
+</div>
+
           <div
 
          

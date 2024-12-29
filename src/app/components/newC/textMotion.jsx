@@ -9,13 +9,13 @@ const TextMotionCustom = ({ text }) => {
         <motion.span
           key={index}
           initial={{ opacity: 0, y: "10px" }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.5 }} // تنظیم viewport
+          animate={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }} // تنظیم viewport
           transition={{
             delay: index * 0.3, // محاسبه درست تأخیر
             duration: 0.5,
           }}
-          className="mr-2 font-extrabold text-3xl"
+          className=" mr-2 font-extrabold text-3xl"
         >
           {word}
         </motion.span>

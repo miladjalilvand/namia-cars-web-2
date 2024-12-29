@@ -52,13 +52,15 @@ const [currentImage, setCurrentImage] = useState(0);
   return (
         <div className="flex flex-col md:flex-row justify-center items-center md:mt-0">
           <div className="relative h-2/3 w-full md:w-1/2 md:h-1/2 cursor-pointer">
-            <Swiper
-              ref={swiperRef}
-              slidesPerView={1}
-              spaceBetween={0}
-              onSlideChange={(swiper) => setCurrentImage(swiper.activeIndex)}
-              loop={true}
-            >
+          <Swiper
+  ref={swiperRef}
+  slidesPerView={1}
+  spaceBetween={0}
+  loop={true}
+  autoplay={{ delay: 5000 }}
+  onSlideChange={(swiper) => setCurrentImage(swiper.activeIndex)}
+>
+
               {images.map((img, index) => (
                 <SwiperSlide key={index}>
                   <Image
@@ -96,7 +98,7 @@ const [currentImage, setCurrentImage] = useState(0);
           </div>
           <div
           
-          className="hidden md:flex w-1/2 h-full items-center justify-center">
+          className=" flex w-1/2 h-full items-center justify-center">
            <Title value={`تصویر ${currentImage + 1}`} images={images} />
           </div>
         </div>
