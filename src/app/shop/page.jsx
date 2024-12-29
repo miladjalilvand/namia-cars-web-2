@@ -1,5 +1,5 @@
     "use client"
-    import { Accordion, AccordionItem } from "@nextui-org/react";
+    import { Accordion, AccordionItem, Pagination } from "@nextui-org/react";
     import TextMotionCustom from "../components/newC/textMotion";
 
     const imageData = [
@@ -47,7 +47,7 @@
 
     const Shop = () => {
         return (
-        <div className="max-w-7xl mx-auto px-4 py-8">
+        <div className="w-screen mx-auto px-4 py-8">
             <div className="pb-6  w-full text-center flex flex-col md:flex-row justify-between items-center">
             <div className="w-1/2 flex justify-center items-center underline"></div>
             <div className="w-1/2 bg-red-700 h-60 flex justify-center items-center">
@@ -88,6 +88,9 @@
                 </div>
                 </div>
             ))}
+            </div>
+            <div className="w-screen flex justify-center items-center  border pt-6">
+                <Pagination showControls initialPage={1} total={10} />
             </div>
         </div>
         );
