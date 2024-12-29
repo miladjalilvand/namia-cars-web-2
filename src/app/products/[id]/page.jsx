@@ -1,9 +1,10 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
-import { Button } from "@nextui-org/react";
+import { Accordion, AccordionItem, Button } from "@nextui-org/react";
 import BannerImage from "@/app/components/newC/imageSwiperBanner";
 import ImageSlider from "@/app/components/imagesSwiper";
+import FooterPages from "@/app/components/newC/footerPages";
 
 
 
@@ -20,7 +21,11 @@ const itemsIndex = [
     title:'شرایط فروش',
     content:(<div className="flex flex-col  "><div className="text-center font-semibold text-2xl text-red-600">وی ایکس
 VX</div>
-    <div className="pt-9">Xtrim VX یک کراس اوور سایز متوسط لوکس است که توسط زیرمجموعه پریمیوم Chery، Xtrim، در سپتامبر 2020 رونمایی شد. این خودرو بر اساس پلتفرم جدید M3X Chery ساخته شده است و از نظر اندازه بین TX و LX قرار می گیرد. VX از نظر طراحی ظاهری شباهت زیادی به سایر مدل های Xtrim دارد، با جلوپنجره بزرگ و چراغ های LED باریک. فضای داخلی این خودرو نیز جادار و لوکس است و از امکاناتی مانند صندلی های چرمی، سانروف پانوراما و سیستم تهویه مطبوع سه منطقه ای بهره می برد. VX با دو موتور توربوشارژ بنزینی 1.6 و 2.0 لیتری عرضه می شود. موتور 1.6 لیتری 197 اسب بخار قدرت و 290 نیوتن متر گشتاور تولید می کند، در حالی که موتور 2.0 لیتری 261 اسب بخار قدرت و 400 نیوتن متر گشتاور دارد. هر دو موتور به گیربکس اتوماتیک 7 سرعته دوکلاچه متصل می شوند. VX به طیف وسیعی از فناوری های ایمنی و کمک راننده مجهز است، از جمله ترمز اضطراری خودکار، هشدار خروج از خط، هشدار نقطه کور و کروز کنترل تطبیقی.</div>
+    <div
+    
+    className="pt-9">Xtrim VX یک کراس اوور سایز متوسط لوکس است که توسط زیرمجموعه پریمیوم Chery، Xtrim، در سپتامبر 2020 رونمایی شد. این خودرو بر اساس پلتفرم جدید M3X Chery ساخته شده است و از نظر اندازه بین TX و LX قرار می گیرد. VX از نظر طراحی ظاهری شباهت زیادی به سایر مدل های Xtrim دارد، با جلوپنجره بزرگ و چراغ های LED باریک. فضای داخلی این خودرو نیز جادار و لوکس است و از امکاناتی مانند صندلی های چرمی، سانروف پانوراما و سیستم تهویه مطبوع سه منطقه ای بهره می برد. VX با دو موتور توربوشارژ بنزینی 1.6 و 2.0 لیتری عرضه می شود. موتور 1.6 لیتری 197 اسب بخار قدرت و 290 نیوتن متر گشتاور تولید می کند، در حالی که موتور 2.0 لیتری 261 اسب بخار قدرت و 400 نیوتن متر گشتاور دارد. هر دو موتور به گیربکس اتوماتیک 7 سرعته دوکلاچه متصل می شوند. VX به طیف وسیعی از فناوری های ایمنی و کمک راننده مجهز است، از جمله ترمز اضطراری خودکار، هشدار خروج از خط، هشدار نقطه کور و کروز کنترل تطبیقی.
+
+    </div>
 
     <div className="bg-red-600 w-full h-full flex flex-col p-3 gap-y-3 ">
      <div className="flex flex-row items-center justify-between">
@@ -55,23 +60,162 @@ VX</div>
   },
   {
     title:'مشخضات فنی',
-    content:(<div>milad</div>)
+    content:(<div className="flex flex-col  ">
+
+      <div className="flex flex-row-2 h-full w-screen items-start ">  
+<div className="">
+مشخصات فنی اکستریم ال ایکس
+</div>icon
+
+      </div><div>اطلاعات کلی </div>
+
+      <div className="flex flex-row-2 w-screen h-full items-start  justify-center 
+      gap-x-3 gap-y-3 ">
+      
+        <div className="border w-1/3 rounded-sm text-center ">a</div>
+        <div className="border w-1/3 rounded-sm text-center ">a</div>
+
+
+      </div>
+      <div className="flex flex-row-2 w-screen h-full items-start  justify-center 
+      gap-x-3 gap-y-3 ">
+      
+        <div className="border w-1/3 rounded-sm text-center ">a</div>
+        <div className="border w-1/3 rounded-sm text-center ">a</div>
+        
+
+      </div>
+      <div className="flex flex-row-2 w-screen h-full items-start  justify-center 
+      gap-x-3 gap-y-3 ">
+      
+        <div className="border w-1/3 rounded-sm text-center ">a</div>
+        <div className="border w-1/3 rounded-sm text-center ">a</div>
+        
+
+      </div>
+      <div className="flex flex-row-2 w-screen h-full items-start  justify-center 
+      gap-x-3 gap-y-3 ">
+      
+        <div className="border w-1/3 rounded-sm text-center ">a</div>
+        <div className="border w-1/3 rounded-sm text-center ">a</div>
+        
+
+      </div>
+      <div className="flex flex-row-2 w-screen h-full items-start  justify-center 
+      gap-x-3 gap-y-3 ">
+      
+        <div className="border w-1/3 rounded-sm text-center ">a</div>
+        <div className="border w-1/3 rounded-sm text-center ">a</div>
+        
+
+      </div>
+      <Button radius="small" fullWidth>نمایش اطلاعات بیشتر</Button>
+
+    </div>)
   },
   {
     title:'طراحی',
-    content:(<div>milad</div>)
+    content:(<div className="flex flex-col w-screen px-3 ">
+      <div className="">
+طراحی داخلی<span >a</span> </div>
+<div className="border "> image</div>
+<Accordion >
+  <AccordionItem  title=" داخلی">
+ <div className="flex flex-col">
+
+ <div className="border "> image</div>
+ <div>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+ </div>
+  </AccordionItem>
+</Accordion>
+<Accordion >
+  <AccordionItem  title=" داخلی">
+ <div className="flex flex-col">
+
+ <div className="border "> image</div>
+ <div>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+ </div>
+  </AccordionItem>
+</Accordion>
+    </div>)
   },
   {
     title:'کارایی',
-    content:(<div>milad</div>)
+    content:(<div className="flex flex-col w-screen px-3 ">
+      <div className="">
+طراحی داخلی<span >a</span> </div>
+<div className="border "> image</div>
+<Accordion >
+  <AccordionItem  title=" داخلی">
+ <div className="flex flex-col">
+
+ <div className="border "> image</div>
+ <div>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+ </div>
+  </AccordionItem>
+</Accordion>
+<Accordion >
+  <AccordionItem  title=" داخلی">
+ <div className="flex flex-col">
+
+ <div className="border "> image</div>
+ <div>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+ </div>
+  </AccordionItem>
+</Accordion>
+    </div>)
   },
   {
     title:'ایمنی',
-    content:(<div>milad</div>)
+    content:(<div className="flex flex-col w-screen px-3 ">
+      <div className="">
+طراحی داخلی<span >a</span> </div>
+<div className="border "> image</div>
+<Accordion >
+  <AccordionItem  title=" داخلی">
+ <div className="flex flex-col">
+
+ <div className="border "> image</div>
+ <div>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+ </div>
+  </AccordionItem>
+</Accordion>
+<Accordion >
+  <AccordionItem  title=" داخلی">
+ <div className="flex flex-col">
+
+ <div className="border "> image</div>
+ <div>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+ </div>
+  </AccordionItem>
+</Accordion>
+    </div>)
   },
   {
     title:'رفاهی',
-    content:(<div>milad</div>)
+    content:(<div className="flex flex-col w-screen px-3 ">
+      <div className="">
+طراحی داخلی<span >a</span> </div>
+<div className="border "> image</div>
+<Accordion >
+  <AccordionItem  title=" داخلی">
+ <div className="flex flex-col">
+
+ <div className="border "> image</div>
+ <div>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+ </div>
+  </AccordionItem>
+</Accordion>
+<Accordion >
+  <AccordionItem  title=" داخلی">
+ <div className="flex flex-col">
+
+ <div className="border "> image</div>
+ <div>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+ </div>
+  </AccordionItem>
+</Accordion>
+    </div>)
   },
   {
     title:'item1',
@@ -200,8 +344,9 @@ export default function Item({ params }) {
       ) : (
         <p>Loading...</p>
       )}
+      <FooterPages />
 
-
+{/* 
       {!isScrolled && (
         <div className="fixed bottom-0 left-0 w-full h-6 bg-fuchsia-900 flex">
     
@@ -213,7 +358,7 @@ export default function Item({ params }) {
             a
           </div>
         </div>
-      )}
+      )} */}
     </div>
   );
 }
