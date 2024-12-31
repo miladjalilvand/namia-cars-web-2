@@ -1,6 +1,7 @@
     "use client"
-    import { Accordion, AccordionItem, Pagination } from "@nextui-org/react";
+    import { Accordion, AccordionItem, Chip, Pagination } from "@nextui-org/react";
     import TextMotionCustom from "../components/newC/textMotion";
+import { useState } from "react";
 
     const imageData = [
     {
@@ -45,23 +46,45 @@
     },
     ];
 
+    const handleCategoryChange = (index) => {
+        setActiveCategories(index);
+    }
+
     const Shop = () => {
+
+        const [activeCategory, setActiveCategories] = useState(-1);
         return (
         <div className="w-screen mx-auto px-4 py-8">
             <div className="pb-6  w-full text-center flex flex-col md:flex-row justify-between items-center">
-            <div className="w-1/2 flex justify-center items-center underline"></div>
+            <div className="w-1/2 flex justify-center items-center ">
+            <div className="cursor-pointer" onClick={()=>setActiveCategories(-1)}>
+            <Chip 
+                isDisabled={activeCategory === -1 ? false : true}
+                
+                  key={-1} color="primary"
+                   className="m-2 ">همه</Chip></div>
+            {imageData.map((val , ind)=>{
+                return <div className="cursor-pointer" onClick={()=>setActiveCategories(ind)}>
+                    <Chip 
+                isDisabled={activeCategory === ind ? false : true}
+                
+                  key={ind} color="primary"
+                   className="m-2 ">{val.details.category}</Chip></div>
+
+            })}</div>
             <div className="w-1/2 bg-red-700 h-60 flex justify-center items-center">
-                <div className="text-3xl md:text-5xl">
+                <div className="text-3xl md:text-5xl ">
                 <TextMotionCustom text={"قطعات لوازم یدکی ام وی ا م"} />
                 </div>
             </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {activeCategory}
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
             {imageData.map((product, index) => (
                 <div
                 key={index}
                 className="border h-min flex flex-col border-gray-400 bg-background 
-                rounded-lg shadow-md overflow-hidden cursor-pointer transform transition hover:scale-105"
+                rounded-lg shadow-md overflow-hidden cursor-pointer transform transition hover:scale-"
                 >
                 <img
                     src={product.url}
@@ -89,7 +112,7 @@
                 </div>
             ))}
             </div>
-            <div className="w-screen flex justify-center items-center  border pt-6">
+            <div className="w-screen flex justify-center items-center  py-6">
                 <Pagination showControls initialPage={1} total={10} />
             </div>
         </div>

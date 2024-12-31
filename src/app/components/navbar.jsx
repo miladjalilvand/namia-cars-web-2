@@ -11,7 +11,7 @@ import ButtonContact from "./buttonContact";
 const links = [
   { name: "خانه", url: "/" },
   { name: "محصولات", url: "products" },
-  { name: "شرایط فروش", url: "services" },
+  { name: "شرایط فروش", url: "terms-of-sale" },
   { name: "قطعات", url: "shop" },
   { name: "تماس با ما ", url: "contact" }
 ];
