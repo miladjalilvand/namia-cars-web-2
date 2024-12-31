@@ -194,7 +194,7 @@ export default function Page({ params }) {
 
         </div>
       </div>
-      <div className="flex md:flex-row w-screen md:w-screen flex-col">
+      <div className="flex md:flex-row w-screen md:w-screen flex-col pt-6">
   <div className="relative h-80 w-screen">
 
     <Image
@@ -204,8 +204,9 @@ export default function Page({ params }) {
       className="object-fill"
     />
   </div>
-  <div className="text-center md:1/2">
-    <div className="flex flex-col">
+  <div className="flex  flex-col items-center justify-around text-center md:1/2
+   h-80 bg-gradient-to-b from-red-700 to-red-900 text-white p-3  ">
+    <div className="flex flex-col items-center justify-evenly h-80">
       <div>ایکس 33 کراس، از جدیدترین کراس اورهای مدرن مدیران خودرو است که با زبان طراحی روز دنیا پا به بازار ایران گذاشته است. این کراس اور، نه تنها از طراحی هیجان‌انگیز و به‌روزترین امکانات رفاهی و ایمنی صنعت خودروی جهان بهره می‌برد، بلکه با الهام از آینده، هنر و تکنولوژی، نماینده سبک زندگی جدید ام‌وی‌ام تحت عنوان کراس لایف است.</div>
       <div className="flex flex-row gap-1 items-center justify-center">
         <Button>بررسی کامل </Button>

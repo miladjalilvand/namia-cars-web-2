@@ -64,7 +64,7 @@ import { useState } from "react";
                   key={-1} color="primary"
                    className="m-2 ">همه</Chip></div>
             {imageData.map((val , ind)=>{
-                return <div className="cursor-pointer" onClick={()=>setActiveCategories(ind)}>
+                return <div key={ind} className="cursor-pointer" onClick={()=>setActiveCategories(ind)}>
                     <Chip 
                 isDisabled={activeCategory === ind ? false : true}
                 
