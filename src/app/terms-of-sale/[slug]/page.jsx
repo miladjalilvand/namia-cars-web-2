@@ -13,6 +13,7 @@ import {
   DropdownTrigger,
 } from "@nextui-org/react";
 import Image from "next/image";
+import AnimatedLineChart from "@/app/components/newC/chart";
 
 const descriptionsMap = {
   merge: "All commits from the source branch are added to the destination branch via a merge commit.",
@@ -38,10 +39,12 @@ export default function Page({ params }) {
   };
 
   return (
-    <div className="flex flex-col w-screen pt-6">
-      <div className="flex flex-row ">
-        <div className="w-1/2 h-3/5 bg-red-600">chart</div>
-        <div className="w-1/2 h-3/5 text-center text-3xl md:text-5xl content-center border border-cyan-700">
+    <div className="flex flex-col  w-screen pt-6">
+      <div className="flex flex-col md:flex-row ">
+        <div className="md:w-1/2 md:h-3/5 bg-red-600">
+        <AnimatedLineChart/>
+        </div>
+        <div className="md:w-1/2  text-center text-3xl md:text-5xl content-center border border-cyan-700">
           <motion.div
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
