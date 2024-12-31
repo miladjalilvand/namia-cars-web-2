@@ -12,6 +12,7 @@ import {
   DropdownItem,
   DropdownTrigger,
 } from "@nextui-org/react";
+import Image from "next/image";
 
 const descriptionsMap = {
   merge: "All commits from the source branch are added to the destination branch via a merge commit.",
@@ -51,19 +52,15 @@ export default function Page({ params }) {
           </motion.div>
         </div>
       </div>
-      <p className="mt-4 text-center">Slug: {slug}</p>
-      <p className="text-center">Current Theme: {theme}</p>
+      {/* <p className="mt-4 text-center">Slug: {slug}</p>
+      <p className="text-center">Current Theme: {theme}</p> */}
 
       <div className="flex flex-col gap-3">
         <div className="flex flex-col md:flex-row">
           <div className="flex flex-row">
             <div className="">نقدی</div>
-            <div>شرایط فروش نقدی مدیران خودرو فونیکس تیگو 8 پرو e پلاس (+e)</div>
           </div>
-          <div className="flex flex-row">
-            <div className=""></div>
-            <div>1.365.365.000</div>
-          </div>
+
         </div>
         <div className="flex flex-col md:flex-row ">
           <div className="flex flex-row ">
@@ -74,8 +71,8 @@ export default function Page({ params }) {
               شرایط فروش نقدی مدیران خودرو فونیکس تیگو 8 پرو e پلاس (+e)
             </div>
           </div>
-          <div className="flex flex-row border max-h-full">
-            <div className="flex flex-row border max-h-full">
+          <div className="flex flex-col md:flex-row border max-h-full">
+            <div className="flex  flex-col md:flex-row border max-h-full">
               <div className="flex-col h-full ">
                 <div
                   className={`border-b p-2 h-1/2 ${
@@ -192,10 +189,33 @@ export default function Page({ params }) {
                 <div className="text-center p-2">32</div>
               </div>
             </div>
-            <div className="md:hidden">1.365.365.000</div>
+
           </div>
+
         </div>
       </div>
+      <div className="flex md:flex-row w-screen md:w-screen flex-col">
+  <div className="relative h-80 w-screen">
+
+    <Image
+      src="/assets/gallery/tiggo8pro/Tiggo8PROred.png"
+      alt="Picture of the author"
+      fill
+      className="object-fill"
+    />
+  </div>
+  <div className="text-center md:1/2">
+    <div className="flex flex-col">
+      <div>ایکس 33 کراس، از جدیدترین کراس اورهای مدرن مدیران خودرو است که با زبان طراحی روز دنیا پا به بازار ایران گذاشته است. این کراس اور، نه تنها از طراحی هیجان‌انگیز و به‌روزترین امکانات رفاهی و ایمنی صنعت خودروی جهان بهره می‌برد، بلکه با الهام از آینده، هنر و تکنولوژی، نماینده سبک زندگی جدید ام‌وی‌ام تحت عنوان کراس لایف است.</div>
+      <div className="flex flex-row gap-1 items-center justify-center">
+        <Button>بررسی کامل </Button>
+        <Button>مشخصات فنی </Button>
+        <Button>گالری تصاویر</Button>
+      </div>
+    </div>
+  </div>
+</div>
+
     </div>
   );
 }
