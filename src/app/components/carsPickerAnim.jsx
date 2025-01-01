@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
+import TextMotionCustom from "./newC/textMotion";
 const imageList = [
   "/assets/gallery/tiggo8pro/Tiggo8PROred.png", 
   "/assets/gallery/tiggo8pro/PCTiggo8PROblack.png",
@@ -26,8 +27,9 @@ export default function CarsAnim() {
   };
 
   return (
-    <div className="overflow-hidden md:hidden flex flex-col items-center justify-center">
-      <div className="flex flex-row gap-2 m-3 z-20">
+    <div className="overflow-hidden md:hidden flex flex-col-reverse items-center justify-center">
+   
+      <div className="flex flex-row gap-2 m-3 z-20 self-start bg-white bg-opacity-15 rounded-full">
       <div
           onClick={() => handleClick(0)}
           className={`rounded-full cursor-pointer h-4 w-4 bg-redasli border-2 ${
@@ -48,12 +50,12 @@ export default function CarsAnim() {
         ></div>
       </div>
    
-    <motion.div className=" h-[600px] w-screen relative " 
+    <motion.div className=" h-[600px] w-screen relative  " 
     initial={{ x: 0 }}
     animate={{ x: isMoving ? -(window.innerWidth): "0%" }}
     transition={{ ease: "easeInOut", duration: 2 }}
     >
-
+      
       {/* تصویر ماشین */}
       <div
        
@@ -113,6 +115,7 @@ export default function CarsAnim() {
       </div>
 
     </motion.div>
+    <TextMotionCustom text={'mvm xr-550'} />
     </div>
   );
 }

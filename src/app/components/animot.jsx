@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
+import TextMotionCustom from "./newC/textMotion";
 
 const imageList = [
   "/assets/gallery/tiggo8pro/Tiggo8PROred.png", 
@@ -29,7 +30,8 @@ if(colorPicked != color){
 
   return (
     <div className="hidden md:flex flex-col h-screen justify-center items-center ">
-  <div className="flex flex-row gap-4 m-4">
+         <TextMotionCustom text={'mvm xr-550'} />
+  <div className="flex flex-row gap-4 m-4 bg-white bg-opacity-15 rounded-full">
         <div
           onClick={() => handleClick(0)}
           className={`rounded-full cursor-pointer h-4 w-4 bg-redasli border-2 ${

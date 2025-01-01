@@ -136,7 +136,7 @@ const AnimatedText = ({ text, isInView, button, ind, textButton }) => {
           }}
         >
           <div
-            className={`w-1/2 cursor-pointer rounded-sm px-1 ${
+            className={`text-center  w-1/2 cursor-pointer rounded-sm px-2 py-1 ${
               ind % 2 === 0 ? "bg-background text-redasli" : "bg-redasli text-txtl"
             }`}
           >
