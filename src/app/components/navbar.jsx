@@ -123,8 +123,10 @@ const changeTheme=()=>{
 
 
               <div className="flex flex-row ">
-           <div className="m-4 text-white cursor-pointer">طرح تعویض</div>
-            <div className="m-4 text-white cursor-pointer">تست درایو</div>
+           <div className="m-4 text-white cursor-pointer" 
+           onClick={() => pushin('/exchange')}>طرح تعویض</div>
+            <div className="m-4 text-white cursor-pointer" 
+            onClick={() => pushin('/test-drive')}>تست درایو</div>
             <div className="m-4 text-white cursor-pointer">وبلاگ</div>
            </div>
             </motion.div>

@@ -316,7 +316,7 @@ export default function Item({ params }) {
       ) : (
         <p>Loading...</p>
       )}
-      <FooterPages />
+      <FooterPages tab={0} />
 
 {/* 
       {!isScrolled && (
