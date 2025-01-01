@@ -33,7 +33,7 @@ const FooterPages = ({ tab = 1, scrollDisabled = false }) => {
     <>
       {(scrollDisabled || !isScrolled) && (
         <div
-          className="fixed bottom-0 left-0 w-full h-14
+          className="fixed bottom-0 left-0 w-full 
              bg-fuchsia-900 flex z-30"
         >
           {/* دکمه مودال */}
