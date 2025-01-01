@@ -81,13 +81,13 @@ export default function ImageSlider() {
         <div className="absolute bottom-0 left-0 flex z-20">
           <button
             onClick={prevImage}
-            className="bg-red-700 text-white px-3 py-3 hover:bg-gray-800"
+            className="bg-redasli text-txtl px-3 py-3 hover:bg-gray-800"
           ><IoIosArrowForward />
            
           </button>
           <button
             onClick={nextImage}
-            className="bg-red-700 text-white px-3 py-3 hover:bg-gray-800"
+            className="bg-redasli text-txtl px-3 py-3 hover:bg-gray-800"
           >
              <IoIosArrowBack />
           </button>

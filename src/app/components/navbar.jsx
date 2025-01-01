@@ -93,7 +93,7 @@ const changeTheme=()=>{
                   <div className="mt-12 ml-2 mr-2 
   flex items-center bg-black p-2
    bg-opacity-60 rounded-sm ">
-  <IoMdSearch color="white" size={24} />
+  <IoMdSearch color="txtl" size={24} />
   <input
     type="text"
     placeholder="جستجو"
@@ -104,7 +104,7 @@ const changeTheme=()=>{
 
 </div>
 
-<div className="flex flex-col items-center text-white font-extrabold space-y-2 pt-2">
+<div className="flex flex-col items-center text-txtl font-extrabold space-y-2 pt-2">
                 {/* <div className="cursor-pointer" onClick={() => pushin('about')}>about</div> */}
                {isOpen && links.map((val , key)=>(
    <motion.div
@@ -123,11 +123,11 @@ const changeTheme=()=>{
 
 
               <div className="flex flex-row ">
-           <div className="m-4 text-white cursor-pointer" 
+           <div className="m-4 text-txtl cursor-pointer" 
            onClick={() => pushin('/exchange')}>طرح تعویض</div>
-            <div className="m-4 text-white cursor-pointer" 
+            <div className="m-4 text-txtl cursor-pointer" 
             onClick={() => pushin('/test-drive')}>تست درایو</div>
-            <div className="m-4 text-white cursor-pointer">وبلاگ</div>
+            <div className="m-4 text-txtl cursor-pointer">وبلاگ</div>
            </div>
             </motion.div>
             {  (isOpen && <div onClick={() => handleClick()} className="fixed md:w-screen z-30 md:h-screen bg-black opacity-70"></div>)}
@@ -137,7 +137,7 @@ const changeTheme=()=>{
                 <div className="flex flex-row-reverse items-center ">
 
                 <div className='h-full w-9 bg-redc cursor-pointer' >
-      <button onClick={() => setModalOpen(true)} className="h-full w-full">
+      <button onClick={() => setModalOpen(true)} className="h-full w-full text-txtl">
        a
       </button>
 
@@ -149,7 +149,7 @@ const changeTheme=()=>{
                 >c</div>
                 <div className="md:hidden px-3">d</div>
                 <div className="hidden md:flex flex-row-2 px-1 cursor-pointer mx-3"> d + a </div>
-                <div className="rounded-sm bg-redc 1 cursor-pointer text-xxs px-3 py-1">طرح تعویض</div>
+                <div className="rounded-sm text-txtl bg-redc cursor-pointer text-xxs px-3 py-1">طرح تعویض</div>
                 </div>
 
               </div>

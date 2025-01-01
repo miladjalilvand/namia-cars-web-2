@@ -8,7 +8,10 @@
   --primary: #3a8857;    /* رنگ اصلی */
   --secondary: #28303e;  /* رنگ ثانویه */
   --danger: #ef4444;   
-  --redc :   #d51717;  /* رنگ خطر */
+  --redc :   rgb(185,28,28);
+  --redasli: rgb(185,28,28);
+  --txtl: #fff7f7; 
+
 }
 
 [data-theme='dark'] {
@@ -17,7 +20,9 @@
   --primary: #f647c2;    /* رنگ اصلی در حالت تاریک */
   --secondary: #6c9bff;  /* رنگ ثانویه در حالت تاریک */
   --danger: #dc2626; 
-  --redc :   #b43535;  /* رنگ خطر در حالت تاریک */
+  --redc :   rgb(185, 38, 58);  /* رنگ خطر در حالت تاریک */
+  --redasli: rgb(185, 38, 58);
+  --txtl: #fff7f7; 
 }
 @media (prefers-color-scheme: dark) {
   :root {

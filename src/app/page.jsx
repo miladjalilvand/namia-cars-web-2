@@ -17,7 +17,7 @@ export default function Home() {
    <AnyMot />
     <CarsAnim/>
     <ItemSlidesImage/>
-    <FooterPages /> 
+
 
   </div>
   );

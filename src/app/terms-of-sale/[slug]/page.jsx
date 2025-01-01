@@ -41,7 +41,7 @@ export default function Page({ params }) {
   return (
     <div className="flex flex-col  w-screen pt-6">
       <div className="flex flex-col md:flex-row ">
-        <div className="md:w-1/2 md:h-3/5 bg-red-600">
+        <div className="md:w-1/2 md:h-3/5 bg-redasli">
         <AnimatedLineChart/>
         </div>
         <div className="md:w-1/2  text-center text-3xl md:text-5xl content-center border border-cyan-700">
@@ -67,10 +67,10 @@ export default function Page({ params }) {
         </div>
         <div className="flex flex-col md:flex-row ">
           <div className="flex flex-row ">
-            <div className="flex items-center justify-center w-10 border bg-gradient-to-r from-red-700 to-red-900 text-white">
+            <div className="flex items-center justify-center w-10 border bg-gradient-to-r from-redasli to-red-900 text-txtl">
               <div className="rotate-90">اقساط</div>
             </div>
-            <div className="border bg-gradient-to-r from-red-700 to-red-900 text-white/95 p-2 md:w-24 w-full">
+            <div className="border bg-gradient-to-r from-redasli to-red-900 text-txtl/95 p-2 md:w-24 w-full">
               شرایط فروش نقدی مدیران خودرو فونیکس تیگو 8 پرو e پلاس (+e)
             </div>
           </div>
@@ -79,8 +79,8 @@ export default function Page({ params }) {
               <div className="flex-col h-full ">
                 <div
                   className={`border-b p-2 h-1/2 ${
-                    theme === "light" ? "bg-white" : "bg-slate-500"
-                  } border-b-red-800 border-b-3`}
+                    theme === "light" ? "bg-txtl" : "bg-slate-500"
+                  } border-b-redasli border-b-3`}
                 >
                   تحویل زمان
                 </div>
@@ -89,8 +89,8 @@ export default function Page({ params }) {
               <div className="flex-col  text-center ">
                 <div
                   className={`border-b p-2 h-1/2 ${
-                    theme === "light" ? "bg-white" : "bg-slate-500"
-                  } border-b-red-800 border-b-3`}
+                    theme === "light" ? "bg-txtl" : "bg-slate-500"
+                  } border-b-redasli border-b-3`}
                 >
                   قیمت
                 </div>
@@ -99,8 +99,8 @@ export default function Page({ params }) {
               <div className="flex-col  text-center">
                 <div
                   className={`border-b p-2 h-1/2 ${
-                    theme === "light" ? "bg-white" : "bg-slate-500"
-                  } border-b-red-800 border-b-3`}
+                    theme === "light" ? "bg-txtl" : "bg-slate-500"
+                  } border-b-redasli border-b-3`}
                 >
                   مدل
                 </div>
@@ -109,8 +109,8 @@ export default function Page({ params }) {
               <div className="flex-col   text-center">
                 <div
                   className={`border-b p-2 h-1/2 ${
-                    theme === "light" ? "bg-white" : "bg-slate-500"
-                  } border-b-red-800 border-b-3`}
+                    theme === "light" ? "bg-txtl" : "bg-slate-500"
+                  } border-b-redasli border-b-3`}
                 >
                   پرداخت پیش
                 </div>
@@ -119,8 +119,8 @@ export default function Page({ params }) {
               <div className="flex-col  text-center ">
                 <div
                   className={`border-b p-2 h-1/2 ${
-                    theme === "light" ? "bg-white" : "bg-slate-500"
-                  } border-b-red-800 border-b-3`}
+                    theme === "light" ? "bg-txtl" : "bg-slate-500"
+                  } border-b-redasli border-b-3`}
                 >
                   پیش پرداخت درصد
                 </div>
@@ -129,8 +129,8 @@ export default function Page({ params }) {
               <div className="flex-col  text-center ">
                 <div
                   className={`border-b p-2 h-1/2 ${
-                    theme === "light" ? "bg-white" : "bg-slate-500"
-                  } border-b-red-800 border-b-3`}
+                    theme === "light" ? "bg-txtl" : "bg-slate-500"
+                  } border-b-redasli border-b-3`}
                 >
                   اقساط سود درصد
                 </div>
@@ -139,8 +139,8 @@ export default function Page({ params }) {
               <div className="flex-col text-center  ">
                 <div
                   className={`border-b p-2 h-1/2 ${
-                    theme === "light" ? "bg-white" : "bg-slate-500"
-                  } border-b-red-800 border-b-3`}
+                    theme === "light" ? "bg-txtl" : "bg-slate-500"
+                  } border-b-redasli border-b-3`}
                 >
                   مدت اقساط
                 </div>
@@ -184,8 +184,8 @@ export default function Page({ params }) {
               <div className="flex-col  text-center ">
                 <div
                   className={`border-b p-2 h-1/2 ${
-                    theme === "light" ? "bg-white" : "bg-slate-500"
-                  } border-b-red-800 border-b-3`}
+                    theme === "light" ? "bg-txtl" : "bg-slate-500"
+                  } border-b-redasli border-b-3`}
                 >
                   هر ماه قسط مبلغ
                 </div>
@@ -208,7 +208,7 @@ export default function Page({ params }) {
     />
   </div>
   <div className="flex  flex-col items-center justify-around text-center md:1/2
-   h-80 bg-gradient-to-b from-red-700 to-red-900 text-white p-3  ">
+   h-80 bg-gradient-to-b from-redasli to-red-900 text-txtl p-3  ">
     <div className="flex flex-col items-center justify-evenly h-80">
       <div>ایکس 33 کراس، از جدیدترین کراس اورهای مدرن مدیران خودرو است که با زبان طراحی روز دنیا پا به بازار ایران گذاشته است. این کراس اور، نه تنها از طراحی هیجان‌انگیز و به‌روزترین امکانات رفاهی و ایمنی صنعت خودروی جهان بهره می‌برد، بلکه با الهام از آینده، هنر و تکنولوژی، نماینده سبک زندگی جدید ام‌وی‌ام تحت عنوان کراس لایف است.</div>
       <div className="flex flex-row gap-1 items-center justify-center">

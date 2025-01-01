@@ -106,7 +106,7 @@ const data = [
 <div className="w-1/2 flex justify-center items-center underline">
   <TextMotionCustom text={"شرایط فروش مدیران خودرو نقد اقساط تیر 1403"} />
 </div>
-<div className="w-1/2 bg-red-700 h-60 flex justify-center items-center">
+<div className="w-1/2 bg-redasli h-60 flex justify-center items-center">
 <div className="text-3xl md:text-5xl ">  ماشین بخر به شرظ اقساط  </div>
 </div>
 </div>

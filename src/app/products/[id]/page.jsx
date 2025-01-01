@@ -19,7 +19,7 @@ const itemsIndex = [
    src={'/assets/24.png'}/>)},
    {
     title:'شرایط فروش',
-    content:(<div className="flex flex-col  "><div className="text-center font-semibold text-2xl text-red-600">وی ایکس
+    content:(<div className="flex flex-col  "><div className="text-center font-semibold text-2xl text-redasli">وی ایکس
 VX</div>
     <div
     
@@ -27,7 +27,7 @@ VX</div>
 
     </div>
 
-    <div className="bg-red-600 w-full h-full flex flex-col p-3 gap-y-3 ">
+    <div className="bg-redasli w-full h-full flex flex-col p-3 gap-y-3 ">
      <div className="flex flex-row items-center justify-between">
 
      <div className="">شرایط فروش اکستریم ال ایکس
@@ -276,7 +276,7 @@ export default function Item({ params }) {
             return (
               <div
                 key={ind}
-                className={`cursor-pointer py-3 px-6 ${isVis ? "text-red-600 border-b-medium border-b-red-600" : ""}`}
+                className={`cursor-pointer py-3 px-6 ${isVis ? "text-redasli border-b-medium border-b-redasli" : ""}`}
                 onClick={() => scrollToSection(ind)}
               >
                 {val.title}

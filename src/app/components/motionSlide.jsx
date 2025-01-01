@@ -48,7 +48,7 @@ const ItemSlidesImage = () => {
           <div
             key={key}
             ref={(el) => (itemRefs.current[key] = el)}
-            className={`flex ${key % 2 === 0 ? "flex-col-reverse pt-5 bg-red-700 text-white" : "flex-col bg-background text-gray-900"} 
+            className={`flex ${key % 2 === 0 ? "flex-col-reverse pt-5 bg-redasli text-txtl" : "flex-col bg-background text-gray-900"} 
                         md:flex-row items-center justify-around md:h-screen `}
             style={{ direction: key % 2 === 0 ? "ltr" : "rtl" }}
           >
@@ -116,7 +116,7 @@ const AnimatedText = ({ text, isInView, button, ind, textButton }) => {
                 duration: 0.5,
               }}
               className={`mr-2 font-extrabold text-3xl ${
-                ind % 2 === 0 ? "text-white" : "text-red-700"
+                ind % 2 === 0 ? "text-txtl" : "text-redasli"
               }`}
             >
               {word}
@@ -137,7 +137,7 @@ const AnimatedText = ({ text, isInView, button, ind, textButton }) => {
         >
           <div
             className={`w-1/2 cursor-pointer rounded-sm px-1 ${
-              ind % 2 === 0 ? "bg-background text-red-700" : "bg-red-700 text-white"
+              ind % 2 === 0 ? "bg-background text-redasli" : "bg-redasli text-txtl"
             }`}
           >
             {textButton}

@@ -18,7 +18,10 @@ module.exports = {
         primary: "var(--primary)",       // متغیر برای رنگ اصلی
         secondary: "var(--secondary)",   // متغیر برای رنگ ثانویه
         danger: "var(--danger)", 
-        redc:"var(--redc)"        // متغیر برای رنگ خطر
+        redc:"var(--redc)" ,
+        txtl:"var(--txtl)" ,
+
+        redasli: "var(--redasli)"       // متغیر برای رنگ خطر
       },
     },
   },
