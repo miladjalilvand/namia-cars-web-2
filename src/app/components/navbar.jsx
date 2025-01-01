@@ -4,9 +4,11 @@ import { useRouter,usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useTheme } from "next-themes";
-import { IoMdSearch } from "react-icons/io";
+import { IoMdContact, IoMdSearch } from "react-icons/io";
 import ModalWithTabs from './tabModal';
 import ButtonContact from "./buttonContact";
+
+import { FaMoon,FaSun } from "react-icons/fa";
 
 const links = [
   { name: "خانه", url: "/" },
@@ -18,6 +20,7 @@ const links = [
 
 export default function NavbarCustom(){
 const {theme,setTheme}=useTheme();
+const [objTheme , setObjTheme]=useState(theme);
 const [isModalOpen, setModalOpen] = useState(false);
 const [isOpen , setOpen]=useState(false);
 
@@ -37,11 +40,13 @@ const handleClick =()=>{
 
 const toggleThemeMenu =() =>{
   theme ==="light"?setTheme("dark"):setTheme("light");
+  theme ==="light"?setObjTheme("dark"):setObjTheme("light");
   setOpen(false);
 }
 
 const changeTheme=()=>{
   theme === "light" ? setTheme("dark") : setTheme("light")
+  theme ==="light"?setObjTheme("dark"):setObjTheme("light");
 }
 
   return (
@@ -87,7 +92,7 @@ const changeTheme=()=>{
                   <div  className="flex flex-row-2 justify-between md:hidden ">
 
                     <div></div>
-                    <div className="cursor-pointer" onClick={()=>toggleThemeMenu()}>theme</div>
+                    <div className="cursor-pointer p-3" onClick={()=>toggleThemeMenu()}>{objTheme === "dark" ? (<FaMoon/>) : (<FaSun/>) }</div>
 
                   </div>
                   <div className="mt-12 ml-2 mr-2 
@@ -137,18 +142,21 @@ const changeTheme=()=>{
                 <div className="flex flex-row-reverse items-center ">
 
                 <div className='h-full w-9 bg-redc cursor-pointer' >
-      <button onClick={() => setModalOpen(true)} className="h-full w-full text-txtl">
+      <button onClick={() => setModalOpen(true)} className="h-full w-full text-txtl flex  items-center justify-center">
        a
       </button>
 
       <ModalWithTabs isOpen={isModalOpen} onClose={() => setModalOpen(false)} />
     </div>
  
-                <div className="hidden md:flex w-12 cursor-pointer"
+                <div className="hidden md:flex w-12 cursor-pointer   items-center justify-center"
                 onClick={()=>changeTheme()}
-                >c</div>
-                <div className="md:hidden px-3">d</div>
-                <div className="hidden md:flex flex-row-2 px-1 cursor-pointer mx-3"> d + a </div>
+                >{objTheme === "dark" ? (<FaMoon/>) : (<FaSun/>) }</div>
+                <div className="md:hidden px-3">  <IoMdContact/></div>
+                <div className="hidden items-center justify-center md:flex flex-row-reverse gap-1 px-1 cursor-pointer mx-3"> 
+                  <div>ورود</div>
+                  <IoMdContact/>
+                   </div>
                 <div className="rounded-sm text-txtl bg-redc cursor-pointer text-xxs px-3 py-1">طرح تعویض</div>
                 </div>
 
