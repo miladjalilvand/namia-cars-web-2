@@ -70,7 +70,7 @@ export default function Page({ params }) {
             <div className="flex items-center justify-center w-10 border bg-gradient-to-r from-redasli to-red-900 text-txtl">
               <div className="rotate-90">اقساط</div>
             </div>
-            <div className="border bg-gradient-to-r from-redasli to-red-900 text-txtl/95 p-2 md:w-24 w-full">
+            <div className="border bg-gradient-to-r from-redasli to-red-900 text-txtl p-2 md:w-24 w-full">
               شرایط فروش نقدی مدیران خودرو فونیکس تیگو 8 پرو e پلاس (+e)
             </div>
           </div>
@@ -198,7 +198,7 @@ export default function Page({ params }) {
         </div>
       </div>
       <div className="flex md:flex-row w-screen md:w-screen flex-col pt-6">
-  <div className="relative h-80 w-screen">
+  <div className="hidden relative h-80 ">
 
     <Image
       src="/assets/gallery/tiggo8pro/Tiggo8PROred.png"
@@ -207,8 +207,8 @@ export default function Page({ params }) {
       className="object-fill"
     />
   </div>
-  <div className="flex  flex-col items-center justify-around text-center md:1/2
-   h-80 bg-gradient-to-b from-redasli to-red-900 text-txtl p-3  ">
+  <div className="flex w-screen  flex-col items-center justify-around text-center md:px-80
+   h-80 bg-gradient-to-b from-redasli to-red-900 text-txtl p-3   ">
     <div className="flex flex-col items-center justify-evenly h-80">
       <div>ایکس 33 کراس، از جدیدترین کراس اورهای مدرن مدیران خودرو است که با زبان طراحی روز دنیا پا به بازار ایران گذاشته است. این کراس اور، نه تنها از طراحی هیجان‌انگیز و به‌روزترین امکانات رفاهی و ایمنی صنعت خودروی جهان بهره می‌برد، بلکه با الهام از آینده، هنر و تکنولوژی، نماینده سبک زندگی جدید ام‌وی‌ام تحت عنوان کراس لایف است.</div>
       <div className="flex flex-row gap-1 items-center justify-center">
