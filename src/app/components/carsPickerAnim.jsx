@@ -70,7 +70,7 @@ export default function CarsAnim() {
         />
     
       {/* چرخ اول */}
-      <div className="absolute bottom-[5%] md:bottom-[10%] left-[3%] md:left-[-6%] w-full h-full">
+      <div className="absolute bottom-[7%] md:bottom-[10%] left-[3%] md:left-[-6%] w-full h-full">
         <motion.div
           className="absolute w-[15%] h-[15%] md:w-[30%] md:h-[30%] transform bottom-[27%] left-[8%] md:bottom-[5%] md:left-[10%] xl:h-[35%] xl:w-[35%] xl:bottom-[5%] xl:left-[12%] 2xl:left-[10%] 2xl:bottom-[6%] 2xl:h-[30%] 2xl:w-[30%]"
           initial={{ rotate: 0 }}
@@ -92,7 +92,7 @@ export default function CarsAnim() {
       </div>
 
       {/* چرخ دوم */}
-      <div className="absolute bottom-[5%] md:bottom-[10%] right-[8%] md:right-[-2%] w-full h-full">
+      <div className="absolute bottom-[7%] md:bottom-[10%] right-[8%] md:right-[-2%] w-full h-full">
         <motion.div
           className="absolute w-[15%] h-[15%] md:w-[30%] md:h-[30%] transform bottom-[27%] right-[8%] md:bottom-[5%] md:right-[10%] xl:h-[35%] xl:w-[35%] xl:bottom-[5%] xl:right-[12%] 2xl:right-[10%] 2xl:bottom-[6%] 2xl:h-[30%] 2xl:w-[30%]"
           initial={{ rotate: 0 }}
