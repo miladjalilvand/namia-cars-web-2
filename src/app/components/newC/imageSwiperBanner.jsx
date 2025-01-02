@@ -74,7 +74,7 @@ const [currentImage, setCurrentImage] = useState(0);
                 </SwiperSlide>
               ))}
             </Swiper>
-            <div className="absolute bottom-0 left-0 flex z-20">
+            <div className="absolute bottom-0 left-0 flex z-10">
               <button
                 onClick={prevImage}
                 className="bg-redasli text-white px-3 py-3 hover:bg-gray-800"

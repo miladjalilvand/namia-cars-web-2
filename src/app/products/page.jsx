@@ -103,10 +103,10 @@ const ItemDynamic = dynamic(()=>import('../components/itemView'),
             <div className="w-1/2">b</div>
           </div> */}
         <div className="pb-6 px-3 h-fit w-screen text-center flex flex-col md:flex-row justify-between items-center">
-  <div className="w-1/2 flex justify-center items-center underline">
+  <div className="w-screen md:w-1/2 flex justify-center items-center underline">
     <TextMotionCustom text={"محصولات مدیران خودرو چری و فونیکس"} />
   </div>
-  <div className="w-1/2 bg-redasli h-60 flex justify-center items-center">
+  <div className="w-screen md:w-1/2 bg-redasli h-60 flex justify-center items-center">
   <div className="text-3xl md:text-5xl "> همه مدل / همه رنگ / همه سایز </div>
   </div>
 </div>
