@@ -4,7 +4,7 @@ import { useRouter,usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useTheme } from "next-themes";
-import { IoMdContact, IoMdSearch } from "react-icons/io";
+import { IoIosCall, IoMdContact, IoMdMoon, IoMdSearch, IoMdSunny } from "react-icons/io";
 import ModalWithTabs from './tabModal';
 import ButtonContact from "./buttonContact";
 
@@ -151,7 +151,7 @@ const changeTheme=()=>{
 
                 <div className='h-full w-9 bg-redc cursor-pointer' >
       <button onClick={() => setModalOpen(true)} className="h-full w-full text-txtl flex  items-center justify-center">
-       a
+       <IoIosCall/>
       </button>
 
       <ModalWithTabs isOpen={isModalOpen} onClose={() => setModalOpen(false)} />
@@ -159,7 +159,8 @@ const changeTheme=()=>{
  
                 <div className="hidden md:flex w-12 cursor-pointer   items-center justify-center"
                 onClick={()=>changeTheme()}
-                >{ objTheme === "dark" ? (<div>aaa</div>) : (<div>bbb</div>) }</div>
+                >{ objTheme === "light" && (<div><IoMdMoon/></div>)  }
+                { objTheme === "dark" && (<div><IoMdSunny/></div>)  }</div>
                 <div className="md:hidden px-3">  <IoMdContact/></div>
                 <div className="hidden items-center justify-center md:flex flex-row-reverse gap-1 px-1 cursor-pointer mx-3"> 
                   <div>ورود</div>
