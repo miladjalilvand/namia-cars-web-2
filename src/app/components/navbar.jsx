@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter,usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -20,9 +20,12 @@ const links = [
 
 export default function NavbarCustom(){
 const {theme,setTheme}=useTheme();
-const [objTheme , setObjTheme]=useState(theme);
+
 const [isModalOpen, setModalOpen] = useState(false);
 const [isOpen , setOpen]=useState(false);
+
+
+const [objTheme,setObjTheme]=useState("light");
 
 const router = useRouter();
 
@@ -40,13 +43,18 @@ const handleClick =()=>{
 
 const toggleThemeMenu =() =>{
   theme ==="light"?setTheme("dark"):setTheme("light");
-  theme ==="light"?setObjTheme("dark"):setObjTheme("light");
+
   setOpen(false);
 }
 
+useEffect(() => {
+  theme === "light" ? setObjTheme("dark") : setObjTheme("light");
+
+},[theme]);
+
 const changeTheme=()=>{
   theme === "light" ? setTheme("dark") : setTheme("light")
-  theme ==="light"?setObjTheme("dark"):setObjTheme("light");
+
 }
 
   return (
@@ -151,7 +159,7 @@ const changeTheme=()=>{
  
                 <div className="hidden md:flex w-12 cursor-pointer   items-center justify-center"
                 onClick={()=>changeTheme()}
-                >{objTheme === "dark" ? (<FaMoon/>) : (<FaSun/>) }</div>
+                >{ objTheme === "dark" ? (<div>aaa</div>) : (<div>bbb</div>) }</div>
                 <div className="md:hidden px-3">  <IoMdContact/></div>
                 <div className="hidden items-center justify-center md:flex flex-row-reverse gap-1 px-1 cursor-pointer mx-3"> 
                   <div>ورود</div>

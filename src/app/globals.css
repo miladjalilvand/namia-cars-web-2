@@ -15,8 +15,8 @@
 }
 
 [data-theme='dark'] {
-  --background: rgb(32, 31, 31);
-  --foreground: rgb(255, 255, 255);
+  --background: #333333;
+  --foreground: #e4e4e4;
   --primary: #f647c2;    /* رنگ اصلی در حالت تاریک */
   --secondary: #6c9bff;  /* رنگ ثانویه در حالت تاریک */
   --danger: #dc2626; 
