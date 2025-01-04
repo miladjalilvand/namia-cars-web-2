@@ -51,7 +51,7 @@ export default function GalleryPage() {
                 className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-                <p className="text-white text-sm font-bold">View Details</p>
+                <p className="text-white text-sm font-bold">نمایش</p>
               </div>
             </div>
           ))}

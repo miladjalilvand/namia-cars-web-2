@@ -9,6 +9,7 @@ import ModalWithTabs from './tabModal';
 import ButtonContact from "./buttonContact";
 
 import { FaMoon,FaSun } from "react-icons/fa";
+import Image from "next/image";
 
 const links = [
   { name: "خانه", url: "/" },
@@ -149,7 +150,15 @@ const changeTheme=()=>{
             {  (isOpen && <div onClick={() => handleClick()} className="fixed md:w-screen z-30 md:h-screen bg-black opacity-70"></div>)}
               <div className="flex flex-row justify-between  mr-12 h-full ">
 
-                <div className="border-r-3 border-foreground-100">a</div>
+                <div className="relative border-r-3 border h-9 w-9 border-foreground-100">
+                <Image 
+                  alt="logo"
+                   src={'/assets/logo.jpg'}
+                  fill 
+                  style={{objectFit:"scale-down"}}
+                 
+                  />
+                </div>
                 <div className="flex flex-row-reverse items-center ">
 
                 <div className='h-full w-9 bg-redc cursor-pointer' >
