@@ -15,7 +15,10 @@ const links = [
   { name: "محصولات", url: "/products" },
   { name: "شرایط فروش", url: "/terms-of-sale" },
   { name: "قطعات", url: "/shop" },
-  { name: "تماس با ما ", url: "contact" }
+  { name: "تماس با ما ", url: "/contact" },
+  { name: "  گالری ", url: "/gallery" },
+  { name: "  کاتالوگ ", url: "/catalogs" },
+  { name: "  تور مجازی  ", url: "/pana" }
 ];
 
 export default function NavbarCustom(){
