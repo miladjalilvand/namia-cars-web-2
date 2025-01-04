@@ -28,7 +28,7 @@ const Page = () => {
 در تمامی روزهای تعطیل نمایندگی مدیران خودرو ۳۵۰ فعال و جهت تست درایو خودروهای MVM و CHERY در خدمت مشتریان عزیز می باشد.
 در صورت تمایل به شرکت در این برنامه خواهشمندیم فرم پیوست را بدقت تکمیل نمایید. </div>
 </div>
-<FooterPages scrollDisabled={true} tab={3}  /> 
+<FooterPages scrollDisabled={true} tab={2}  /> 
         </div>
     );
 };

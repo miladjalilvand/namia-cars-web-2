@@ -60,7 +60,17 @@ const changeTheme=()=>{
   theme === "light" ? setTheme("dark") : setTheme("light")
 
 }
+useEffect(() => {
+  if (isOpen) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "auto";
+  }
 
+  return () => {
+    document.body.style.overflow = "scroll";
+  };
+}, [isOpen]);
   return (
     <div className="fixed flex-row w-full z-40 h-9 bg-background  shadow-foreground-200 shadow-sm ">
 
@@ -98,7 +108,7 @@ const changeTheme=()=>{
              transition={{ duration: 0.5, ease: "circInOut" }}
         
              className="fixed z-40 flex flex-col justify-between
-              w-full bg-redc opacity-90 min-h-screen md:w-1/3">
+             w-full bg-redc opacity-90 min-h-screen md:w-1/3 overflow-y-auto max-h-screen">
                 <div className="flex-col">
                   
                   <div  className="flex flex-row-2 justify-between md:hidden ">
@@ -178,7 +188,7 @@ const changeTheme=()=>{
                   <div>ورود</div>
                   <IoMdContact/>
                    </div>
-                <div className="rounded-sm text-txtl bg-redc cursor-pointer text-xxs px-3 py-1">طرح تعویض</div>
+                <div onClick={()=>pushin('/exchange')} className="rounded-sm text-txtl bg-redc cursor-pointer text-xxs px-3 py-1">طرح تعویض</div>
                 </div>
 
               </div>

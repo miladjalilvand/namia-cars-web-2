@@ -27,7 +27,7 @@ const Page = () => {
  جهت استفاده از طرح تعویض خودرو اطلاعات خود را ثبت کرده تا کارشناسان ما در اسرع وقت با شما تماس بگیرند.
  </div>
 </div>
-<FooterPages scrollDisabled={true} tab={2}  /> 
+<FooterPages scrollDisabled={true} tab={3}  /> 
         </div>
     );
 };
