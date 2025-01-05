@@ -1,11 +1,13 @@
 "use client";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Dialog } from "@headlessui/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import { motion, AnimatePresence } from "framer-motion";
 import TabScreen from "./tabScreenContact";
 import { FaTwitter, FaInstagram, FaLinkedin, FaRegWindowClose } from "react-icons/fa";
+import { useBusiness } from "../providers/businessContext";
+import BranchDetails from "./newC/tabAddresses";
 
 const myTabData = [
   { title: "Item 1", subtitle: "Subtitle for Item 1", number: 1 },
@@ -14,8 +16,12 @@ const myTabData = [
 ];
 
 export default function ModalWithTabs({ isOpen, onClose }) {
+
   const [activeTab, setActiveTab] = useState(0);
+  const [tabsdata , setTabData]=useState();
   const swiperRef = useRef(null);
+
+  const businessData = useBusiness();
 
   const tabs = ["واحد فروش", "واحد خدمات", "واحد قطعات"];
 
@@ -23,6 +29,14 @@ export default function ModalWithTabs({ isOpen, onClose }) {
     setActiveTab(index);
     swiperRef.current.swiper.slideTo(index);
   };
+
+  useEffect(()=>{
+    console.log("hello from here");
+    console.log(businessData.data.addresses);
+    setTabData(businessData.data.addresses);
+
+
+  },[]);
 
   return (
     <AnimatePresence>
@@ -67,7 +81,7 @@ export default function ModalWithTabs({ isOpen, onClose }) {
                 </div>
 
                 <div className="flex justify-center space-x-4 mb-4">
-                  {tabs.map((tab, index) => (
+                  {tabsdata.map((tab, index) => (
                     <button
                       className="hover:bg-red-100"
                       key={index}
@@ -77,7 +91,7 @@ export default function ModalWithTabs({ isOpen, onClose }) {
                         borderBottom: activeTab === index ? "2px solid #3B82F6" : "none",
                       }}
                     >
-                      {tab}
+                      {tab.title}
                     </button>
                   ))}
                 </div>
@@ -90,21 +104,18 @@ export default function ModalWithTabs({ isOpen, onClose }) {
                   slidesPerView={1}
                   ref={swiperRef}
                 >
-                  <SwiperSlide>
-                    <TabScreen title="My Tabs" list={myTabData} />
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <TabScreen title="My Tabs" list={myTabData} />
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <TabScreen title="My Tabs" list={myTabData} />
-                  </SwiperSlide>
+                 {tabsdata.map((val, ind) => (
+  <SwiperSlide key={ind}>
+    <BranchDetails data={val} />
+  </SwiperSlide>
+))}
+
                 </Swiper>
               </div>
 
-              <div className="bottom-0 bg-slate-600 w-full text-center">
+              {/* <div className="bottom-0 bg-slate-600 w-full text-center">
                 Footer
-              </div>
+              </div> */}
             </Dialog.Panel>
           </motion.div>
         </Dialog>
