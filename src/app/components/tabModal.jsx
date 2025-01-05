@@ -4,23 +4,14 @@ import { Dialog } from "@headlessui/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import { motion, AnimatePresence } from "framer-motion";
-import TabScreen from "./tabScreenContact";
 import { FaTwitter, FaInstagram, FaLinkedin, FaRegWindowClose } from "react-icons/fa";
 import { useBusiness } from "../providers/businessContext";
 import BranchDetails from "./newC/tabAddresses";
 
-const myTabData = [
-  { title: "Item 1", subtitle: "Subtitle for Item 1", number: 1 },
-  { title: "Item 2", subtitle: "Subtitle for Item 2", number: 2 },
-  { title: "Item 3", subtitle: "Subtitle for Item 3", number: 3 },
-];
-
 export default function ModalWithTabs({ isOpen, onClose }) {
-
   const [activeTab, setActiveTab] = useState(0);
-  const [tabsdata , setTabData]=useState();
+  const [tabsdata, setTabData] = useState([]);
   const swiperRef = useRef(null);
-
   const businessData = useBusiness();
 
   const tabs = ["واحد فروش", "واحد خدمات", "واحد قطعات"];
@@ -30,13 +21,11 @@ export default function ModalWithTabs({ isOpen, onClose }) {
     swiperRef.current.swiper.slideTo(index);
   };
 
-  useEffect(()=>{
-    console.log("hello from here");
-    console.log(businessData.data.addresses);
-    setTabData(businessData.data.addresses);
-
-
-  },[]);
+  useEffect(() => {
+    if (businessData.data?.addresses) {
+      setTabData(businessData.data.addresses);
+    }
+  }, [businessData]);
 
   return (
     <AnimatePresence>
@@ -44,7 +33,7 @@ export default function ModalWithTabs({ isOpen, onClose }) {
         <Dialog open={isOpen} onClose={onClose} className="fixed inset-0 z-50 flex items-center justify-center p-4">
           {/* Overlay for background shadow */}
           <motion.div
-          onClick={onClose}
+            onClick={onClose}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -60,7 +49,7 @@ export default function ModalWithTabs({ isOpen, onClose }) {
           >
             <Dialog.Panel
               className="p-6 md:max-w-lg w-screen md:w-full h-screen md:h-4/5 
-              rounded shadow-lg relative bg-background flex flex-col justify-between"
+              rounded shadow-lg relative bg-background flex flex-col justify-between overflow-y-auto" // Allow scrolling in the modal panel
             >
               <div>
                 <div className="flex flex-row justify-between items-center">
@@ -81,9 +70,9 @@ export default function ModalWithTabs({ isOpen, onClose }) {
                 </div>
 
                 <div className="flex justify-center space-x-4 mb-4">
-                  {tabsdata.map((tab, index) => (
+                  {tabsdata.length > 0 && tabsdata.map((tab, index) => (
                     <button
-                      className="hover:bg-red-100"
+                      className=""
                       key={index}
                       onClick={() => handleTabClick(index)}
                       style={{
@@ -104,18 +93,13 @@ export default function ModalWithTabs({ isOpen, onClose }) {
                   slidesPerView={1}
                   ref={swiperRef}
                 >
-                 {tabsdata.map((val, ind) => (
-  <SwiperSlide key={ind}>
-    <BranchDetails data={val} />
-  </SwiperSlide>
-))}
-
+                  {tabsdata.length > 0 && tabsdata.map((val, ind) => (
+                    <SwiperSlide key={ind}>
+                      <BranchDetails data={val} />
+                    </SwiperSlide>
+                  ))}
                 </Swiper>
               </div>
-
-              {/* <div className="bottom-0 bg-slate-600 w-full text-center">
-                Footer
-              </div> */}
             </Dialog.Panel>
           </motion.div>
         </Dialog>

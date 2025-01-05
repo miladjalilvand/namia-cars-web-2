@@ -8,7 +8,7 @@ const BranchDetails = ({ data }) => {
   const { title, lat, lng, address, mobiles, phones, is_open, schedules } = data;
 
   return (
-    <div className="p-4 rounded shadow-md  ">
+    <div className="flex flex-col overflow-y-scroll  p-4 rounded shadow-md  ">
       <h2 className="text-2xl font-bold mb-4">{title}</h2>
       <div className="mb-4">
         <p className="">آدرس: {address}</p>
