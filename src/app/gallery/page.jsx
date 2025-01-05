@@ -13,7 +13,7 @@ export default function GalleryPage() {
     try {
       const response = await fetch("https://namya.ir/api/v3/posts?business_id=1165");
       const data = await response.json();
-      setData(data.data);  // Set the data once
+      setData(data.data); // Set the data once
     } catch (error) {
       console.error("Error fetching data:", error);
     }
@@ -24,21 +24,19 @@ export default function GalleryPage() {
   }, []);
 
   useEffect(() => {
-    // console.log("hello"+datas.length);
     if (datas.length > 0) {
-      const imagesP =   datas[0].media_files.map((data) => ({
-          original: data.original,
-          thumbnail: data.thumbnail
-        }));
-        
-    //   const images = datas.media_files.map((data) => ({
-        
-    //     original: data.media_files,
-    //     thumbnail: data.name,
-    //     // description: data.title,
-    //   }));
+      const imagesP = datas.flatMap((val) =>
+        val.media_files
+          ? val.media_files
+              .filter((data) => data.type === "IMAGE") // Only keep image types
+              .map((data) => ({
+                original: data.original,
+                thumbnail: data.thumbnail,
+              }))
+          : []
+      );
       setImages(imagesP);
-      setLoading(false);  // Set loading to false after data is processed
+      setLoading(false); // Set loading to false after data is processed
     }
   }, [datas]);
 
@@ -48,7 +46,7 @@ export default function GalleryPage() {
       {loading ? (
         <p>Loading...</p>
       ) : (
-        <ImageGallery lazyLoad items={images} />
+        <ImageGallery lazyLoad items={images} disableThumbnailScroll={false} slideOnThumbnailOver={true} isRTL={true}  />
       )}
     </div>
   );

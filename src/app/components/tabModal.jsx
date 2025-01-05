@@ -14,7 +14,7 @@ export default function ModalWithTabs({ isOpen, onClose }) {
   const swiperRef = useRef(null);
   const businessData = useBusiness();
 
-  const tabs = ["واحد فروش", "واحد خدمات", "واحد قطعات"];
+
 
   const handleTabClick = (index) => {
     setActiveTab(index);

@@ -7,6 +7,7 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import "swiper/css";
 import { motion } from "framer-motion";
 import MotD from "./ItemHome";
+import { useBusiness } from "../providers/businessContext";
 
 const images = [
   "/assets/1.jpg",
@@ -17,6 +18,16 @@ const images = [
 
 export default function ImageSlider() {
   const [currentImage, setCurrentImage] = useState(0);
+
+const [imagesBanner,setImageBanner]=useState([]);
+
+const businessData = useBusiness();
+
+useEffect(()=>{
+  setImageBanner(businessData?.data?.banners);
+},[]);
+
+
   const swiperRef = useRef(null);
 
   // Auto slide every 5 seconds
@@ -65,13 +76,13 @@ export default function ImageSlider() {
           onSlideChange={(swiper) => setCurrentImage(swiper.activeIndex)}
           loop={true}
         >
-          {images.map((img, index) => (
+          {imagesBanner.map((img, index) => (
             <SwiperSlide key={index}>
               <Image
-                src={img}
+                src={img.image}
                 alt={`تصویر ${index + 1}`}
                 width={10000}
-                height={240}
+                height={500}
                 style={{ objectFit: "cover", height: "100%", width: "100%" }}
                 priority
               />
