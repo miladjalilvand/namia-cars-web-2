@@ -9,12 +9,6 @@ import { motion } from "framer-motion";
 import MotD from "./ItemHome";
 import { useBusiness } from "../providers/businessContext";
 
-const images = [
-  "/assets/1.jpg",
-  "/assets/2.jpg",
-  "/assets/3.jpg",
-  "/assets/4.jpg",
-];
 
 export default function ImageSlider() {
   const [currentImage, setCurrentImage] = useState(0);
@@ -43,7 +37,7 @@ useEffect(()=>{
   const nextImage = () => {    
     if (swiperRef.current && swiperRef.current.swiper) {
       swiperRef.current.swiper.slideNext();
-      if (currentImage === images.length - 1) {
+      if (currentImage === imagesBanner.length - 1) {
       setCurrentImage(0); // Reset to the first image
     } else {
       setCurrentImage(currentImage + 1); // Move to the next image
@@ -67,8 +61,8 @@ useEffect(()=>{
   };
 
   return (
-    <div className="flex flex-col md:flex-row justify-center items-center md:mt-0">
-      <div className="relative h-2/3 w-full md:w-1/2 md:h-1/2 cursor-pointer">
+    <div className="flex flex-col md:flex-row justify-center items-center md:mt-0  ">
+      <div className="relative h-2/3 w-full md:w-1/2 md:h-1/2 cursor-pointer ">
         <Swiper
           ref={swiperRef}
           slidesPerView={1}
@@ -76,17 +70,20 @@ useEffect(()=>{
           onSlideChange={(swiper) => setCurrentImage(swiper.activeIndex)}
           loop={true}
         >
+       
           {imagesBanner.map((img, index) => (
-            <SwiperSlide key={index}>
+         <SwiperSlide key={index}> <div className="  h-72 bg-black ">
+
+            
               <Image
                 src={img.image}
                 alt={`تصویر ${index + 1}`}
-                width={10000}
-                height={500}
-                style={{ objectFit: "cover", height: "100%", width: "100%" }}
+                layout="fill"
+                objectFit="cover"  // Use cover to make images fit
+                objectPosition="center"  // Center the image
                 priority
               />
-            </SwiperSlide>
+            </div></SwiperSlide>
           ))}
         </Swiper>
         <div className="absolute bottom-0 left-0 flex z-20">
@@ -106,6 +103,7 @@ useEffect(()=>{
       </div>
       <div className="flex md:w-1/7 h-full items-center justify-center pt-1">
         <CursorImage
+        ib={imagesBanner}
           currentIndex={currentImage}
           onCircleClick={handleCircleClick}
         />
@@ -121,10 +119,10 @@ useEffect(()=>{
 function Title({ value }) {
   return <MotD params={value} key={value} />;
 }
-function CursorImage({ currentIndex, onCircleClick }) {
+function CursorImage({ currentIndex, onCircleClick , ib }) {
   return (
     <ul className="flex flex-row md:flex-col -space-x-px justify-center items-center p-6">
-      {images.map((_, ind) => (
+      {ib.map((_, ind) => (
         <li key={ind}>
           <div
             onClick={() => onCircleClick(ind)}
