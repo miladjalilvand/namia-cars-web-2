@@ -4,7 +4,7 @@ import { Dialog } from "@headlessui/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaTwitter, FaInstagram, FaLinkedin, FaRegWindowClose } from "react-icons/fa";
+import { FaWhatsapp, FaInstagram, FaLinkedin, FaRegWindowClose } from "react-icons/fa";
 import { useBusiness } from "../providers/businessContext";
 import BranchDetails from "./newC/tabAddresses";
 
@@ -59,13 +59,13 @@ export default function ModalWithTabs({ isOpen, onClose }) {
                   <div className="flex flex-row space-x-2">
                     <button className="absolute top-2 left-2">
                       <FaInstagram />
+                      {/* {businessData?.data?.instagram} */}
                     </button>
                     <button className="absolute top-2 left-6">
-                      <FaTwitter />
+                      <FaWhatsapp />
+                      {/* {businessData?.data?.whatsapp} */}
                     </button>
-                    <button className="absolute top-2 left-12">
-                      <FaLinkedin />
-                    </button>
+                   
                   </div>
                 </div>
 
