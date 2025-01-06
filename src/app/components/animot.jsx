@@ -30,7 +30,7 @@ if(indexColor !== selectedColor){
     setSelectedColor(indexColor);
     setRotation(false);
     setIsMoving(false);
-  }, 2000);
+  }, 300);
 }
 };
 
@@ -42,15 +42,21 @@ if(colorPicked != color){
     setColor(colorPicked); // انتخاب رنگ جدید
     setRotation(false);
     setIsMoving(false);
-  }, 2000);
+  }, 300);
 }
   };
+
+  const handleSetCar = (ind) => {
+    setCarSelected(ind);
+    setSelectedColor(0);
+
+  }
 
   return (
     <div className=" hidden md:flex flex-col h-screen justify-center items-center ">
 <div className="flex flex-row  gap-6 py-2">
   {cars.map((val, ind) => (
-    <div onClick={()=>setCarSelected(ind)} key={ind} className={`${selectedCar === ind && "border-5"}  border border-gray-400  rounded-md py-2 px-4 cursor-pointer hover:bg-gray-400 backdrop-opacity-40`}>
+    <div onClick={()=>handleSetCar(ind)} key={ind} className={`${selectedCar === ind && "border-5"}  border border-gray-400  rounded-md py-2 px-4 cursor-pointer hover:bg-gray-400 backdrop-opacity-40`}>
       {val.name}
     </div>
   ))}

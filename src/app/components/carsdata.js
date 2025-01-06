@@ -43,30 +43,30 @@ const cars = [
       {
         color: "black",
         hex: "#000000",
-        url: "/assets/cars/tiggo8proeplus/tiggo8proeplusblack.jpg"
+        url: "/assets/cars/Tiggo8PROEPLUS/PCTiggo8PROEPLUSblack.png"
       },
       {
-        color: "white",
-        hex: "#FFFFFF",
-        url: "/assets/cars/tiggo8proeplus/tiggo8proepluswhite.jpg"
+        color: "purple",
+        hex: "#3b2063",
+        url: "/assets/cars/Tiggo8PROEPLUS/PCTiggo8PROEPLUSpurple.png"
       },
       {
         color: "red",
         hex: "#FF0000",
-        url: "/assets/cars/tiggo8proeplus/tiggo8proeplusred.jpg"
+        url: "/assets/cars/Tiggo8PROEPLUS/PCTiggo8PROEPLUSred.png"
       },
       {
         color: "blue",
         hex: "#0000FF",
-        url: "/assets/cars/tiggo8proeplus/tiggo8proeplusblue.jpg"
+        url: "/assets/cars/Tiggo8PROEPLUS/PCTiggo8PROEPLUSblue.png"
       },
       {
-        color: "orange",
-        hex: "#FFA500",
-        url: "/assets/cars/tiggo8proeplus/tiggo8proeplusorange.jpg"
+        color: "grey",
+        hex: "#858585",
+        url: "/assets/cars/Tiggo8PROEPLUS/PCTiggo8PROEPLUSgrey.png"
       }
     ],
-    wheel: "/assets/cars/tiggo8proeplus/tiggo8proepluswheel.jpg"
+    wheel: "/assets/cars/Tiggo8PROEPLUS/PCTiggo8PROEPLUSwheel.png"
   },
   {
     name: "آریزو 5 توربو اس",
@@ -75,30 +75,35 @@ const cars = [
       {
         color: "black",
         hex: "#000000",
-        url: "/assets/cars/arizo5turbo/arizo5turbo_black.jpg"
+        url: "/assets/cars/arrizo5TurboS/PCArrizo5TurboSblack.png"
       },
       {
         color: "white",
         hex: "#FFFFFF",
-        url: "/assets/cars/arizo5turbo/arizo5turbo_white.jpg"
+        url: "/assets/cars/arrizo5TurboS/PCArrizo5TurboSwhite.png"
       },
       {
         color: "red",
         hex: "#FF0000",
-        url: "/assets/cars/arizo5turbo/arizo5turbo_red.jpg"
+        url: "/assets/cars/arrizo5TurboS/PCArrizo5TurboSred.png"
+      },
+      {
+        color: "brown",
+        hex: "#141210",
+        url: "/assets/cars/arrizo5TurboS/PCArrizo5TurboSbrown.png"
       },
       {
         color: "blue",
-        hex: "#0000FF",
-        url: "/assets/cars/arizo5turbo/arizo5turbo_blue.jpg"
+        hex: "#1b36d1",
+        url: "/assets/cars/arrizo5TurboS/PCArrizo5TurboSblue.png"
       },
       {
-        color: "orange",
-        hex: "#FFA500",
-        url: "/assets/cars/arizo5turbo/arizo5turbo_orange.jpg"
+        color: "grey",
+        hex: "#858585",
+        url: "/assets/cars/arrizo5TurboS/PCArrizo5TurboSgrey.png"
       }
     ],
-    wheel: "/assets/cars/arizo5turbo/arizo5turbo_wheel.jpg"
+    wheel: "/assets/cars/arrizo5TurboS/PCArrizo5TurboSwheel.png"
   },
   {
     name: "ایکس 33 کراس",
@@ -107,30 +112,40 @@ const cars = [
       {
         color: "black",
         hex: "#000000",
-        url: "/assets/cars/x33cross/x33crossblack.jpg"
+        url: "/assets/cars/X33CROSS/PCX33CROSSblack.png"
       },
       {
-        color: "white",
-        hex: "#FFFFFF",
-        url: "/assets/cars/x33cross/x33crosswhite.jpg"
+        color: "blue-gray",
+        hex: "#9096ab",
+        url: "/assets/cars/X33CROSS/PCX33CROSSblue-grey.png"
+      },
+      {
+        color: "green",
+        hex: "#2eab5c",
+        url: "/assets/cars/X33CROSS/PCX33CROSSgreen.png"
       },
       {
         color: "red",
         hex: "#FF0000",
-        url: "/assets/cars/x33cross/x33crossred.jpg"
+        url: "/assets/cars/X33CROSS/PCX33CROSSred.png"
       },
       {
         color: "blue",
         hex: "#0000FF",
-        url: "/assets/cars/x33cross/x33crossblue.jpg"
+        url: "/assets/cars/X33CROSS/PCX33CROSSblue.png"
       },
       {
         color: "orange",
         hex: "#FFA500",
-        url: "/assets/cars/x33cross/x33crossorange.jpg"
+        url: "/assets/cars/X33CROSS/PCX33CROSSorange.png"
+      },
+      {
+        color: "grey",
+        hex: "#4e4f52",
+        url: "/assets/cars/X33CROSS/PCX33CROSSgrey.png"
       }
     ],
-    wheel: "/assets/cars/x33cross/x33crosswheel.jpg"
+    wheel: "/assets/cars/X33CROSS/PCX33CROSSwheel.png"
   },
   {
     name: "ایکس ۵۵ پرو",
@@ -139,30 +154,30 @@ const cars = [
       {
         color: "black",
         hex: "#000000",
-        url: "/assets/cars/x55pro/x55problack.jpg"
+        url: "/assets/cars/X55PRO/PCX55PROblack.png"
       },
       {
         color: "white",
         hex: "#FFFFFF",
-        url: "/assets/cars/x55pro/x55prowhite.jpg"
+        url: "/assets/cars/X55PRO/PCX55PROwhite.png"
       },
       {
         color: "red",
         hex: "#FF0000",
-        url: "/assets/cars/x55pro/x55prored.jpg"
+        url: "/assets/cars/X55PRO/PCX55PROred.png"
       },
       {
         color: "blue",
         hex: "#0000FF",
-        url: "/assets/cars/x55pro/x55problue.jpg"
+        url: "/assets/cars/X55PRO/PCX55PROblue.png"
       },
       {
-        color: "orange",
-        hex: "#FFA500",
-        url: "/assets/cars/x55pro/x55proorange.jpg"
+        color: "grey",
+        hex: "#4e4f52",
+        url: "/assets/cars/X55PRO/PCX55PROgrey.png"
       }
     ],
-    wheel: "/assets/cars/x55pro/x55prowheel.jpg"
+    wheel: "/assets/cars/X55PRO/PCX55PROwheel.png"
   },
   {
     name: "تیگو ۸ پرو",
@@ -171,30 +186,36 @@ const cars = [
       {
         color: "black",
         hex: "#000000",
-        url: "/assets/cars/tiggo8pro/tiggo8problack.jpg"
+        url: "/assets/cars/tiggo8pro/PCTiggo8PROblack.png"
       },
       {
         color: "white",
         hex: "#FFFFFF",
-        url: "/assets/cars/tiggo8pro/tiggo8prowhite.jpg"
+        url: "/assets/cars/tiggo8pro/PCTiggo8PROwhite.png"
       },
       {
         color: "red",
         hex: "#FF0000",
-        url: "/assets/cars/tiggo8pro/tiggo8prored.jpg"
+        url: "/assets/cars/tiggo8pro/PCTiggo8PROred.png"
       },
       {
         color: "blue",
         hex: "#0000FF",
-        url: "/assets/cars/tiggo8pro/tiggo8problue.jpg"
+        url: "/assets/cars/tiggo8pro/PCTiggo8PROblue.png"
       },
       {
-        color: "orange",
-        hex: "#FFA500",
-        url: "/assets/cars/tiggo8pro/tiggo8proorange.jpg"
-      }
+        color: "purple",
+        hex: "#3b2063",
+        url: "/assets/cars/tiggo8pro/PCTiggo8PROpurple.png"
+      },
+      {
+        color: "grey",
+        hex: "#4e4f52",
+        url: "/assets/cars/tiggo8pro/PCTiggo8PROgrey.png"
+      },
+      
     ],
-    wheel: "/assets/cars/tiggo8pro/tiggo8prowheel.jpg"
+    wheel: "/assets/cars/Tiggo8PRO/PCTiggo8PROwheel.png"
   },
   {
     name: "تیگو ۷ پرو",
@@ -203,30 +224,40 @@ const cars = [
       {
         color: "black",
         hex: "#000000",
-        url: "/assets/cars/tiggo7pro/tiggo7problack.jpg"
+        url: "/assets/cars/Tiggo7PRO/PCTiggo7PROblack.png"
       },
       {
         color: "white",
         hex: "#FFFFFF",
-        url: "/assets/cars/tiggo7pro/tiggo7prowhite.jpg"
+        url: "/assets/cars/Tiggo7PRO/PCTiggo7PROwhite.png"
       },
       {
         color: "red",
         hex: "#FF0000",
-        url: "/assets/cars/tiggo7pro/tiggo7prored.jpg"
+        url: "/assets/cars/Tiggo7PRO/PCTiggo7PROred.png"
       },
       {
         color: "blue",
         hex: "#0000FF",
-        url: "/assets/cars/tiggo7pro/tiggo7problue.jpg"
+        url: "/assets/cars/Tiggo7PRO/PCTiggo7PROblue.png"
       },
       {
         color: "orange",
         hex: "#FFA500",
-        url: "/assets/cars/tiggo7pro/tiggo7proorange.jpg"
+        url: "/assets/cars/Tiggo7PRO/PCTiggo7PROorange.png"
+      },
+      {
+        color: "grey",
+        hex: "#0000FF",
+        url: "/assets/cars/Tiggo7PRO/PCTiggo7PROgrey.png"
+      },
+      {
+        color: "ligh-blue",
+        hex: "#FFA500",
+        url: "/assets/cars/Tiggo7PRO/PCTiggo7PROlight-blue.png"
       }
     ],
-    wheel: "/assets/cars/tiggo7pro/tiggo7prowheel.jpg"
+    wheel: "/assets/cars/tiggo7pro/PCTiggo7PROwheel.png"
   },
   {
     name: "تیگو ۷",
@@ -235,30 +266,40 @@ const cars = [
       {
         color: "black",
         hex: "#000000",
-        url: "/assets/cars/tiggo7/tiggo7black.jpg"
+        url: "/assets/cars/Tiggo7/PCTiggo7black.png"
       },
       {
         color: "white",
         hex: "#FFFFFF",
-        url: "/assets/cars/tiggo7/tiggo7white.jpg"
+        url: "/assets/cars/Tiggo7/PCTiggo7white.png"
       },
       {
         color: "red",
         hex: "#FF0000",
-        url: "/assets/cars/tiggo7/tiggo7red.jpg"
+        url: "/assets/cars/Tiggo7/PCTiggo7red.png"
       },
       {
         color: "blue",
         hex: "#0000FF",
-        url: "/assets/cars/tiggo7/tiggo7blue.jpg"
+        url: "/assets/cars/Tiggo7/PCTiggo7blue.png"
       },
       {
         color: "orange",
         hex: "#FFA500",
-        url: "/assets/cars/tiggo7/tiggo7orange.jpg"
-      }
+        url: "/assets/cars/Tiggo7/PCTiggo7orange.png"
+      },
+      {
+        color: "green",
+        hex: "#2eab5c",
+        url: "/assets/cars/Tiggo7/PCTiggo7green.png"
+      },
+      {
+        color: "grey",
+        hex: "#0000FF",
+       url: "/assets/cars/Tiggo7/PCTiggo7grey.png"
+      },
     ],
-    wheel: "/assets/cars/tiggo7/tiggo7wheel.jpg"
+    wheel: "/assets/cars/Tiggo7/PCTiggo7wheel.png"
   },
   {
     name: "ایکس ۳۳",
@@ -267,30 +308,35 @@ const cars = [
       {
         color: "black",
         hex: "#000000",
-        url: "/assets/cars/x33/x33black.jpg"
+        url: "/assets/cars/X33S/PCX33Sblack.png"
       },
       {
         color: "white",
         hex: "#FFFFFF",
-        url: "/assets/cars/x33/x33white.jpg"
+        url: "/assets/cars/X33S/PCX33Swhite.png"
       },
       {
         color: "red",
         hex: "#FF0000",
-        url: "/assets/cars/x33/x33red.jpg"
+        url: "/assets/cars/X33S/PCX33Sred.png"
       },
       {
         color: "blue",
         hex: "#0000FF",
-        url: "/assets/cars/x33/x33blue.jpg"
+        url: "/assets/cars/X33S/PCX33Sblue.png"
       },
       {
         color: "orange",
         hex: "#FFA500",
-        url: "/assets/cars/x33/x33orange.jpg"
-      }
+        url: "/assets/cars/X33S/PCX33Sorange.png"
+      },
+      {
+        color: "green",
+        hex: "#2eab5c",
+           url: "/assets/cars/X33S/PCX33Sgreen.png"
+      },
     ],
-    wheel: "/assets/cars/x33/x33wheel.jpg"
+    wheel: "/assets/cars/X33S/PCX33Swheel.png"
   },
   {
     name: "ایکس ۲۲ پرو",
@@ -299,30 +345,45 @@ const cars = [
       {
         color: "black",
         hex: "#000000",
-        url: "/assets/cars/x22pro/x22problack.jpg"
+        url: "/assets/cars/X22PRO/PCX22PROblack.png"
+      },
+      {
+        color: "blue-gray",
+        hex: "#9096ab",
+        url: "/assets/cars/X22PRO/PCX22PROblue-grey.png"
+      },
+      {
+        color: "grey",
+        hex: "#0000FF",
+       url: "/assets/cars/X22PRO/PCX22PROgrey.png"
+      },
+      {
+        color: "green",
+        hex: "#2eab5c",
+           url: "/assets/cars/X22PRO/PCX22PROgreen.png"
       },
       {
         color: "white",
         hex: "#FFFFFF",
-        url: "/assets/cars/x22pro/x22prowhite.jpg"
+        url: "/assets/cars/X22PRO/PCX22PROwhite.png"
       },
       {
         color: "red",
         hex: "#FF0000",
-        url: "/assets/cars/x22pro/x22prored.jpg"
+        url: "/assets/cars/X22PRO/PCX22PROred.png"
       },
       {
         color: "blue",
         hex: "#0000FF",
-        url: "/assets/cars/x22pro/x22problue.jpg"
+        url: "/assets/cars/X22PRO/PCX22PROblue.png"
       },
       {
         color: "orange",
         hex: "#FFA500",
-        url: "/assets/cars/x22pro/x22proorange.jpg"
+        url: "/assets/cars/X22PRO/PCX22PROorange.png"
       }
     ],
-    wheel: "/assets/cars/x22pro/x22prowheel.jpg"
+    wheel: "/assets/cars/X22PRO/PCX22PROwheel.png"
   },
   {
     name: "ایکس ۲۲ B",
@@ -331,30 +392,45 @@ const cars = [
       {
         color: "black",
         hex: "#000000",
-        url: "/assets/cars/x22b/x22bblack.jpg"
+        url: "/assets/cars/x22/PCX22black.png"
+      },
+      {
+        color: "blue-gray",
+        hex: "#9096ab",
+        url: "/assets/cars/x22/PCX22blue-grey.png"
+      },
+      {
+        color: "grey",
+        hex: "#0000FF",
+       url: "/assets/cars/x22/PCX22grey.png"
+      },
+      {
+        color: "green",
+        hex: "#2eab5c",
+           url: "/assets/cars/x22/PCX22green.png"
       },
       {
         color: "white",
         hex: "#FFFFFF",
-        url: "/assets/cars/x22b/x22bwhite.jpg"
+        url: "/assets/cars/x22/PCX22white.png"
       },
       {
         color: "red",
         hex: "#FF0000",
-        url: "/assets/cars/x22b/x22bred.jpg"
+        url: "/assets/cars/x22/PCX22red.png"
       },
       {
         color: "blue",
         hex: "#0000FF",
-        url: "/assets/cars/x22b/x22bblue.jpg"
+        url: "/assets/cars/x22/PCX22blue.png"
       },
       {
         color: "orange",
         hex: "#FFA500",
-        url: "/assets/cars/x22b/x22borange.jpg"
+        url: "/assets/cars/x22/PCX22orange.png"
       }
     ],
-    wheel: "/assets/cars/x22b/x22bwheel.jpg"
+    wheel: "/assets/cars/x22/PCX22wheel.png"
   }
 ];
 
