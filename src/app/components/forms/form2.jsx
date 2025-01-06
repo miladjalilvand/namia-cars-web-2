@@ -1,3 +1,4 @@
+//test-drive
 import { Form, Input, Button, Select, SelectItem } from "@nextui-org/react";
 import { useState } from "react";
 
@@ -40,20 +41,23 @@ const Form2 = () => {
       <Form onSubmit={handleForm2} className="space-y-4 ">
         {/* نام */}
         <Input
+        className="text-red-900"
           isRequired
-          label="نام"
+          
+          label=""
           labelPlacement="outside"
           name="firstName"
           placeholder="نام خود را وارد کنید"
           type="text"
           validationState={errors.firstName ? "invalid" : "valid"}
           errorMessage={errors.firstName}
+         
         />
 
         {/* نام خانوادگی */}
         <Input
           isRequired
-          label="نام خانوادگی"
+          label=" "
           labelPlacement="outside"
           name="lastName"
           placeholder="نام خانوادگی خود را وارد کنید"
@@ -65,7 +69,7 @@ const Form2 = () => {
         {/* موبایل */}
         <Input
           isRequired
-          label="موبایل"
+          label=""
           labelPlacement="outside"
           name="mobile"
           placeholder="شماره موبایل خود را وارد کنید"
@@ -77,7 +81,7 @@ const Form2 = () => {
         {/* نام خودرو */}
         <Input
           isRequired
-          label="نام خودرو"
+          label=" "
           labelPlacement="outside"
           name="car"
           placeholder="نام خودرو را وارد کنید"
@@ -89,7 +93,7 @@ const Form2 = () => {
         {/* گواهینامه */}
         <Select
           isRequired
-          label="گواهینامه"
+          label=""
           placeholder="وضعیت گواهینامه را انتخاب کنید"
           name="license"
           validationState={errors.license ? "invalid" : "valid"}
@@ -102,7 +106,7 @@ const Form2 = () => {
         {/* تعداد همراهان */}
         <Select
           isRequired
-          label="تعداد همراهان"
+          label=" "
           placeholder="تعداد همراهان را انتخاب کنید"
           name="passengers"
           validationState={errors.passengers ? "invalid" : "valid"}
@@ -115,7 +119,7 @@ const Form2 = () => {
         </Select>
 
         {/* دکمه ارسال */}
-        <Button className="bg-[#6f4ef2] shadow-lg shadow-indigo-500/20" type="submit">
+        <Button fullWidth className="bg-[#6f4ef2] shadow-lg shadow-indigo-500/20" type="submit">
           ثبت درخواست
         </Button>
       </Form>

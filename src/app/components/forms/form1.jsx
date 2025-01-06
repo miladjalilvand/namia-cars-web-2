@@ -41,7 +41,7 @@ const Form1 = () => {
         {/* نام */}
         <Input
           isRequired
-          label="نام"
+          label=""
           labelPlacement="outside"
           name="firstName"
           placeholder="نام خود را وارد کنید"
@@ -53,7 +53,7 @@ const Form1 = () => {
         {/* نام خانوادگی */}
         <Input
           isRequired
-          label="نام خانوادگی"
+          label=" "
           labelPlacement="outside"
           name="lastName"
           placeholder="نام خانوادگی خود را وارد کنید"
@@ -65,7 +65,7 @@ const Form1 = () => {
         {/* موبایل */}
         <Input
           isRequired
-          label="موبایل"
+          label=""
           labelPlacement="outside"
           name="mobile"
           placeholder="شماره موبایل خود را وارد کنید"
@@ -77,7 +77,7 @@ const Form1 = () => {
         {/* نام خودرو */}
         <Input
           isRequired
-          label="نام خودرو"
+          label=" "
           labelPlacement="outside"
           name="carName"
           placeholder="نام خودرو را وارد کنید"
@@ -89,7 +89,7 @@ const Form1 = () => {
         {/* کیلومتر کارکرد */}
         <Input
           isRequired
-          label="کیلومتر کارکرد"
+          label=" "
           labelPlacement="outside"
           name="kilometer"
           placeholder="عدد کیلومتر کارکرد را وارد کنید"
@@ -101,7 +101,7 @@ const Form1 = () => {
         {/* نوع خدمت */}
         <Select
           isRequired
-          label="نوع خدمت"
+          label=" "
           placeholder="یک گزینه انتخاب کنید"
           name="serviceType"
           validationState={errors.serviceType ? "invalid" : "valid"}

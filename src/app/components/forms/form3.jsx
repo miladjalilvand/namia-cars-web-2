@@ -1,3 +1,4 @@
+//exhange 
 import { Form, Input, Button, Textarea } from "@nextui-org/react";
 import { useState } from "react";
 
@@ -48,7 +49,7 @@ const Form3 = () => {
         {/* نام */}
         <Input
           isRequired
-          label="نام"
+          label=""
           labelPlacement="outside"
           name="firstName"
           placeholder="نام خود را وارد کنید"
@@ -60,7 +61,7 @@ const Form3 = () => {
         {/* نام خانوادگی */}
         <Input
           isRequired
-          label="نام خانوادگی"
+          label=" "
           labelPlacement="outside"
           name="lastName"
           placeholder="نام خانوادگی خود را وارد کنید"
@@ -72,7 +73,7 @@ const Form3 = () => {
         {/* موبایل */}
         <Input
           isRequired
-          label="موبایل"
+          label=""
           labelPlacement="outside"
           name="mobile"
           placeholder="شماره موبایل خود را وارد کنید"
@@ -84,7 +85,7 @@ const Form3 = () => {
         {/* نام خودروی فعلی */}
         <Input
           isRequired
-          label="نام خودروی فعلی"
+          label="  "
           labelPlacement="outside"
           name="currentCar"
           placeholder="نام خودروی فعلی را وارد کنید"
@@ -96,7 +97,7 @@ const Form3 = () => {
         {/* کیلومتر کارکرد */}
         <Input
           isRequired
-          label="کیلومتر کارکرد"
+          label=" "
           labelPlacement="outside"
           name="mileage"
           placeholder="کیلومتر کارکرد را وارد کنید"
@@ -108,7 +109,7 @@ const Form3 = () => {
         {/* سال ساخت */}
         <Input
           isRequired
-          label="سال ساخت"
+          label=" "
           labelPlacement="outside"
           name="year"
           placeholder="سال ساخت را وارد کنید"
@@ -120,7 +121,7 @@ const Form3 = () => {
         {/* رنگ */}
         <Input
           isRequired
-          label="رنگ"
+          label=""
           labelPlacement="outside"
           name="color"
           placeholder="رنگ خودروی فعلی را وارد کنید"
@@ -132,7 +133,7 @@ const Form3 = () => {
         {/* نام خودروی درخواستی */}
         <Input
           isRequired
-          label="نام خودروی درخواستی"
+          label="  "
           labelPlacement="outside"
           name="requestedCar"
           placeholder="نام خودروی درخواستی را وارد کنید"
@@ -144,7 +145,7 @@ const Form3 = () => {
         {/* توضیحات سلامت خودروی فعلی */}
         <Textarea
           isRequired
-          label="توضیحات سلامت خودروی فعلی"
+          label="   "
           placeholder="توضیحات سلامت خودروی فعلی را وارد کنید"
           name="carCondition"
           validationState={errors.carCondition ? "invalid" : "valid"}
@@ -152,7 +153,7 @@ const Form3 = () => {
         />
 
         {/* دکمه ارسال */}
-        <Button className="bg-[#6f4ef2] shadow-lg shadow-indigo-500/20" type="submit">
+        <Button fullWidth className="bg-[#6f4ef2] shadow-lg shadow-indigo-500/20" type="submit">
           ثبت درخواست
         </Button>
       </Form>

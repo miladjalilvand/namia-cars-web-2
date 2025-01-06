@@ -1,3 +1,4 @@
+//پیش ثبت نام 
 import { Form, Input, Button, Select, SelectItem } from "@nextui-org/react";
 import { useState } from "react";
 
@@ -37,7 +38,7 @@ const Form0 = () => {
         {/* نام */}
         <Input
           isRequired
-          label="نام"
+          label=""
           labelPlacement="outside"
           name="firstName"
           placeholder="نام خود را وارد کنید"
@@ -49,7 +50,7 @@ const Form0 = () => {
         {/* نام خانوادگی */}
         <Input
           isRequired
-          label="نام خانوادگی"
+          label=" "
           labelPlacement="outside"
           name="lastName"
           placeholder="نام خانوادگی خود را وارد کنید"
@@ -61,7 +62,7 @@ const Form0 = () => {
         {/* موبایل */}
         <Input
           isRequired
-          label="موبایل"
+          label=""
           labelPlacement="outside"
           name="mobile"
           placeholder="شماره موبایل خود را وارد کنید"
@@ -73,7 +74,7 @@ const Form0 = () => {
         {/* شهر */}
         <Input
           isRequired
-          label="شهر"
+          label=""
           labelPlacement="outside"
           name="city"
           placeholder="شهر خود را وارد کنید"
@@ -112,7 +113,7 @@ const Form0 = () => {
         </Select>
 
         {/* دکمه ارسال */}
-        <Button className="bg-[#6f4ef2] shadow-lg shadow-indigo-500/20" type="submit">
+        <Button fullWidth className="bg-[#6f4ef2] shadow-lg shadow-indigo-500/20" type="submit">
           ثبت درخواست
         </Button>
       </Form>

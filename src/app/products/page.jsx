@@ -4,6 +4,7 @@
   import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 import TextMotionCustom from "../components/newC/textMotion";
+import FooterPages from "../components/newC/footerPages";
 const ItemDynamic = dynamic(()=>import('../components/itemView'),
 { loading: () => <p>Loading...</p>,}
 );
@@ -134,6 +135,8 @@ const ItemDynamic = dynamic(()=>import('../components/itemView'),
               </motion.div>
             ))}
           </div>
+          <FooterPages tab={0} />
+
         </div>
        
       );
