@@ -20,21 +20,21 @@ const cars = [
       },
       {
         color: "brown",
-        hex: "##59411c",
+        hex: "#2e251d",
         url: "/assets/cars/arizo5/PCArrizo5FLbrown.png"
       },
       {
         color: "blue",
-        hex: "##1b36d1",
+        hex: "#1b36d1",
         url: "/assets/cars/arizo5/PCArrizo5FLblue.png"
       },
       {
         color: "grey",
-        hex: "##858585",
+        hex: "#858585",
         url: "/assets/cars/arizo5/PCArrizo5FLgrey.png"
       }
     ],
-    wheel: "/assets/cars/arizo5/arizo5wheel.png"
+    wheel: "/assets/cars/arizo5/PCArrizo5FLwheel.png"
   },
   {
     name: "تیگو 8 پرو E پلاس",

@@ -64,13 +64,13 @@ if(colorPicked != color){
   <div
     
     onClick={() => handleChangeColor(ind)}
-    className={`rounded-full cursor-pointer h-4 w-4 border-2 transition-transform 
+    className={`rounded-full cursor-pointer h-7 w-7 border-2 transition-transform 
       duration-300 ${selectedColor === ind ? "border-pink-700 scale-125" : ""} `}
       style={{
         backgroundColor: cars[selectedCar].images[ind].color, // استفاده از رنگ هگز
       }}
   >
-    {selectedColor}
+   
   </div></div>
 ))}
 
@@ -127,7 +127,7 @@ if(colorPicked != color){
           }}
         >
           <Image
-            src={"/assets/gallery/tiggo8pro/PCTiggo8PROwheel.png"}
+             src={cars[selectedCar].wheel}
             alt="Front Wheel"
             fill
           />
@@ -146,7 +146,7 @@ if(colorPicked != color){
           }}
         >
           <Image
-            src={"/assets/gallery/tiggo8pro/PCTiggo8PROwheel.png"}
+            src={cars[selectedCar].wheel}
             alt="Rear Wheel"
             fill
           />
