@@ -4,6 +4,9 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
 import TextMotionCustom from "./newC/textMotion";
+import cars from "./carsdata";
+
+
 const imageList = [
   "/assets/gallery/tiggo8pro/Tiggo8PROred.png", 
   "/assets/gallery/tiggo8pro/PCTiggo8PROblack.png",
@@ -14,41 +17,53 @@ export default function CarsAnim() {
   const [isMoving, setIsMoving] = useState(false);
   const [color, setColor] = useState(0); // شروع با رنگ قرمز
 
-  const handleClick = (colorPicked) => {
-    if(color != colorPicked){
-      setIsMoving(true);
-    setRotation(true);
-    setTimeout(() => {
-      setColor(colorPicked); // انتخاب رنگ جدید
-      setRotation(false);
-      setIsMoving(false);
-    }, 2000); // بازگشت انیمیشن بعد از 3 ثانیه
-    }
-  };
+  const [selectedCar , setCarSelected]=useState(0);
+  const [selectedColor ,setSelectedColor ]=useState(0);
 
+
+  const handleChangeColor = (indexColor) => {
+    console.log({ selectedCar, selectedColor, indexColor });
+
+if(indexColor !== selectedColor){
+  setIsMoving(true);
+  setRotation(true);
+  setTimeout(() => {
+    setSelectedColor(indexColor);
+    setRotation(false);
+    setIsMoving(false);
+  }, 2000);
+}
+};
+
+
+
+  const handleSetCar = (ind) => {
+    setCarSelected(ind);
+    setSelectedColor(0);
+
+  }
   return (
     <div className="overflow-hidden md:hidden flex flex-col-reverse items-center justify-center">
-   
-      <div className="flex flex-row gap-2 m-3 z-20 self-start bg-white bg-opacity-15 rounded-full">
-      <div
-          onClick={() => handleClick(0)}
-          className={`rounded-full cursor-pointer h-4 w-4 bg-redasli border-2 ${
-            color === 0 ? "border-red-400 scale-125" : ""
-          } transition-transform duration-300`}
-        ></div>
-        <div
-          onClick={() => handleClick(1)}
-          className={`rounded-full cursor-pointer h-4 w-4 bg-black border-2 ${
-            color === 1 ? "border-gray-400 scale-125" : ""
-          } transition-transform duration-300`}
-        ></div>
-        <div
-          onClick={() => handleClick(2)}
-          className={`rounded-full cursor-pointer h-4 w-4 bg-white border-2 ${
-            color === 2 ? "border-gray-400 scale-125" : ""
-          } transition-transform duration-300`}
-        ></div>
-      </div>
+       <div className="flex flex-row gap-4 m-4 bg-black bg-opacity-15 rounded-full ">
+
+{cars[selectedCar].images.map((val, ind) => (
+  <div key={ind} className="flex flex-col ">
+<div
+  
+  onClick={() => handleChangeColor(ind)}
+  className={`rounded-full cursor-pointer h-7 w-7 border-2 transition-transform 
+    duration-300 ${selectedColor === ind ? "border-pink-700 scale-125" : ""} `}
+    style={{
+      backgroundColor: cars[selectedCar].images[ind].color, // استفاده از رنگ هگز
+    }}
+>
+ 
+</div></div>
+))}
+
+    </div>
+
+
    
     <motion.div className=" h-[600px] w-screen relative  " 
     initial={{ x: 0 }}
@@ -62,11 +77,12 @@ export default function CarsAnim() {
         className="absolute inset-0"
       >
         <Image
-        src={imageList[color]} // انتخاب تصویر بر اساس رنگ
-        alt={`car - ${color}`}
+        src={cars[selectedCar].images[selectedColor].url} // انتخاب تصویر بر اساس رنگ
+            alt={`car - ${cars[selectedCar].name}`}
           layout="fill"
           objectFit="contain"
           style={{ position: "absolute", top: "0", left: "0" }}
+          className="border"
         />
     
       {/* چرخ اول */}
@@ -83,7 +99,7 @@ export default function CarsAnim() {
           }}
         >
           <Image
-            src="/assets/gallery/tiggo8pro/PCTiggo8PROwheel.png"
+           src={cars[selectedCar].wheel}
             alt="Wheel 1"
             fill
             className="object-contain"
@@ -105,7 +121,7 @@ export default function CarsAnim() {
           }}
         >
           <Image
-            src="/assets/gallery/tiggo8pro/PCTiggo8PROwheel.png"
+             src={cars[selectedCar].wheel}
             alt="Wheel 2"
             fill
             className="object-contain"
@@ -115,7 +131,16 @@ export default function CarsAnim() {
       </div>
 
     </motion.div>
+
+  
     <TextMotionCustom text={'mvm xr-550'} />
+    <div className="flex flex-wrap  gap-6 py-2 mb-12">
+  {cars.map((val, ind) => (
+    <div onClick={()=>handleSetCar(ind)} key={ind} className={`${selectedCar === ind && "border-5"}  border border-gray-400  rounded-md py-2 px-4 cursor-pointer hover:bg-gray-400 backdrop-opacity-40`}>
+      {val.name}
+    </div>
+  ))}
+</div>
     </div>
   );
 }

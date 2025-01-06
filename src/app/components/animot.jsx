@@ -30,7 +30,7 @@ if(indexColor !== selectedColor){
     setSelectedColor(indexColor);
     setRotation(false);
     setIsMoving(false);
-  }, 300);
+  }, 1200);
 }
 };
 
@@ -54,7 +54,7 @@ if(colorPicked != color){
 
   return (
     <div className=" hidden md:flex flex-col h-screen justify-center items-center ">
-<div className="flex flex-row  gap-6 py-2">
+<div className="flex flex-wrap  gap-6 py-2 mb-12">
   {cars.map((val, ind) => (
     <div onClick={()=>handleSetCar(ind)} key={ind} className={`${selectedCar === ind && "border-5"}  border border-gray-400  rounded-md py-2 px-4 cursor-pointer hover:bg-gray-400 backdrop-opacity-40`}>
       {val.name}
@@ -63,7 +63,7 @@ if(colorPicked != color){
 </div>
 
          <TextMotionCustom text={cars[selectedCar].foreignName} />
-  <div className="flex flex-row gap-4 m-4 bg-white bg-opacity-15 rounded-full ">
+  <div className="flex flex-row gap-4 m-4 bg-black bg-opacity-15 rounded-full ">
 
   {cars[selectedCar].images.map((val, ind) => (
     <div key={ind} className="flex flex-col ">
@@ -100,7 +100,7 @@ if(colorPicked != color){
         ></div> */}
       </div>
 
-    <motion.div className="relative w-[1200px] h-[481px] md:w-[900px] md:h-[420px] mx-auto  text-6xl overflow-hidden"
+    <motion.div className="border border-red-700 relative w-[1200px] h-[481px] md:w-[900px] md:h-[420px] mx-auto  text-6xl overflow-hidden"
     initial={{ x: 0 }}
     animate={{ x: isMoving ? -(window.innerWidth) : "0%" }}
     transition={{ ease: "easeInOut", duration: 2 }}
