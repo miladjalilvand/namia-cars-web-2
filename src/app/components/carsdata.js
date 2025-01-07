@@ -57,7 +57,7 @@ const cars = [
       },
       {
         color: "blue",
-         hex : "#3d3d3d",
+         hex : "#1b36d1",
         url: "/assets/cars/Tiggo8PROEPLUS/PCTiggo8PROEPLUSblue.png"
       },
       {
@@ -131,7 +131,7 @@ const cars = [
       },
       {
         color: "blue",
-         hex : "#3d3d3d",
+         hex : "#1b36d1",
         url: "/assets/cars/X33CROSS/PCX33CROSSblue.png"
       },
       {
@@ -168,7 +168,7 @@ const cars = [
       },
       {
         color: "blue",
-         hex : "#3d3d3d",
+         hex : "#1b36d1",
         url: "/assets/cars/X55PRO/PCX55PROblue.png"
       },
       {
@@ -200,7 +200,7 @@ const cars = [
       },
       {
         color: "blue",
-         hex : "#3d3d3d",
+         hex : "#1b36d1",
         url: "/assets/cars/tiggo8pro/PCTiggo8PROblue.png"
       },
       {
@@ -238,7 +238,7 @@ const cars = [
       },
       {
         color: "blue",
-         hex : "#3d3d3d",
+         hex : "#1b36d1",
         url: "/assets/cars/Tiggo7PRO/PCTiggo7PROblue.png"
       },
       {
@@ -253,7 +253,7 @@ const cars = [
       },
       {
         color: "ligh-blue",
-        hex: "#FFA500",
+        hex: "#16aaba",
         url: "/assets/cars/Tiggo7PRO/PCTiggo7PROlight-blue.png"
       }
     ],
@@ -280,7 +280,7 @@ const cars = [
       },
       {
         color: "blue",
-         hex : "#3d3d3d",
+         hex : "#1b36d1",
         url: "/assets/cars/Tiggo7/PCTiggo7blue.png"
       },
       {
@@ -322,7 +322,7 @@ const cars = [
       },
       {
         color: "blue",
-         hex : "#3d3d3d",
+         hex : "#1b36d1",
         url: "/assets/cars/X33S/PCX33Sblue.png"
       },
       {
@@ -374,7 +374,7 @@ const cars = [
       },
       {
         color: "blue",
-        hex : "#3d3d3d",
+        hex : "#1b36d1",
         url: "/assets/cars/X22PRO/PCX22PROblue.png"
       },
       {
@@ -421,7 +421,7 @@ const cars = [
       },
       {
         color: "blue",
-         hex : "#3d3d3d",
+         hex : "#1b36d1",
         url: "/assets/cars/x22/PCX22blue.png"
       },
       {
