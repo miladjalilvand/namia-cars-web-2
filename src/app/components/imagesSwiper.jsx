@@ -8,10 +8,13 @@ import "swiper/css";
 import { motion } from "framer-motion";
 import MotD from "./ItemHome";
 import { useBusiness } from "../providers/businessContext";
+import { Skeleton } from "@nextui-org/react";
 
 
 export default function ImageSlider() {
   const [currentImage, setCurrentImage] = useState(0);
+
+  const [isLoading , setIsLoading] = useState(true);
 
 const [imagesBanner,setImageBanner]=useState([]);
 
@@ -19,7 +22,12 @@ const businessData = useBusiness();
 
 useEffect(()=>{
   setImageBanner(businessData?.data?.banners);
+  
 },[]);
+
+useEffect(()=>{
+  setIsLoading(false);
+},[imagesBanner]);
 
 
   const swiperRef = useRef(null);
@@ -49,6 +57,11 @@ useEffect(()=>{
   const prevImage = () => {
     if (swiperRef.current && swiperRef.current.swiper) {
       swiperRef.current.swiper.slidePrev();
+      if (currentImage === 0) {
+        setCurrentImage(imagesBanner.length - 1); // Reset to the first image
+      }  else {
+        setCurrentImage(currentImage-1);
+      }
     }
   };
 
@@ -61,7 +74,7 @@ useEffect(()=>{
   };
 
   return (
-    <div className="flex flex-col md:flex-row justify-center items-center md:mt-0  ">
+    <Skeleton isLoaded={!isLoading} ><div className="flex flex-col md:flex-row justify-center items-center md:mt-0  ">
       <div className="relative h-2/3 w-full md:w-1/2 md:h-1/2 cursor-pointer ">
         <Swiper
           ref={swiperRef}
@@ -114,6 +127,7 @@ useEffect(()=>{
        <Title value={`تصویر ${currentImage + 1}`} />
       </div>
     </div>
+    </Skeleton>
   );
 }
 function Title({ value }) {

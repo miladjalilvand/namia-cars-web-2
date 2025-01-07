@@ -30,7 +30,7 @@ if(indexColor !== selectedColor){
     setSelectedColor(indexColor);
     setRotation(false);
     setIsMoving(false);
-  }, 1200);
+  }, 2500 );
 }
 };
 
