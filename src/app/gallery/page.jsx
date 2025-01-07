@@ -54,7 +54,7 @@ export default function GalleryPage() {
   return (
     <div>
       {loading ? (
-        <p className="text-center mt-16">در حال بارگذاری...</p>
+        <p className="text-center pt-16">در حال بارگذاری...</p>
       ) : (
         <div className="flex flex-col pt-16 ">
           {/* Toggle Buttons */}
