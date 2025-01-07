@@ -4,6 +4,7 @@ import { useTheme } from "next-themes";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 import TextMotionCustom from "../components/newC/textMotion";
+import { useEffect, useState } from "react";
 const ItemDynamic = dynamic(()=>import('../components/itemView'),
 { loading: () => <p>Loading...</p>,}
 );
@@ -96,8 +97,13 @@ const data = [
   
   export default function ProductsPage() {
     const { theme } = useTheme();
+    const [cTheme , setCTheme]=useState(theme);
+    useEffect(()=>{
+      setCTheme(theme);
+    },[theme]);
     return (
-      <div className="pt-12">
+      <div className={`pt-12 ${cTheme === "dark" ? "bg-black" : "bg-background"}`}>
+
         {/* <div className="bg-blue-700 bottom-0 w-full fixed z-20 flex-row flex">
           <div className="w-1/2 bg-orange-700">a</div>
           <div className="w-1/2">b</div>
@@ -120,11 +126,11 @@ const data = [
           
              `}
 
-            style={{   backgroundColor: theme === 'light' ? "#eaeaea" : '#000000', 
-            }}
+
         >
           {data.map((val, ind) => (
             <motion.div key={ind}
+    
             //  initial={{opacity:0.5 , y:"20%" }}
             //  whileInView={{opacity:1 , y:"0%" }}
         // animate={{opacity:1 , y:"0%"}}

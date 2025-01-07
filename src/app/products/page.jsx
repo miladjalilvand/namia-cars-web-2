@@ -1,10 +1,11 @@
   "use client"
-  import { useTheme } from "next-themes";
+  import { useTheme} from "next-themes";
 
   import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 import TextMotionCustom from "../components/newC/textMotion";
 import FooterPages from "../components/newC/footerPages";
+import { useState , useEffect } from "react";
 const ItemDynamic = dynamic(()=>import('../components/itemView'),
 { loading: () => <p>Loading...</p>,}
 );
@@ -96,9 +97,13 @@ const ItemDynamic = dynamic(()=>import('../components/itemView'),
     
     
     export default function ProductsPage() {
-      const { theme } = useTheme();
-      return (
-        <div className="pt-12">
+    const { theme } = useTheme();
+    const [cTheme , setCTheme]=useState(theme);
+    useEffect(()=>{
+      setCTheme(theme);
+    },[theme]);
+    return (
+      <div className={`pt-12 ${cTheme === "dark" ? "bg-black" : "bg-background"}`}>
           {/* <div className="bg-blue-700 bottom-0 w-full fixed z-20 flex-row flex">
             <div className="w-1/2 bg-orange-700">a</div>
             <div className="w-1/2">b</div>
@@ -121,8 +126,8 @@ const ItemDynamic = dynamic(()=>import('../components/itemView'),
             
                `}
 
-              style={{   backgroundColor: theme === 'light' ? "#eaeaea" : '#000000', 
-              }}
+              // style={{   backgroundColor: theme === 'light' ? "#eaeaea" : '#000000', 
+              // }}
           >
             {data.map((val, ind) => (
               <motion.div key={ind}
