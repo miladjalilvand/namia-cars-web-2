@@ -137,7 +137,7 @@ if(image){
 
         {/* چرخ جلو */}
         <motion.div
-          className="absolute w-[60px] h-[60px] md:w-[141px] md:h-[141px] top-[60%] left-[11%] flex items-center justify-center"
+          className="absolute w-[60px] h-[60px] md:w-[144px] md:h-[144px] top-[60%] left-[11%] flex items-center justify-center"
           initial={{ rotate: 0 }}
           animate={{
             rotate: rotation ? -1440 : 0, // چرخش همزمان با حرکت
@@ -156,7 +156,7 @@ if(image){
 
         {/* چرخ عقب */}
         <motion.div
-          className="absolute w-[60px] h-[60px] md:w-[141px] md:h-[141px] top-[60%] left-[69%] flex items-center justify-center"
+          className="absolute w-[60px] h-[60px] md:w-[144px] md:h-[144px] top-[60%] left-[69%] flex items-center justify-center"
           initial={{ rotate: 0 }}
           animate={{
             rotate: rotation ? -1440 : 0, // چرخش همزمان با حرکت

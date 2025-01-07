@@ -205,7 +205,7 @@ const cars = [
       },
       {
         color: "purple",
-        hex: "#3b2063",
+        hex: "#660e66",
         url: "/assets/cars/tiggo8pro/PCTiggo8PROpurple.png"
       },
       {
