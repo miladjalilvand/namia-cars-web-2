@@ -24,12 +24,12 @@
   --redasli: rgb(185, 38, 58);
   --txtl: #fff7f7; 
 }
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #65b10f;
     --foreground: #1ed2ff;
   }
-}
+} */
 
 body {
   color: var(--foreground);

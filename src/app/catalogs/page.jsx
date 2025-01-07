@@ -32,7 +32,7 @@ export default function GalleryPage() {
   };
 
   return (
-    <div className="p-4 pt-12 ">
+    <div className="p-4 pt-12  ">
       {loading ? (
         <p className="text-center">Loading...</p>
       ) : (
