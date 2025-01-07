@@ -10,12 +10,12 @@ const cars = [
       },
       {
         color: "white",
-        hex: "#FFFFFF",
+        hex: "#e3e3e3",
         url: "/assets/cars/arizo5/PCArrizo5FLwhite.png"
       },
       {
         color: "red",
-        hex: "#FF0000",
+         hex: "#8f0000",
         url: "/assets/cars/arizo5/PCArrizo5FLred.png"
       },
       {
@@ -47,17 +47,17 @@ const cars = [
       },
       {
         color: "purple",
-        hex: "#3b2063",
+        hex: "#362942",
         url: "/assets/cars/Tiggo8PROEPLUS/PCTiggo8PROEPLUSpurple.png"
       },
       {
         color: "red",
-        hex: "#FF0000",
+         hex: "#8f0000",
         url: "/assets/cars/Tiggo8PROEPLUS/PCTiggo8PROEPLUSred.png"
       },
       {
         color: "blue",
-        hex: "#0000FF",
+         hex : "#3d3d3d",
         url: "/assets/cars/Tiggo8PROEPLUS/PCTiggo8PROEPLUSblue.png"
       },
       {
@@ -79,12 +79,12 @@ const cars = [
       },
       {
         color: "white",
-        hex: "#FFFFFF",
+        hex: "#e3e3e3",
         url: "/assets/cars/arrizo5TurboS/PCArrizo5TurboSwhite.png"
       },
       {
         color: "red",
-        hex: "#FF0000",
+         hex: "#8f0000",
         url: "/assets/cars/arrizo5TurboS/PCArrizo5TurboSred.png"
       },
       {
@@ -115,28 +115,28 @@ const cars = [
         url: "/assets/cars/X33CROSS/PCX33CROSSblack.png"
       },
       {
-        color: "blue-gray",
+        color: "blue-grey",
         hex: "#9096ab",
         url: "/assets/cars/X33CROSS/PCX33CROSSblue-grey.png"
       },
       {
         color: "green",
-        hex: "#2eab5c",
+         hex: "#5d6b1c",
         url: "/assets/cars/X33CROSS/PCX33CROSSgreen.png"
       },
       {
         color: "red",
-        hex: "#FF0000",
+         hex: "#8f0000",
         url: "/assets/cars/X33CROSS/PCX33CROSSred.png"
       },
       {
         color: "blue",
-        hex: "#0000FF",
+         hex : "#3d3d3d",
         url: "/assets/cars/X33CROSS/PCX33CROSSblue.png"
       },
       {
         color: "orange",
-        hex: "#FFA500",
+        hex: "#ff8819",
         url: "/assets/cars/X33CROSS/PCX33CROSSorange.png"
       },
       {
@@ -158,17 +158,17 @@ const cars = [
       },
       {
         color: "white",
-        hex: "#FFFFFF",
+        hex: "#e3e3e3",
         url: "/assets/cars/X55PRO/PCX55PROwhite.png"
       },
       {
         color: "red",
-        hex: "#FF0000",
+         hex: "#8f0000",
         url: "/assets/cars/X55PRO/PCX55PROred.png"
       },
       {
         color: "blue",
-        hex: "#0000FF",
+         hex : "#3d3d3d",
         url: "/assets/cars/X55PRO/PCX55PROblue.png"
       },
       {
@@ -190,17 +190,17 @@ const cars = [
       },
       {
         color: "white",
-        hex: "#FFFFFF",
+        hex: "#e3e3e3",
         url: "/assets/cars/tiggo8pro/PCTiggo8PROwhite.png"
       },
       {
         color: "red",
-        hex: "#FF0000",
+         hex: "#8f0000",
         url: "/assets/cars/tiggo8pro/PCTiggo8PROred.png"
       },
       {
         color: "blue",
-        hex: "#0000FF",
+         hex : "#3d3d3d",
         url: "/assets/cars/tiggo8pro/PCTiggo8PROblue.png"
       },
       {
@@ -228,27 +228,27 @@ const cars = [
       },
       {
         color: "white",
-        hex: "#FFFFFF",
+        hex: "#e3e3e3",
         url: "/assets/cars/Tiggo7PRO/PCTiggo7PROwhite.png"
       },
       {
         color: "red",
-        hex: "#FF0000",
+         hex: "#8f0000",
         url: "/assets/cars/Tiggo7PRO/PCTiggo7PROred.png"
       },
       {
         color: "blue",
-        hex: "#0000FF",
+         hex : "#3d3d3d",
         url: "/assets/cars/Tiggo7PRO/PCTiggo7PROblue.png"
       },
       {
         color: "orange",
-        hex: "#FFA500",
+        hex: "#ff8819",
         url: "/assets/cars/Tiggo7PRO/PCTiggo7PROorange.png"
       },
       {
         color: "grey",
-        hex: "#0000FF",
+         hex : "#3d3d3d",
         url: "/assets/cars/Tiggo7PRO/PCTiggo7PROgrey.png"
       },
       {
@@ -270,32 +270,32 @@ const cars = [
       },
       {
         color: "white",
-        hex: "#FFFFFF",
+        hex: "#e3e3e3",
         url: "/assets/cars/Tiggo7/PCTiggo7white.png"
       },
       {
         color: "red",
-        hex: "#FF0000",
+         hex: "#8f0000",
         url: "/assets/cars/Tiggo7/PCTiggo7red.png"
       },
       {
         color: "blue",
-        hex: "#0000FF",
+         hex : "#3d3d3d",
         url: "/assets/cars/Tiggo7/PCTiggo7blue.png"
       },
       {
         color: "orange",
-        hex: "#FFA500",
+        hex: "#ff8819",
         url: "/assets/cars/Tiggo7/PCTiggo7orange.png"
       },
       {
         color: "green",
-        hex: "#2eab5c",
+         hex: "#5d6b1c",
         url: "/assets/cars/Tiggo7/PCTiggo7green.png"
       },
       {
         color: "grey",
-        hex: "#0000FF",
+         hex : "#3d3d3d",
        url: "/assets/cars/Tiggo7/PCTiggo7grey.png"
       },
     ],
@@ -312,27 +312,27 @@ const cars = [
       },
       {
         color: "white",
-        hex: "#FFFFFF",
+        hex: "#e3e3e3",
         url: "/assets/cars/X33S/PCX33Swhite.png"
       },
       {
         color: "red",
-        hex: "#FF0000",
+         hex: "#8f0000",
         url: "/assets/cars/X33S/PCX33Sred.png"
       },
       {
         color: "blue",
-        hex: "#0000FF",
+         hex : "#3d3d3d",
         url: "/assets/cars/X33S/PCX33Sblue.png"
       },
       {
         color: "orange",
-        hex: "#FFA500",
+        hex: "#ff8819",
         url: "/assets/cars/X33S/PCX33Sorange.png"
       },
       {
         color: "green",
-        hex: "#2eab5c",
+         hex: "#5d6b1c",
            url: "/assets/cars/X33S/PCX33Sgreen.png"
       },
     ],
@@ -348,38 +348,38 @@ const cars = [
         url: "/assets/cars/X22PRO/PCX22PROblack.png"
       },
       {
-        color: "blue-gray",
+        color: "blue-grey",
         hex: "#9096ab",
         url: "/assets/cars/X22PRO/PCX22PROblue-grey.png"
       },
       {
         color: "grey",
-        hex: "#0000FF",
+       hex : "#3d3d3d",
        url: "/assets/cars/X22PRO/PCX22PROgrey.png"
       },
       {
         color: "green",
-        hex: "#2eab5c",
+        hex: "#5d6b1c",
            url: "/assets/cars/X22PRO/PCX22PROgreen.png"
       },
       {
         color: "white",
-        hex: "#FFFFFF",
+        hex: "#e3e3e3",
         url: "/assets/cars/X22PRO/PCX22PROwhite.png"
       },
       {
         color: "red",
-        hex: "#FF0000",
+        hex: "#8f0000",
         url: "/assets/cars/X22PRO/PCX22PROred.png"
       },
       {
         color: "blue",
-        hex: "#0000FF",
+        hex : "#3d3d3d",
         url: "/assets/cars/X22PRO/PCX22PROblue.png"
       },
       {
         color: "orange",
-        hex: "#FFA500",
+        hex: "#ff8819",
         url: "/assets/cars/X22PRO/PCX22PROorange.png"
       }
     ],
@@ -395,38 +395,38 @@ const cars = [
         url: "/assets/cars/x22/PCX22black.png"
       },
       {
-        color: "blue-gray",
+        color: "blue-grey",
         hex: "#9096ab",
         url: "/assets/cars/x22/PCX22blue-grey.png"
       },
       {
         color: "grey",
-        hex: "#0000FF",
+         hex : "#3d3d3d",
        url: "/assets/cars/x22/PCX22grey.png"
       },
       {
         color: "green",
-        hex: "#2eab5c",
+         hex: "#5d6b1c",
            url: "/assets/cars/x22/PCX22green.png"
       },
       {
         color: "white",
-        hex: "#FFFFFF",
+        hex: "#e3e3e3",
         url: "/assets/cars/x22/PCX22white.png"
       },
       {
         color: "red",
-        hex: "#FF0000",
+         hex: "#8f0000",
         url: "/assets/cars/x22/PCX22red.png"
       },
       {
         color: "blue",
-        hex: "#0000FF",
+         hex : "#3d3d3d",
         url: "/assets/cars/x22/PCX22blue.png"
       },
       {
         color: "orange",
-        hex: "#FFA500",
+        hex: "#ff8819",
         url: "/assets/cars/x22/PCX22orange.png"
       }
     ],

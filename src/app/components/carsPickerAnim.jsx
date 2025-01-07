@@ -59,9 +59,9 @@ const handleSetCar = (ind) => {
   
   onClick={() => handleChangeColor(ind)}
   className={`rounded-full cursor-pointer h-7 w-7 border-2 transition-transform 
-    duration-300 ${selectedColor === ind ? "border-pink-700 scale-125" : ""} `}
+    duration-300 ${selectedColor === ind ? "border-grey-400 scale-125" : ""} `}
     style={{
-      backgroundColor: cars[selectedCar].images[ind].color, // استفاده از رنگ هگز
+      backgroundColor: cars[selectedCar].images[ind].hex, // استفاده از رنگ هگز
     }}
 >
  
@@ -90,7 +90,7 @@ const handleSetCar = (ind) => {
           layout="fill"
           objectFit="contain"
           style={{ position: "absolute", top: "0", left: "0" }}
-          className="border"
+          className=""
         />
     
       {/* چرخ اول */}

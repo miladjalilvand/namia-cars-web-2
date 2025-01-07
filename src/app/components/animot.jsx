@@ -1,5 +1,5 @@
 "use client";
-
+//DESKTOP VERSION
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
@@ -80,9 +80,9 @@ if(image){
     
     onClick={() => handleChangeColor(ind)}
     className={`rounded-full cursor-pointer h-7 w-7 border-2 transition-transform 
-      duration-300 ${selectedColor === ind ? "border-pink-700 scale-125" : ""} `}
+      duration-300 ${selectedColor === ind ? "border-gray-500 scale-125" : ""} `}
       style={{
-        backgroundColor: cars[selectedCar].images[ind].color, // استفاده از رنگ هگز
+        backgroundColor: cars[selectedCar].images[ind].hex, // استفاده از رنگ هگز
       }}
   >
    
@@ -109,13 +109,19 @@ if(image){
         ></div> */}
       </div>
 
-    <motion.div className="border border-red-700 relative w-[1200px] h-[481px] md:w-[900px] md:h-[420px] mx-auto  text-6xl overflow-hidden"
+    <motion.div className=" relative w-[1200px] h-[481px] md:w-[900px] md:h-[420px] mx-auto  text-6xl overflow-hidden"
     initial={{ x: 0 }}
     animate={{ x: isMoving ? -(window.innerWidth) : "0%" }}
     transition={{ ease: "easeInOut", duration: 2 }}
     >
       {/* تصویر ماشین و چرخ‌ها */}
       <motion.div
+      initial={{opacity:0.5}}
+      animate={{opacity:1}}
+      transition={{ease:"easeInOut" , duration:0.6}}
+      key={selectedCar}
+
+
         className="absolute w-full h-full  flex items-center justify-center"
      
       >
@@ -138,7 +144,7 @@ if(image){
           }}
           transition={{
             ease: "easeInOut",
-            duration: 2,
+            duration: 0.6,
           }}
         >
           <Image

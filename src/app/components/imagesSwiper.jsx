@@ -136,7 +136,7 @@ useEffect(()=>{
 }
 function Title({ value , title }) {
   return <div className="flex flex-col gap-5">
-    <div className="text-4xl">{title}</div>
+    <div className="text-xl">{title}</div>
     <MotD params={value} key={value} /></div>;
 }
 function CursorImage({ currentIndex, onCircleClick , ib }) {
