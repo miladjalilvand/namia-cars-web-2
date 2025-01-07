@@ -18,16 +18,19 @@ export default function ImageSlider() {
 
 const [imagesBanner,setImageBanner]=useState([]);
 
+const [addresses , setAddresses]=useState([]);
+
 const businessData = useBusiness();
 
 useEffect(()=>{
   setImageBanner(businessData?.data?.banners);
+  setAddresses(businessData?.data?.addresses);
   
 },[]);
 
 useEffect(()=>{
   setIsLoading(false);
-},[imagesBanner]);
+},[imagesBanner,addresses]);
 
 
   const swiperRef = useRef(null);
@@ -76,6 +79,7 @@ useEffect(()=>{
   return (
     <Skeleton isLoaded={!isLoading} ><div className="flex flex-col md:flex-row justify-center items-center md:mt-0  ">
       <div className="relative h-2/3 w-full md:w-1/2 md:h-1/2 cursor-pointer ">
+      
         <Swiper
           ref={swiperRef}
           slidesPerView={1}
@@ -124,14 +128,16 @@ useEffect(()=>{
       <div
       
       className="hidden md:flex w-1/2 h-full items-center justify-center">
-       <Title value={`تصویر ${currentImage + 1}`} />
+       <Title title={addresses[currentImage < addresses.length ? currentImage : 0].title} value={addresses[currentImage < addresses.length ? currentImage : 0].address} />
       </div>
     </div>
     </Skeleton>
   );
 }
-function Title({ value }) {
-  return <MotD params={value} key={value} />;
+function Title({ value , title }) {
+  return <div className="flex flex-col gap-5">
+    <div className="text-4xl">{title}</div>
+    <MotD params={value} key={value} /></div>;
 }
 function CursorImage({ currentIndex, onCircleClick , ib }) {
   return (
