@@ -160,12 +160,12 @@ useEffect(() => {
             {  (isOpen && <div onClick={() => handleClick()} className="fixed md:w-screen z-30 md:h-screen bg-black opacity-70"></div>)}
               <div className="flex flex-row justify-between  mr-12 h-full ">
 
-                <div className="relative border-r-3 border h-9 w-9 border-foreground-100">
+                <div className="relative border-r-3 p-1 border  w-24 border-foreground-100">
                 <Image 
                   alt="logo"
                    src={'/assets/logo.jpg'}
                   fill 
-                  style={{objectFit:"scale-down"}}
+                  style={{objectFit:"cover"}}
                  
                   />
                 </div>
