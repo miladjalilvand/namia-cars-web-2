@@ -1,5 +1,5 @@
 "use client";
-
+//MOBILE VERSION
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
@@ -37,11 +37,18 @@ if(indexColor !== selectedColor){
 
 
 
-  const handleSetCar = (ind) => {
-    setCarSelected(ind);
-    setSelectedColor(0);
-
+const handleSetCar = (ind) => {
+  setCarSelected(ind);
+  setSelectedColor(0);
+  const section = document.getElementById("image-section");
+  if (section) {
+    section.scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+    });
   }
+};
+
   return (
     <div className="overflow-hidden md:hidden flex flex-col-reverse items-center justify-center">
        <div className="flex flex-row gap-4 m-4 bg-black bg-opacity-15 rounded-full ">
@@ -77,6 +84,7 @@ if(indexColor !== selectedColor){
         className="absolute inset-0"
       >
         <Image
+        id="image-section"
         src={cars[selectedCar].images[selectedColor].url} // انتخاب تصویر بر اساس رنگ
             alt={`car - ${cars[selectedCar].name}`}
           layout="fill"
@@ -86,7 +94,7 @@ if(indexColor !== selectedColor){
         />
     
       {/* چرخ اول */}
-      <div className="absolute bottom-[7%] md:bottom-[10%] left-[3%] md:left-[-6%] w-full h-full">
+      <div className="absolute bottom-[8%] md:bottom-[10%] left-[3%] md:left-[-6%] w-full h-full">
         <motion.div
           className="absolute w-[15%] h-[15%] md:w-[30%] md:h-[30%] transform bottom-[27%] left-[8%] md:bottom-[5%] md:left-[10%] xl:h-[35%] xl:w-[35%] xl:bottom-[5%] xl:left-[12%] 2xl:left-[10%] 2xl:bottom-[6%] 2xl:h-[30%] 2xl:w-[30%]"
           initial={{ rotate: 0 }}
@@ -108,7 +116,7 @@ if(indexColor !== selectedColor){
       </div>
 
       {/* چرخ دوم */}
-      <div className="absolute bottom-[7%] md:bottom-[10%] right-[8%] md:right-[-2%] w-full h-full">
+      <div className="absolute bottom-[8%] md:bottom-[10%] right-[8%] md:right-[-2%] w-full h-full">
         <motion.div
           className="absolute w-[15%] h-[15%] md:w-[30%] md:h-[30%] transform bottom-[27%] right-[8%] md:bottom-[5%] md:right-[10%] xl:h-[35%] xl:w-[35%] xl:bottom-[5%] xl:right-[12%] 2xl:right-[10%] 2xl:bottom-[6%] 2xl:h-[30%] 2xl:w-[30%]"
           initial={{ rotate: 0 }}

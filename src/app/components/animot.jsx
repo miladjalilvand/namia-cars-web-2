@@ -50,6 +50,15 @@ if(colorPicked != color){
     setCarSelected(ind);
     setSelectedColor(0);
 
+    const image = document.getElementById("img-section");
+if(image){
+    image.scrollIntoView({
+      behavior: "smooth",
+      block: "end",
+      
+    });
+  }
+
   }
 
   return (
@@ -113,7 +122,7 @@ if(colorPicked != color){
         {/* تصویر اصلی ماشین */}
         <div className="relative w-full h-full">
           <Image
-          
+          id="img-section"
             src={cars[selectedCar].images[selectedColor].url} // انتخاب تصویر بر اساس رنگ
             alt={`car - ${cars[selectedCar].name}`}
             fill

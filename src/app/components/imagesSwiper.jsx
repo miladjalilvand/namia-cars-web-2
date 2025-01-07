@@ -128,7 +128,7 @@ useEffect(()=>{
       <div
       
       className="hidden md:flex w-1/2 h-full items-center justify-center">
-       <Title title={addresses[currentImage < addresses.length ? currentImage : 0].title} value={addresses[currentImage < addresses.length ? currentImage : 0].address} />
+       <Title title={addresses[currentImage < addresses.length ? currentImage : 0]?.title} value={addresses[currentImage < addresses.length ? currentImage : 0]?.address} />
       </div>
     </div>
     </Skeleton>
