@@ -267,7 +267,7 @@ export default function Item({ params }) {
   };
 
   return (
-    <div className="flex flex-col pt-5">
+    <div className="flex flex-col">
       <div className="fixed overflow-x-auto w-full bg-black text-white z-[21]">
         <div className="flex flex-row min-w-max  justify-center items-end   h-full">
           {itemsIndex.map((val, ind) => {

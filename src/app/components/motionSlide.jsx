@@ -115,7 +115,7 @@ const AnimatedText = ({ text, isInView, button, ind, textButton }) => {
                 delay: index * 0.3,
                 duration: 0.5,
               }}
-              className={`mr-2 font-extrabold text-3xl ${
+              className={`mr-2 font-extrabold text-3xl md:text-5xl ${
                 ind % 2 === 0 ? "text-txtl" : "text-redasli"
               }`}
             >

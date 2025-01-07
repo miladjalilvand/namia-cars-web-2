@@ -32,12 +32,12 @@ export default async function RootLayout({ children }) {
 
   return (
     <html dir="rtl" lang="fa-IR" suppressHydrationWarning>
-      <body className={` ${vazir.className} min-h-screen   antialiased overflow-hidden bg-background`}>
+      <body className={` ${vazir.className} mt-0 min-h-screen   antialiased overflow-hidden bg-background`}>
         <ThemeProvider>
           <NextUIProvider>
             <BusinessProvider value={businessData}>
               <NavbarCustom />
-             {children}
+             <div className="pt-9">{children}</div>
            
             </BusinessProvider>
           </NextUIProvider>
