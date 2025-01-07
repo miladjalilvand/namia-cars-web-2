@@ -9,7 +9,7 @@ import BannerImage from "./components/newC/imageSwiperBanner";
 import TextMotionCustom from "./components/newC/textMotion";
 export default function Home() {
   return (
-  <div className=" flex-col pt-9  ">
+  <div className=" flex-col pt-9 overflow-x-hidden  ">
 
 
 

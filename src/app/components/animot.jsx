@@ -72,7 +72,7 @@ if(image){
 </div>
 
          <TextMotionCustom text={cars[selectedCar].foreignName} />
-  <div className="flex flex-row gap-4 m-4 bg-black bg-opacity-30 rounded-full ">
+  <div className="flex flex-row gap-4 m-4 bg-gray-500 bg-opacity-30 rounded-full ">
 
   {cars[selectedCar].images.map((val, ind) => (
     <div key={ind} className="flex flex-col ">

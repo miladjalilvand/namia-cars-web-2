@@ -17,7 +17,12 @@ const BranchDetails = () => {
   }, [businessData]);
 
   return (
-    <div className="flex flex-col md:flex-row gap-6 p-4 pt-12">
+    <div className="flex flex-col  justify-between pb-6  pt-12 ">
+      <div className="pb-24">مدیران خودرو</div>
+
+
+    <div className="flex flex-col md:flex-row gap-6 p-4 ">
+
       {data.map((val, ind) => (
         <div key={ind} className="flex-1 p-4  rounded shadow-md">
           <h2 className="text-2xl font-bold mb-4">{val.title}</h2>
@@ -26,10 +31,10 @@ const BranchDetails = () => {
 
           <div className="mt-4">
             <h3 className="text-lg font-semibold">شماره تماس:</h3>
-            <ul className="list-disc pl-5">
+            <ul  className="list-none pl-5">
               {val.mobiles && val.mobiles.length > 0 ? (
                 val.mobiles.map((mobile, index) => (
-                  <li key={index}>{mobile}</li>
+                  <li  key={index}>{mobile}</li>
                 ))
               ) : (
                 <li>تلفن همراهی موجود نیست</li>
@@ -75,7 +80,7 @@ const BranchDetails = () => {
           </div>
         </div>
       ))}
-    </div>
+    </div></div>
   );
 };
 

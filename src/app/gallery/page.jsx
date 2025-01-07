@@ -56,7 +56,7 @@ export default function GalleryPage() {
       {loading ? (
         <p className="text-center mt-16">در حال بارگذاری...</p>
       ) : (
-        <div className="flex flex-col pt-16">
+        <div className="flex flex-col pt-16 ">
           {/* Toggle Buttons */}
           <div className="flex flex-row p-3 items-center justify-center gap-3">
             <button
