@@ -72,7 +72,7 @@ useEffect(() => {
   };
 }, [isOpen]);
   return (
-    <div className="fixed flex-row w-full z-40 h-9 bg-background  shadow-foreground-200 shadow-sm ">
+    <div className="fixed flex-row w-full z-40 h-20 bg-background  shadow-foreground-200 shadow-sm ">
 
              <div 
               className="flex flex-col  fixed space-y-px pt-4 pr-1 cursor-pointer
@@ -139,7 +139,7 @@ useEffect(() => {
    animate={{opacity:1}}
    transition={{duration:1.5}}
    key={key} 
-   className="cursor-pointer" onClick={() => pushin(val.url)}>{val.name}
+   className="cursor-pointer text-2xl" onClick={() => pushin(val.url)}>{val.name}
    </motion.div>
                ))}
               </div>
@@ -171,9 +171,9 @@ useEffect(() => {
                 </div>
                 <div className="flex flex-row-reverse items-center ">
 
-                <div className='h-full w-9 bg-redc cursor-pointer' >
+                <div className='h-full w-20 bg-redc cursor-pointer' >
       <button onClick={() => setModalOpen(true)} className="h-full w-full text-txtl flex  items-center justify-center">
-       <IoIosCall/>
+       <IoIosCall size={"36px"}/>
       </button>
 
       <ModalWithTabs isOpen={isModalOpen} onClose={() => setModalOpen(false)} />
@@ -181,14 +181,14 @@ useEffect(() => {
  
                 <div className="hidden md:flex w-12 cursor-pointer   items-center justify-center"
                 onClick={()=>changeTheme()}
-                >{ objTheme === "light" && (<div><IoMdMoon/></div>)  }
-                { objTheme === "dark" && (<div><IoMdSunny/></div>)  }</div>
-                <div className="md:hidden px-3">  <IoMdContact/></div>
-                <div className="hidden items-center justify-center md:flex flex-row-reverse gap-1 px-1 cursor-pointer mx-3"> 
+                >{ objTheme === "light" && (<div><IoMdMoon  size={"36px"}/></div>)  }
+                { objTheme === "dark" && (<div><IoMdSunny  size={"36px"}/></div>)  }</div>
+                <div className="md:hidden px-3">  <IoMdContact  size={"36px"}/></div>
+                <div className="hidden items-center justify-center md:flex flex-row-reverse gap-1 px-1 text-xl cursor-pointer mx-3"> 
                   <div>ورود</div>
-                  <IoMdContact/>
+                  <IoMdContact  size={"36px"}/>
                    </div>
-                <div onClick={()=>pushin('/exchange')} className="rounded-sm text-txtl bg-redc cursor-pointer text-xxs px-3 py-1">طرح تعویض</div>
+                <div onClick={()=>pushin('/exchange')} className="rounded-sm text-txtl bg-redc cursor-pointer text-xl px-3 py-1">طرح تعویض</div>
                 </div>
 
               </div>

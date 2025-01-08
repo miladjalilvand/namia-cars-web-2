@@ -3,7 +3,7 @@ import { FaMapMarkedAlt } from 'react-icons/fa';
 
 const Footer = ({ data }) => {
   return (
-    <footer className="bg-redasli text-white py-8">
+    <footer className="bg-redasli text-white py-8 mt-60">
       <div className="max-w-6xl mx-auto px-6">
         {/* توضیحات */}
         <div className="mb-6">

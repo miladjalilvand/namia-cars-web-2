@@ -4,7 +4,7 @@ import FooterPages from "../components/newC/footerPages";
 
 const Page = () => {
     return (
-        <div className="flex w-screen flex-col pt-8 ">
+        <div className="flex w-screen  flex-col pt-8 ">
             <div className="flex flex-col md:flex-row">
                 <div className="w-full md:w-1/2 h-80 bg-red-400  flex items-center justify-center">
                 <TextMotionCustom text={'ی تست بزن '} /> 

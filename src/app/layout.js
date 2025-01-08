@@ -38,7 +38,7 @@ export default async function RootLayout({ children }) {
           <NextUIProvider>
             <BusinessProvider value={businessData}>
               <NavbarCustom />
-             <div className="pt-9">{children}</div>
+             <div className="pt-9 min-h-screen">{children}</div>
            <Footer data={businessData?.data} />
            
             </BusinessProvider>

@@ -8,10 +8,7 @@ const items = [
   { image: '/assets/svg/parts.svg', title: 'شرایط فروش چری', subtitle: 'شرایط فروش مدیران خودرو' },
   { image: '/assets/svg/price-list.svg', title: 'قطعات چری', subtitle: 'قطعات مدیران خودرو' },
   { image: '/assets/svg/services.svg', title: 'نمایندگی چری', subtitle: 'نمایندگی مدیران خودرو' },
-  { image: '/assets/svg/agency.svg', title: 'محصولات چری', subtitle: 'محصولات مدیران خودرو' },
-  { image: '/assets/svg/parts.svg', title: 'شرایط فروش چری', subtitle: 'شرایط فروش مدیران خودرو' },
-  { image: '/assets/svg/price-list.svg', title: 'قطعات چری', subtitle: 'قطعات مدیران خودرو' },
-  { image: '/assets/svg/services.svg', title: 'نمایندگی چری', subtitle: 'نمایندگی مدیران خودرو' },
+
 ];
 
 const ItemSlidesImage = () => {
