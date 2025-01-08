@@ -92,7 +92,11 @@ export default ItemSlidesImage;
 
 function PicCon({ src }) {
   return (
-    <Image src={src} alt="Item Image" width={400} height={400} className="rounded-lg m-4" />
+    <div className="h-[400px] w-[400px] md:h-[600px] md:w-[600px] relative ">
+
+    <Image src={src} alt="Item Image" fill style={{}} className="rounded-lg m-4" />
+    
+    </div>
   );
 }
 

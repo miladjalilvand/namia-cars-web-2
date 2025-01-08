@@ -6,6 +6,7 @@ import dynamic from "next/dynamic";
 import TextMotionCustom from "../components/newC/textMotion";
 import FooterPages from "../components/newC/footerPages";
 import { useState , useEffect } from "react";
+import Image from "next/image";
 const ItemDynamic = dynamic(()=>import('../components/itemView'),
 { loading: () => <p>Loading...</p>,}
 );
@@ -112,9 +113,19 @@ const ItemDynamic = dynamic(()=>import('../components/itemView'),
   <div className="w-screen md:w-1/2 flex justify-center items-center underline">
     <TextMotionCustom text={"محصولات مدیران خودرو چری و فونیکس"} />
   </div>
-  <div className="w-screen md:w-1/2 bg-redasli h-60 flex justify-center items-center">
-  <div className="text-3xl md:text-5xl "> همه مدل / همه رنگ / همه سایز </div>
+  <div className="relative w-screen md:w-1/2 h-60 flex justify-center items-center overflow-hidden">
+  <Image
+    fill
+    alt="imagebanner"
+    src={'/assets/bg-banners/1.jpg'}
+    style={{ objectFit: "cover" }}
+    className="z-0"
+  />
+  <div className="absolute z-10 text-white text-center text-3xl md:text-5xl  px-4 py-2 rounded-lg">
+  <TextMotionCustom text={" همه مدل / همه رنگ / همه سایز "}/>
   </div>
+</div>
+
 </div>
 
           <div

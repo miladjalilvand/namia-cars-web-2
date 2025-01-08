@@ -89,7 +89,7 @@ useEffect(()=>{
         >
        
           {imagesBanner.map((img, index) => (
-         <SwiperSlide key={index}> <div className="  h-[420px] md:h-[600px] bg-black ">
+         <SwiperSlide key={index}> <div className="  h-[420px] md:h-[522px] bg-black ">
 
             
               <Image

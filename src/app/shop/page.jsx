@@ -2,6 +2,7 @@
 import { Accordion, AccordionItem, Chip, Pagination } from "@nextui-org/react";
 import TextMotionCustom from "../components/newC/textMotion";
 import { useState } from "react";
+import Image from "next/image";
 
 const imageData = [
 {
@@ -141,8 +142,15 @@ const Shop = () => {
     <div className="w-screen min-h-screen mx-auto px-0 py-8">
       {/* دسته‌بندی‌ها */}
       <div className="pb-6 w-full text-center flex flex-col md:flex-row justify-between items-center">
-        <div className="md:w-1/2 w-screen bg-redasli h-60 flex justify-center items-center">
-          <div className="text-3xl md:text-5xl ">
+  <div className="relative w-screen md:w-1/2 h-60 flex justify-center items-center overflow-hidden">
+  <Image
+    fill
+    alt="imagebanner"
+    src={'/assets/bg-banners/1.jpg'}
+    style={{ objectFit: "cover" }}
+    className="z-0"
+  />
+  <div className="absolute z-10 text-white text-center text-3xl md:text-5xl  px-4 py-2 rounded-lg">
             <TextMotionCustom text={"قطعات لوازم یدکی ام وی ا م"} />
           </div>
         </div>

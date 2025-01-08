@@ -17,13 +17,14 @@ const BranchDetails = () => {
   }, [businessData]);
 
   return (
-    <div className="flex flex-col bg-background justify-between pb-6   pt-12 ">
+    <div className="flex flex-col bg-background  justify-around min-h-screen pb-6   pt-12 ">
+
 
 
     <div className="flex flex-col md:flex-row gap-6 p-4 ">
 
       {data.map((val, ind) => (
-        <div key={ind} className="flex-1 p-4  rounded shadow-md">
+        <div key={ind} className="flex-1 p-4  rounded border border-foreground ">
           <h2 className="text-2xl font-bold mb-4">{val.title}</h2>
           <p>آدرس: {val.address}</p>
           <p>وضعیت: {val.is_open ? "باز" : "بسته"}</p>

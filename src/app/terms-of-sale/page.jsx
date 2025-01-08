@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 import TextMotionCustom from "../components/newC/textMotion";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 const ItemDynamic = dynamic(()=>import('../components/itemView'),
 { loading: () => <p>Loading...</p>,}
 );
@@ -114,8 +115,16 @@ const data = [
 <div className="w-screen md:w-1/2 flex justify-center items-center underline">
   <TextMotionCustom text={"شرایط فروش مدیران خودرو نقد اقساط تیر 1403"} />
 </div>
-<div className="w-screen md:w-1/2 bg-redasli h-60 flex justify-center items-center">
-<div className="text-3xl md:text-5xl ">  ماشین بخر به شرظ اقساط  </div>
+  <div className="relative w-screen md:w-1/2 h-60 flex justify-center items-center overflow-hidden">
+  <Image
+    fill
+    alt="imagebanner"
+    src={'/assets/bg-banners/1.jpg'}
+    style={{ objectFit: "cover" }}
+    className="z-0"
+  />
+  <div className="absolute z-10 text-white text-center text-3xl md:text-5xl  px-4 py-2 rounded-lg"> 
+  <TextMotionCustom text={" ماشین بخر به شرظ اقساط "}/> </div>
 </div>
 </div>
 
