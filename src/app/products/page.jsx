@@ -98,12 +98,12 @@ const ItemDynamic = dynamic(()=>import('../components/itemView'),
     
     export default function ProductsPage() {
     const { theme } = useTheme();
-    const [cTheme , setCTheme]=useState(theme);
+    const [cTheme , setCTheme]=useState(theme || "light");
     useEffect(()=>{
       setCTheme(theme);
     },[theme]);
     return (
-      <div className={`pt-12 ${cTheme === "dark" ? "bg-black" : "bg-background"}`}>
+      <div className={`pt-12 ${ typeof window === "undefined" ? "bg-background" :cTheme === "dark" ? "bg-black" : "bg-background"}`}>
           {/* <div className="bg-blue-700 bottom-0 w-full fixed z-20 flex-row flex">
             <div className="w-1/2 bg-orange-700">a</div>
             <div className="w-1/2">b</div>

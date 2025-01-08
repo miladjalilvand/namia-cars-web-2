@@ -17,7 +17,7 @@ const BranchDetails = () => {
   }, [businessData]);
 
   return (
-    <div className="flex flex-col bg-background justify-between pb-6  pt-12 ">
+    <div className="flex flex-col bg-background justify-between pb-6   pt-12 ">
 
 
     <div className="flex flex-col md:flex-row gap-6 p-4 ">
