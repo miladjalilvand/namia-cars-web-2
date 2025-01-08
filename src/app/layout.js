@@ -4,6 +4,7 @@ import { NextUIProvider } from "@nextui-org/react";
 import { ThemeProvider } from "next-themes";
 import NavbarCustom from "./components/navbar";
 import { BusinessProvider } from "./providers/businessContext";
+import Footer from "./components/footer";
 
 const vazir = localFont({
   src: "./fonts/Vazir-FD.woff2",
@@ -32,12 +33,13 @@ export default async function RootLayout({ children }) {
 
   return (
     <html dir="rtl" lang="fa-IR" suppressHydrationWarning>
-      <body className={` ${vazir.className} mt-0 min-h-screen   antialiased overflow-hidden bg-background`}>
+      <body className={` ${vazir.className} mt-0 min-h-screen flex-initial scale-1   antialiased overflow-hidden bg-background`}>
         <ThemeProvider>
           <NextUIProvider>
             <BusinessProvider value={businessData}>
               <NavbarCustom />
              <div className="pt-9">{children}</div>
+           <Footer data={businessData?.data} />
            
             </BusinessProvider>
           </NextUIProvider>

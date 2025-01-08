@@ -11,7 +11,7 @@ export default function ItemProducts({ details , theme}) {
   return (
     <div className="flex flex-col bg-background h-96 rounded-md ">
       {/* بخش تصویر */}
-      <div className="relative h-1/2 z-10 rounded-md">
+      <div className="relative h-2/3 z-10 rounded-md">
       <div className="absolute z-20  left-2 top-2 flex-col ">
       <div>{details.title}</div>
        {details.status === "sold out" && ( <div>{details.status}</div>
@@ -24,8 +24,8 @@ export default function ItemProducts({ details , theme}) {
         <Image
         
         className="cursor-pointe rounded-t-md"
-          src={details.img}
-          alt={`image ${details.img}`}
+          src={details.icon}
+          alt={`image ${details.icon}`}
           fill // استفاده از حالت fill برای تطابق کامل با والد
           style={{ objectFit: "cover" }} // استفاده از objectFit
         // loading="lazy"
@@ -40,14 +40,13 @@ export default function ItemProducts({ details , theme}) {
       {/* بخش متن */}
       <div className="h-fit flex flex-col space-y-2 items-start justify-center text-foreground text-center
       p-3"
-      style={{   backgroundColor: theme === 'light' ? "#ffffff" : '#363636', 
-      }}
+      // style={{   backgroundColor: theme === 'light' ? "#ffffff" : '#363636', 
+      // }}
       >
       <div className="cursor-pointer">  {details.subtitle}</div>
       <div  className="flex w-full flex-row justify-between items-center">
       <div>آخرین بروزرسانی</div>
-      <div style={{   backgroundColor: theme === 'light' ? "#cdcdcd" : '#202020', 
-       }} className=" px-1 "
+      <div  className=" px-1 "
       
       >{details.date}</div>
      
