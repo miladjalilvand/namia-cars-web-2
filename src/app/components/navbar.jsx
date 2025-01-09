@@ -14,12 +14,13 @@ import Image from "next/image";
 const links = [
   { name: "خانه", url: "/" },
   { name: "محصولات", url: "/products" },
-  { name: "شرایط فروش", url: "/terms-of-sale" },
-  { name: "قطعات", url: "/shop" },
-  { name: "تماس با ما ", url: "/contact" },
+  // { name: "شرایط فروش", url: "/terms-of-sale" },
+  // { name: "قطعات", url: "/shop" },
+
   { name: "  گالری ", url: "/gallery" },
   { name: "  کاتالوگ ", url: "/catalogs" },
-  { name: "  تور مجازی  ", url: "/pana" }
+  { name: "  تور مجازی  ", url: "/pana" },
+  { name: "تماس با ما ", url: "/contact" },
 ];
 
 export default function NavbarCustom(){
@@ -117,7 +118,9 @@ useEffect(() => {
                     <div className="cursor-pointer p-3" onClick={()=>toggleThemeMenu()}>{objTheme === "dark" ? (<FaMoon/>) : (<FaSun/>) }</div>
 
                   </div>
-                  <div className="mt-12 ml-2 mr-2 
+
+                  <div className="mt-12 border-b ">  </div>
+                  {/* <div className="mt-12 ml-2 mr-2 
   flex items-center bg-black p-2
    bg-opacity-60 rounded-sm ">
   <IoMdSearch color="txtl" size={24} />
@@ -129,9 +132,9 @@ useEffect(() => {
   />
 
 
-</div>
+</div> */}
 
-<div className="flex flex-col items-center text-txtl font-extrabold space-y-2 pt-2">
+<div className="flex flex-col gap-3 items-center text-txtl font-extrabold space-y-2 pt-3 md:pt-12">
                 {/* <div className="cursor-pointer" onClick={() => pushin('about')}>about</div> */}
                {isOpen && links.map((val , key)=>(
    <motion.div
@@ -149,12 +152,17 @@ useEffect(() => {
                 
 
 
-              <div className="flex flex-row ">
-           <div className="m-4 text-txtl cursor-pointer" 
-           onClick={() => pushin('/exchange')}>طرح تعویض</div>
-            <div className="m-4 text-txtl cursor-pointer" 
-            onClick={() => pushin('/test-drive')}>تست درایو</div>
-            <div className="m-4 text-txtl cursor-pointer">وبلاگ</div>
+              <div className="flex flex-row border-t-1 items-center justify-around border-t-white ">
+              <div className="m-4 text-txtl text-2xl font-semibold cursor-pointer" 
+
+           onClick={() => pushin('https://sdfn.ir/f/namya/view.php?id=84231')}>طرح تعویض</div>
+                      <div className="m-4 text-txtl text-2xl font-semibold cursor-pointer" 
+
+            onClick={() => pushin('https://sdfn.ir/f/namya/view.php?id=82738')}>تست درایو</div>
+            <div className="m-4 text-txtl text-2xl font-semibold cursor-pointer" 
+            onClick={() => pushin('https://sdfn.ir/f/namya/view.php?id=82738')}>پیش ثبت‌نام   </div>
+                        {/* <div className="m-4 text-txtl text-2xl font-semibold cursor-pointer" 
+                        >وبلاگ</div> */}
            </div>
             </motion.div>
             {  (isOpen && <div onClick={() => handleClick()} className="fixed md:w-screen z-30 md:h-screen bg-black opacity-70"></div>)}
@@ -173,7 +181,7 @@ useEffect(() => {
 
                 <div className='h-full w-20 bg-redc cursor-pointer' >
       <button onClick={() => setModalOpen(true)} className="h-full w-full text-txtl flex  items-center justify-center">
-       <IoIosCall size={"36px"}/>
+       <IoIosCall size={"24px"}/>
       </button>
 
       <ModalWithTabs isOpen={isModalOpen} onClose={() => setModalOpen(false)} />
@@ -181,15 +189,22 @@ useEffect(() => {
  
                 <div className="hidden md:flex w-12 cursor-pointer   items-center justify-center"
                 onClick={()=>changeTheme()}
-                >{ objTheme === "light" && (<div><IoMdMoon  size={"36px"}/></div>)  }
-                { objTheme === "dark" && (<div><IoMdSunny  size={"36px"}/></div>)  }</div>
-                <div className="md:hidden px-3">  <IoMdContact  size={"36px"}/></div>
-                <div className="hidden items-center justify-center md:flex flex-row-reverse gap-1 px-1 text-xl cursor-pointer mx-3"> 
+                >{ objTheme === "light" && (<div><IoMdMoon  size={"24px"}/></div>)  }
+                { objTheme === "dark" && (<div><IoMdSunny  size={"24px"}/></div>)  }</div>
+                <div className="md:hidden px-3">  <IoMdContact  size={"24px"}/></div>
+                <div className="hidden items-center justify-center md:flex flex-row-reverse gap-1 px-1 text-lg cursor-pointer mx-3 "> 
                   <div>ورود</div>
-                  <IoMdContact  size={"36px"}/>
+                  <IoMdContact  size={"24px"}/>
                    </div>
-                <div onClick={()=>pushin('/exchange')} className="rounded-sm text-txtl bg-redc cursor-pointer text-xl px-3 py-1">طرح تعویض</div>
+               <div className="hidden md:flex">
+               <div onClick={()=>pushin('https://sdfn.ir/f/namya/view.php?id=84231')} className="rounded-sm mx-3 text-txtl bg-redc cursor-pointer text-lg px-3 py-1">طرح تعویض</div>
+                <div onClick={()=>pushin('https://sdfn.ir/f/namya/view.php?id=82738')} className="rounded-sm mx-3 text-txtl bg-redc cursor-pointer text-lg px-3 py-1"> تست درایو</div>
+                <div onClick={()=>pushin('https://sdfn.ir/f/namya/view.php?id=82738')} className="rounded-sm mx-3 text-txtl bg-redc cursor-pointer text-lg px-3 py-1">پیش ثبت‌نام</div>
+
+
+               </div>
                 </div>
+
 
               </div>
      
