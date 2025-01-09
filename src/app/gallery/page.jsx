@@ -1,9 +1,8 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import ImageGallery from "react-image-gallery";
-import "react-image-gallery/styles/css/image-gallery.css";
 import { FaPlay } from "react-icons/fa"; // استفاده از آیکن پلی
+import Image from "next/image";
 
 export default function GalleryPage() {
   const [imageMode, setImageMode] = useState(true); // Default to images
@@ -16,16 +15,21 @@ export default function GalleryPage() {
       const response = await fetch("https://namya.ir/api/v3/posts?business_id=1165");
       const { data } = await response.json();
 
-      const imagesData = data.flatMap((item) =>
-        item.media_files
-          ? item.media_files
-              .filter((file) => file.type === "IMAGE")
-              .map((file) => ({
-                original: file.original,
-                thumbnail: file.thumbnail,
-              }))
-          : []
-      );
+      // حذف تکراری‌ها با استفاده از Set
+      const imgsSet = new Set();
+
+      data.forEach((itU) => {
+        itU.media_files.forEach((item) => {
+          if (item.type === "IMAGE") {
+            imgsSet.add(itU); // اضافه کردن تنها یک نسخه از داده‌ها
+          }
+        });
+      });
+
+      // تبدیل Set به آرایه
+      const uniqueImgs = Array.from(imgsSet);
+      setImages(uniqueImgs);
+      console.log("we have log here : =>  " + JSON.stringify(uniqueImgs));
 
       const videosData = data.flatMap((item) =>
         item.media_files
@@ -38,10 +42,9 @@ export default function GalleryPage() {
           : []
       );
 
-      setImages(imagesData);
       setVideos(videosData);
     } catch (error) {
-      console.error("Error fetching data:", error);
+      console.log("Error fetching data:", error);
     } finally {
       setLoading(false);
     }
@@ -56,15 +59,13 @@ export default function GalleryPage() {
       {loading ? (
         <p className="text-center pt-16">در حال بارگذاری...</p>
       ) : (
-        <div className="flex flex-col pt-16 ">
+        <div className="flex flex-col pt-16">
           {/* Toggle Buttons */}
           <div className="flex flex-row p-3 items-center justify-center gap-3">
             <button
               onClick={() => setImageMode(true)}
               className={`${
-                imageMode
-                  ? "border-b-2 text-blue-600 scale-105"
-                  : "text-gray-600 hover:text-blue-600"
+                imageMode ? "border-b-2 text-blue-600 scale-105" : "text-gray-600 hover:text-blue-600"
               } cursor-pointer px-3`}
             >
               عکس‌ها
@@ -72,9 +73,7 @@ export default function GalleryPage() {
             <button
               onClick={() => setImageMode(false)}
               className={`${
-                !imageMode
-                  ? "border-b-2 text-blue-600 scale-105"
-                  : "text-gray-600 hover:text-blue-600"
+                !imageMode ? "border-b-2 text-blue-600 scale-105" : "text-gray-600 hover:text-blue-600"
               } cursor-pointer px-3`}
             >
               ویدیوها
@@ -84,13 +83,53 @@ export default function GalleryPage() {
           {/* Image and Video Galleries */}
           {imageMode ? (
             images.length > 0 ? (
-              <ImageGallery
-                items={images}
-                lazyLoad
-                disableThumbnailScroll={false}
-                slideOnThumbnailOver
-                isRTL
-              />
+              <div className="container mx-auto p-4">
+                <div className="flex flex-col gap-6">
+                  {images.map((item, index) => (
+                    <div
+                      key={index}
+                      className="bg-white hover:opacity-20 shadow-md rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300"
+                    >
+                      {/* Header */}
+                      <div className="p-4 border-b">
+                        <div className="flex items-center">
+                          <img
+                            src={item.business.logo}
+                            alt={item.business.name}
+                            className="w-12 h-12 rounded-full mr-3"
+                          />
+                          <div>
+                            <h3 className="text-lg font-bold">{item.business.name}</h3>
+                            <p className="text-sm text-gray-500">{item.caption}</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Images */}
+                      <div className="p-4">
+                        <div className="relative w-full h-[321px]">
+                          <Image
+                            src={item.media_files[0].original}
+                            alt={`Image ${index}`}
+                            layout="fill"
+                            objectFit="cover"
+                            className="rounded-lg"
+                          />
+                        </div>
+                      </div>
+
+                      {/* Footer */}
+                      <div className="p-4 border-t flex justify-between items-center text-sm text-gray-600">
+                        <div className="flex items-center gap-2">
+                          <span>❤️ {item.likes_count}</span>
+                          <span>💬 {item.comments_count}</span>
+                        </div>
+                        <span>👁 {item.views_count}</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
             ) : (
               <p className="text-center">هیچ تصویری موجود نیست.</p>
             )
