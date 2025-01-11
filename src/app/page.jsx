@@ -1,4 +1,5 @@
 
+import TextAnimation from "./components/animot";
 import AnyMot from "./components/animot";
 import CarsPicker from "./components/CarsPicker";
 import CarsAnim from "./components/carsPickerAnim";

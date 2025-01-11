@@ -20,32 +20,6 @@ export default function AnyMot() {
   const [selectedCar , setCarSelected]=useState(0);
   const [selectedColor ,setSelectedColor ]=useState(0);
 
-  const [isOut,setIsout]=useState(false);
-  const [isEnter,setIsInter]=useState(false);
-
-  const [currentRotation , setCurrentRotation] = useState(0);
-
-  const handleChange= (indexColor) => {
-    if(indexColor !== selectedColor){ 
-      setIsout(true);
-      setRotation(true);
-     
-
-      setTimeout(()=>{
-        setIsout(false);
-        setSelectedColor(indexColor);
-        setIsInter(true);
-
-
-
-        setTimeout(() => {
-          setIsInter(false);
-          setRotation(false);
-          setCurrentRotation(currentRotation-900);
-        }, 1500);
-      },1500);
-    }
-  }
 
   const handleChangeColor = (indexColor) => {
 
@@ -104,7 +78,7 @@ if(image){
     <div key={ind} className="flex flex-col ">
   <div
     
-    onClick={() => handleChange(ind)}
+    onClick={() => handleChangeColor(ind)}
     className={`rounded-full cursor-pointer h-7 w-7 border-2 transition-transform 
       duration-300 ${selectedColor === ind ? "border-gray-500 scale-125" : ""} `}
       style={{
@@ -134,24 +108,17 @@ if(image){
           } transition-transform duration-300`}
         ></div> */}
       </div>
-      <motion.div
-      // initial={{x:isEnter ? 0  : "-50%" }}
-      // animate={{ x: isOut ? -(window.innerWidth) : isEnter ? window.innerWidth : "0%" }}
-      transition={{duration:1 , ease:"easeInOut"}}
-      className={` relative  text-center w-[1200px] h-[481px] md:w-[900px] md:h-[420px] mx-auto  text-6xl overflow-hidden `}>
-      {currentRotation}
-      </motion.div>
-      <div className={` "w-[1200px] h-[481px] md:w-[900px] md:h-[420px]`}>
-    <motion.div className={`relative mx-auto w-[1200px] h-[481px] md:w-[900px] md:h-[420px] text-6xl overflow-hidden ${isEnter && "hidden"}`}
-    initial={{x:isEnter ? 0  : "-50%" }}
-      animate={{ x: isOut ? -(window.innerWidth) : isEnter ? window.innerWidth : "0%" }}
-    transition={{ ease: "easeInOut", duration: 1.5 , delay:0.15 }}
+
+    <motion.div className=" relative w-[1200px] h-[481px] md:w-[900px] md:h-[420px] mx-auto  text-6xl overflow-hidden"
+    initial={{ x: 0 }}
+    animate={{ x: isMoving ? -(window.innerWidth) : "0%" }}
+    transition={{ ease: "easeInOut", duration: 2 }}
     >
       {/* تصویر ماشین و چرخ‌ها */}
       <motion.div
       initial={{opacity:0.5}}
       animate={{opacity:1}}
-      transition={{ease:"easeInOut" , duration:1}}
+      transition={{ease:"easeInOut" , duration:0.6}}
       key={selectedCar}
 
 
@@ -170,14 +137,14 @@ if(image){
 
         {/* چرخ جلو */}
         <motion.div
-          className={`absolute w-[60px] h-[60px] md:w-[144px] md:h-[144px] top-[60%] left-[11%] flex items-center justify-center ${isEnter && "hidden"}`}
-          initial={{ rotate: currentRotation, }}
+          className="absolute w-[60px] h-[60px] md:w-[144px] md:h-[144px] top-[60%] left-[11%] flex items-center justify-center"
+          initial={{ rotate: 0 }}
           animate={{
-            rotate: rotation ? (currentRotation-360) : currentRotation, // چرخش همزمان با حرکت
+            rotate: rotation ? -1440 : 0, // چرخش همزمان با حرکت
           }}
           transition={{
             ease: "easeInOut",
-            duration: 1.9,
+            duration: 2,
           }}
         >
           <Image
@@ -190,13 +157,13 @@ if(image){
         {/* چرخ عقب */}
         <motion.div
           className="absolute w-[60px] h-[60px] md:w-[144px] md:h-[144px] top-[60%] left-[69%] flex items-center justify-center"
-          initial={{ rotate: currentRotation, }}
+          initial={{ rotate: 0 }}
           animate={{
-            rotate: rotation ? (currentRotation-360) : currentRotation, // چرخش همزمان با حرکت
+            rotate: rotation ? -1440 : 0, // چرخش همزمان با حرکت
           }}
           transition={{
             ease: "easeInOut",
-            duration:1.9,
+            duration: 2,
           }}
         >
           <Image
@@ -210,7 +177,6 @@ if(image){
       {/* دایره‌های رنگی برای تغییر رنگ ماشین */}
     
     </motion.div>
-    </div>
     </div>
   );
 }

@@ -20,33 +20,6 @@ export default function CarsAnim() {
   const [selectedCar , setCarSelected]=useState(0);
   const [selectedColor ,setSelectedColor ]=useState(0);
 
-  
-  const [isOut,setIsout]=useState(false);
-  const [isEnter,setIsInter]=useState(false);
-
-  const [currentRotation , setCurrentRotation] = useState(0);
-
-  const handleChange= (indexColor) => {
-    if(indexColor !== selectedColor){ 
-      setIsout(true);
-      setRotation(true);
-     
-
-      setTimeout(()=>{
-        setIsout(false);
-        setSelectedColor(indexColor);
-        setIsInter(true);
-
-
-
-        setTimeout(() => {
-          setIsInter(false);
-          setRotation(false);
-          setCurrentRotation(currentRotation-900);
-        }, 1500);
-      },1500);
-    }
-  }
 
   const handleChangeColor = (indexColor) => {
     console.log({ selectedCar, selectedColor, indexColor });
@@ -84,7 +57,7 @@ const handleSetCar = (ind) => {
   <div key={ind} className="flex flex-col ">
 <div
   
-  onClick={() => handleChange(ind)}
+  onClick={() => handleChangeColor(ind)}
   className={`rounded-full cursor-pointer h-7 w-7 border-2 transition-transform 
     duration-300 ${selectedColor === ind ? "border-grey-400 scale-125" : ""} `}
     style={{
@@ -98,11 +71,11 @@ const handleSetCar = (ind) => {
     </div>
 
 
-   <div className="h-[600px] w-screen relative">
-    <motion.div className={` h-[600px] w-screen relative   ${isEnter && "hidden"} `}
-   initial={{x:isEnter ? 0  : "-50%" }}
-   animate={{ x: isOut ? -(window.innerWidth) : isEnter ? window.innerWidth : "0%" }}
- transition={{ ease: "easeInOut", duration: 1.5 , delay:0.15 }}
+   
+    <motion.div className=" h-[600px] w-screen relative  " 
+    initial={{ x: 0 }}
+    animate={{ x: isMoving ? -(window.innerWidth): "0%" }}
+    transition={{ ease: "easeInOut", duration: 2 }}
     >
       
       {/* تصویر ماشین */}
@@ -123,17 +96,15 @@ const handleSetCar = (ind) => {
       {/* چرخ اول */}
       <div className="absolute bottom-[6.2%] md:bottom-[10%] left-[3%] md:left-[-6%] w-full h-full">
         <motion.div
-          className={`absolute w-[14%] h-[14%] md:w-[30%] md:h-[30%] transform bottom-[29%] left-[8%] md:bottom-[5%] md:left-[10%] xl:h-[35%] xl:w-[35%] xl:bottom-[5%] xl:left-[12%] 2xl:left-[10%] 2xl:bottom-[6%] 2xl:h-[30%] 2xl:w-[30%]
-           
-            `}
-            initial={{ rotate: currentRotation, }}
-            animate={{
-              rotate: rotation ? (currentRotation-360) : currentRotation, // چرخش همزمان با حرکت
-            }}
-            transition={{
-              ease: "easeInOut",
-              duration: 1.9,
-            }}
+          className="absolute w-[14%] h-[14%] md:w-[30%] md:h-[30%] transform bottom-[29%] left-[8%] md:bottom-[5%] md:left-[10%] xl:h-[35%] xl:w-[35%] xl:bottom-[5%] xl:left-[12%] 2xl:left-[10%] 2xl:bottom-[6%] 2xl:h-[30%] 2xl:w-[30%]"
+          initial={{ rotate: 0 }}
+          animate={{
+            rotate: rotation ? -1440 : 0, // چرخش همزمان با حرکت
+          }}
+          transition={{
+            ease: "easeInOut",
+            duration: 2,
+          }}
         >
           <Image
            src={cars[selectedCar].wheel}
@@ -148,13 +119,13 @@ const handleSetCar = (ind) => {
       <div className="absolute bottom-[6.2%] md:bottom-[10%] right-[8%] md:right-[-2%] w-full h-full">
         <motion.div
           className="absolute w-[14%] h-[14%] md:w-[30%] md:h-[30%] transform bottom-[29%] right-[8%] md:bottom-[5%] md:right-[10%] xl:h-[35%] xl:w-[35%] xl:bottom-[5%] xl:right-[12%] 2xl:right-[10%] 2xl:bottom-[6%] 2xl:h-[30%] 2xl:w-[30%]"
-          initial={{ rotate: currentRotation, }}
+          initial={{ rotate: 0 }}
           animate={{
-            rotate: rotation ? (currentRotation-360) : currentRotation, // چرخش همزمان با حرکت
+            rotate: rotation ? -1440 : 0, // چرخش همزمان با حرکت
           }}
           transition={{
             ease: "easeInOut",
-            duration: 1.9,
+            duration: 2,
           }}
         >
           <Image
@@ -169,7 +140,7 @@ const handleSetCar = (ind) => {
 
     </motion.div>
 
-    </div>
+  
     <TextMotionCustom text={'mvm xr-550'} />
     <div className="flex flex-wrap  gap-6 py-2 mb-12">
   {cars.map((val, ind) => (
