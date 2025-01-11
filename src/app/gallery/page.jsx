@@ -1,14 +1,21 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { FaPlay } from "react-icons/fa"; // استفاده از آیکن پلی
+import { FaPlay, FaWindowClose } from "react-icons/fa"; // استفاده از آیکن پلی
 import Image from "next/image";
+import { Drawer, DrawerContent, useDisclosure } from "@nextui-org/react";
 
+import ImageGallery from "react-image-gallery";
+
+import "react-image-gallery/styles/css/image-gallery.css";
 export default function GalleryPage() {
   const [imageMode, setImageMode] = useState(true); // Default to images
   const [images, setImages] = useState([]);
   const [videos, setVideos] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [imageGallery , setImageGallery]=useState([]);
+
+const {isOpen , onOpen , onOpenChange}= useDisclosure();
 
   const fetchData = async () => {
     try {
@@ -50,6 +57,15 @@ export default function GalleryPage() {
     }
   };
 
+  const imageGalleryHandleCLick =(itemItu) =>{
+    const gallery = itemItu.map((val)=>({
+      original: val.original,
+      thumbnail: val.thumbnail,
+    }));
+    setImageGallery(gallery);
+    onOpen();
+  }
+
   useEffect(() => {
     fetchData();
   }, []);
@@ -88,7 +104,7 @@ export default function GalleryPage() {
                   {images.map((item, index) => (
                     <div
                       key={index}
-                      className="bg-white hover:opacity-20 shadow-md rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300"
+                      className="bg-gradient-to-t from-gray-900 md:from-gray-300 to-background  shadow-md rounded-lg overflow-hidden  transition-transform duration-300"
                     >
                       {/* Header */}
                       <div className="p-4 border-b">
@@ -124,8 +140,26 @@ export default function GalleryPage() {
                           <span>❤️ {item.likes_count}</span>
                           <span>💬 {item.comments_count}</span>
                         </div>
+                      { item.media_files.length > 0 &&  (<span onClick={()=>imageGalleryHandleCLick(item.media_files)} className="cursor-pointer hover:text-blue-600" >مشاهده عکس ها </span>)}
+                         <Drawer hideCloseButton={true} size="full" placement="bottom" key={`drawer-${index}`} isOpen={isOpen} onOpenChange={onOpenChange} >
+                          <DrawerContent>
+                            {(onClose) => (
+                              <div className="w-screen h-screen relative">
+                                <div className="flex flex-row items-center justify-center gap-3 cursor-pointer bg-red-600 bg-opacity-60 top-6 left-6" onClick={()=>onClose()}  >
+                                  <FaWindowClose/>
+                                 <div className="">بستن </div>
+                                
+                                </div>
+                                <ImageGallery  lazyLoad
+                disableThumbnailScroll={false}
+                slideOnThumbnailOver items={imageGallery}/></div>
+                            )}
+                          </DrawerContent>
+                         </Drawer>
                         <span>👁 {item.views_count}</span>
+                       
                       </div>
+                      
                     </div>
                   ))}
                 </div>
@@ -145,7 +179,7 @@ export default function GalleryPage() {
                   <img
                     src={video.thumbnail}
                     alt={`Video thumbnail ${index}`}
-                    className="w-full h-44 object-cover rounded-lg"
+                    className="w-full h-60 object-cover rounded-lg"
                   />
                   {/* Play Icon */}
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50 rounded-lg">
