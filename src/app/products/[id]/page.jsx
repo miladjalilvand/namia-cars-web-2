@@ -267,16 +267,16 @@ export default function Item({ params }) {
   };
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col pt-9">
       <div className="fixed overflow-x-auto w-full bg-black text-white z-[21]">
-        <div className="flex flex-row min-w-max  justify-center items-end   h-full">
+        <div className="flex flex-row min-w-max justify-center items-end   h-full">
           {itemsIndex.map((val, ind) => {
             const isVis = visibleItems[ind];
             console.log("isVis:" + isVis);
             return (
               <div
                 key={ind}
-                className={`cursor-pointer py-3 px-6 ${isVis ? "text-redasli border-b-medium border-b-redasli" : ""}`}
+                className={`cursor-pointer pt-3 py-3 px-6 ${isVis ? "text-redasli border-b-medium border-b-redasli" : ""}`}
                 onClick={() => scrollToSection(ind)}
               >
                 {val.title}

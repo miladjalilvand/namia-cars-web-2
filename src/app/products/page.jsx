@@ -9,6 +9,8 @@ import { useState , useEffect } from "react";
 import Image from "next/image";
 import items from "../components/data/baseData";
 import ItemProducts from "../components/itemView";
+import Link from "next/link";
+import { IoIosArrowDown } from "react-icons/io";
 // { loading: () => <p>Loading...</p>,}
 // );
 // const DynamicHeader = dynamic(() => import('../components/header'), {
@@ -105,9 +107,9 @@ import ItemProducts from "../components/itemView";
       setCTheme(theme);
     },[theme]);
     return (
-      <div className={`pt-12 ${cTheme === "dark" ? "bg-black" : "bg-background"}`}>
+      <div className={``}>
           {/* <div className="bg-blue-700 bottom-0 w-full fixed z-20 flex-row flex">
-            <div className="w-1/2 bg-orange-700">a</div>
+            <div className="w-1/2 bg-orange-700">a</divursor-pointer px-2 p>
             <div className="w-1/2">b</div>
           </div> */}
         <div className="pb-6 px-3 h-fit w-screen text-center flex flex-col md:flex-row justify-between items-center">
@@ -148,7 +150,87 @@ import ItemProducts from "../components/itemView";
           // animate={{opacity:1 , y:"0%"}}
           // transition={{duration:(ind+0.3)}}
           >
-            <ItemProducts details={val} theme={theme}/>
+           <div className="flex flex-col bg-background h-96 rounded-md ">
+      {/* بخش تصویر */}
+      <div className="relative h-2/3 z-10 rounded-md">
+      <div className="absolute z-20  left-2 top-2 flex-col ">
+      <div>{val.title}</div>
+       {val.status === "sold out" && ( <div>{val.status}</div>
+)}
+        
+        </div>
+        {true && ( <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
+          <div className="animate-spin rounded-full h-12 w-12 border-t-4 border-blue-500"></div>
+        </div>)}
+        <Image
+        
+        className="cursor-pointe "
+          src={val.icon}
+          alt={`image ${val.icon}`}
+          fill // استفاده از حالت fill برای تطابق کامل با والد
+          style={{ objectFit: "cover" }} // استفاده از objectFit
+        // loading="lazy"
+        // placeholder="empty"
+        // onLoad={(e)=>console.log("e:"+e)}
+        // onLoadingComplete={()=>setLoadImg(false)}
+          
+      
+        />
+      </div>
+      
+      {/* بخش متن */}
+      <div className="h-fit flex flex-col space-y-2 items-start justify-center text-foreground text-center
+      p-3"
+      // style={{   backgroundColor: theme === 'light' ? "#ffffff" : '#363636', 
+      // }}
+      >
+      <div className="cursor-pointer">  {val.subtitle}</div>
+      
+      <div  className="flex w-full flex-row justify-between items-center">
+      <div>آخرین بروزرسانی</div>
+      <div  className=" px-1 "
+      
+      >{val.date}</div>
+     
+      </div>
+      <div  
+      //   style={{   backgroundColor: theme === 'light' ? "#cdcdcd" : '#202020', 
+      //  }}
+        className="flex w-full   flex-row justify-between items-center">
+      <div
+   
+      > تیپ {val.title}</div>
+      <div className=" px-1">{val.price}</div>
+     
+      </div>
+     
+      <div className="flex w-full   flex-row justify-between items-center "
+       
+      >
+<div
+  className={`cursor-pointer px-2 py-1 transition-colors  hover:bg-red-200 hover:text-white`}
+>
+  بررسی کامل {val.title}
+</div>
+
+<div
+  className={`cursor-pointer px-2 py-1 transition-colors  hover:bg-red-200 hover:text-white`}
+>
+  شرایط فروش {val.title}
+</div>
+
+     
+      </div>
+      <div className="flex w-full flex-row justify-between items-center cursor-pointer pt-4">
+      <div>نمودار قیمت </div>
+      <div className=" px-1">  <Link href={'/products/3'}> 
+       <IoIosArrowDown/></Link>
+     </div>
+     
+      </div>
+    
+      </div>
+    </div>
                 {/* <ItemDynamic details={val} theme={theme} /> */}
               </motion.div>
             ))}
