@@ -35,7 +35,7 @@ const cars = [
         url: "/assets/cars/arizo5/PCArrizo5FLgrey.png"
       }
     ],
-    wheel: "/assets/cars/arizo5/PCArrizo5FLwheel.png"
+    wheel: "/assets/cars/arizo5/PCArrizo5FLwheel.png" 
   },
   {id : 1,
     name: "تیگو 8 پرو E پلاس",
