@@ -25,6 +25,47 @@ export default function AnyMot() {
 
   const [currentRotation , setCurrentRotation] = useState(0);
 
+
+  const styleWheelFRONT = () => {
+    switch (selectedCar) {
+      
+      case 0 :  return "md:w-[200px] md:h-[200px] top-[61%] left-[11.6%]"; 
+      case 1 :  return "md:w-[220px] md:h-[220px] top-[60%] left-[11.0%]"; 
+      case 2 : return "md:w-[200px] md:h-[200px] top-[61%] left-[11.6%]"; 
+      case 4 :  return "md:w-[222px] md:h-[222px] top-[58%] left-[10%]"; 
+      case 5 :  return "md:w-[222px] md:h-[222px] top-[58%] left-[10.7%]"; 
+      case 6 :  return "md:w-[222px] md:h-[222px] top-[57%] left-[10%]"; 
+      case 7 :  return "md:w-[222px] md:h-[222px] top-[57%] left-[10%]"; 
+      case 8 :  return "md:w-[222px] md:h-[222px] top-[60%] left-[10%]"; 
+      case 9 : return "md:w-[200px] md:h-[200px] top-[61%] left-[11.6%]"; 
+      case 10 :  return "md:w-[200px] md:h-[200px] top-[61%] left-[11%]"; 
+      default:
+       
+        return "md:w-[201px] md:h-[201px]  top-[60%] left-[11.6%]";
+    }
+  };
+
+  const styleWheelREAR = () => {
+    switch (selectedCar) {
+      
+      case 0 :  return "md:w-[200px] md:h-[200px] top-[61%] left-[69.1%]"; 
+      case 1 :  return "md:w-[220px] md:h-[220px] top-[60%] left-[69.1%]"; 
+      case 2 :  return "md:w-[200px] md:h-[200px] top-[61%] left-[69.1%]"; 
+      case 4 :  return "md:w-[222px] md:h-[222px] top-[58%] left-[69%]"; 
+      case 5 :  return "md:w-[222px] md:h-[222px] top-[58%] left-[69.1%]"; 
+      case 6 :  return "md:w-[222px] md:h-[222px] top-[57%] left-[68%]"; 
+      case 7 :  return "md:w-[222px] md:h-[222px] top-[57%] left-[68%]"; 
+      case 8 :  return "md:w-[222px] md:h-[222px] top-[60%] left-[68.5%]"; 
+      case 9 :  return "md:w-[200px] md:h-[200px] top-[61%] left-[69%]"; 
+      case 10 :  return "md:w-[200px] md:h-[200px] top-[61%] left-[70%]"; 
+      case 0 :  return "md:w-[201px] md:h-[201px]"; 
+      default:
+       
+        return "md:w-[201px] md:h-[201px] top-[61%] left-[69.1%]";
+    }
+  };
+
+
   const handleChange= (indexColor) => {
     if(indexColor !== selectedColor){ 
       setIsout(true);
@@ -42,8 +83,8 @@ export default function AnyMot() {
           setIsInter(false);
           setRotation(false);
           setCurrentRotation(currentRotation-900);
-        }, 1500);
-      },1500);
+        }, 100);
+      },1000);
     }
   }
 
@@ -134,18 +175,30 @@ if(image){
           } transition-transform duration-300`}
         ></div> */}
       </div>
-      <motion.div
-      // initial={{x:isEnter ? 0  : "-50%" }}
-      // animate={{ x: isOut ? -(window.innerWidth) : isEnter ? window.innerWidth : "0%" }}
-      transition={{duration:1 , ease:"easeInOut"}}
-      className={` relative  text-center w-[1200px] h-[481px] md:w-[900px] md:h-[420px] mx-auto  text-6xl overflow-hidden `}>
-      {currentRotation}
-      </motion.div>
-      <div className={` "w-[1200px] h-[481px] md:w-[900px] md:h-[420px]`}>
-    <motion.div className={`relative mx-auto w-[1200px] h-[481px] md:w-[900px] md:h-[420px] text-6xl overflow-hidden ${isEnter && "hidden"}`}
-    initial={{x:isEnter ? 0  : "-50%" }}
+ 
+    
+         {/* <motion.div 
+          initial={{x:0 }}
+          animate={{ x: isOut ? -(window.innerWidth) : isEnter ? window.innerWidth : "0%" }}
+        transition={{ ease: "easeInOut", duration: isEnter ? 0 : 1.5   }}
+      > asasas  </motion.div> */}
+
+
+
+
+
+      {/* <motion.div
+          initial={{x:0 }}
+          animate={{ x: isOut ? -(window.innerWidth) : isEnter ? window.innerWidth : "0%" }}
+        transition={{ ease: "easeInOut", duration: isEnter ? 0 : 1.5   }}
+      className={` relative  text-center w-[1200px] h-[481px] md:w-[1900px] md:h-[420px] mx-auto  text-6xl overflow-hidden `}>
+      {/* {currentRotation} */}
+      {/* </motion.div> */} 
+      <div className={` "w-[1200px] h-[481px] md:w-[1350px] md:h-[630px]`}>
+    <motion.div className={`relative mx-auto w-[1200px] h-[481px] md:w-[1350px] md:h-[630px] text-6xl overflow-hidden `}
+    initial={{x:0 }}
       animate={{ x: isOut ? -(window.innerWidth) : isEnter ? window.innerWidth : "0%" }}
-    transition={{ ease: "easeInOut", duration: 1.5 , delay:0.15 }}
+    transition={{ ease: "easeInOut", duration: isEnter ? 0 : 1.5   }}
     >
       {/* تصویر ماشین و چرخ‌ها */}
       <motion.div
@@ -170,14 +223,15 @@ if(image){
 
         {/* چرخ جلو */}
         <motion.div
-          className={`absolute w-[60px] h-[60px] md:w-[144px] md:h-[144px] top-[60%] left-[11%] flex items-center justify-center ${isEnter && "hidden"}`}
+        key={selectedCar*selectedColor}
+          className={`absolute w-[60px] h-[60px] ${styleWheelFRONT()}  flex items-center justify-center ${isEnter && "hidden"}`}
           initial={{ rotate: currentRotation, }}
           animate={{
             rotate: rotation ? (currentRotation-360) : currentRotation, // چرخش همزمان با حرکت
           }}
           transition={{
             ease: "easeInOut",
-            duration: 1.9,
+            duration: 1.5,
           }}
         >
           <Image
@@ -189,14 +243,14 @@ if(image){
 
         {/* چرخ عقب */}
         <motion.div
-          className="absolute w-[60px] h-[60px] md:w-[144px] md:h-[144px] top-[60%] left-[69%] flex items-center justify-center"
+          className={`absolute w-[60px] h-[60px]   flex items-center justify-center ${styleWheelREAR()}`}
           initial={{ rotate: currentRotation, }}
           animate={{
             rotate: rotation ? (currentRotation-360) : currentRotation, // چرخش همزمان با حرکت
           }}
           transition={{
             ease: "easeInOut",
-            duration:1.9,
+            duration:1.5,
           }}
         >
           <Image
