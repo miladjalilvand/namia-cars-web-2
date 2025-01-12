@@ -36,7 +36,7 @@ export default function AnyMot() {
       case 5 :  return "md:w-[222px] md:h-[222px] top-[58%] left-[10.7%]"; 
       case 6 :  return "md:w-[222px] md:h-[222px] top-[57%] left-[10%]"; 
       case 7 :  return "md:w-[222px] md:h-[222px] top-[57%] left-[11%]"; 
-      case 8 :  return "md:w-[228px] md:h-[228px] top-[60%] left-[10.6%]"; 
+      case 8 :  return "md:w-[234px] md:h-[234px] top-[60%] left-[10.6%]"; 
       case 9 : return "md:w-[200px] md:h-[200px] top-[61%] left-[11.6%]"; 
       case 10 :  return "md:w-[200px] md:h-[200px] top-[61%] left-[11%]"; 
       default:
@@ -55,7 +55,7 @@ export default function AnyMot() {
       case 5 :  return "md:w-[222px] md:h-[222px] top-[58%] left-[69.1%]"; 
       case 6 :  return "md:w-[222px] md:h-[222px] top-[57%] left-[68%]"; 
       case 7 :  return "md:w-[222px] md:h-[222px] top-[57%] left-[69%]"; 
-      case 8 :  return "md:w-[228px] md:h-[228px] top-[60%] left-[68.9%]"; 
+      case 8 :  return "md:w-[234px] md:h-[234px] top-[60%] left-[68.9%]"; 
       case 9 :  return "md:w-[200px] md:h-[200px] top-[61%] left-[69%]"; 
       case 10 :  return "md:w-[200px] md:h-[200px] top-[61%] left-[70%]"; 
       case 0 :  return "md:w-[201px] md:h-[201px]"; 

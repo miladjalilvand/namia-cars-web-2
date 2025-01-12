@@ -15,6 +15,7 @@ export default function GalleryPage() {
       const mappedImages = data.data.map((item) => ({
         preview: item.preview,
         url: item.url,
+        title : item.title
       }));
       setImages(mappedImages);
       setLoading(false);
@@ -40,18 +41,22 @@ export default function GalleryPage() {
           {images.map((image, index) => (
             <div
               key={index}
-              className="relative cursor-pointer rounded-md overflow-hidden shadow-lg"
+              className="relative cursor-pointer rounded-md overflow-hidden  w-full h-64 md:h-96 "
               onClick={() => handleImageClick(image.url)}
             >
               <Image
                 src={image.preview}
                 alt={`Image ${index + 1}`}
-                width={300} // Set a fixed width
-                height={200} // Set a fixed height
-                className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+               fill
+                className=" object-contain hover:scale-105 transition-transform duration-300"
               />
-              <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-                <p className="text-white text-sm font-bold">نمایش</p>
+              <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                <div className="flex flex-row gap-1 text-lg animate-bounce text-white  font-bold">
+                  <div/>نمایش<div/>
+                 <div className="text-lg">{image.title}</div>
+               
+                </div>
+                
               </div>
             </div>
           ))}

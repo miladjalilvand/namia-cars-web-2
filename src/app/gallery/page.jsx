@@ -108,22 +108,22 @@ const {isOpen , onOpen , onOpenChange}= useDisclosure();
                     >
                       {/* Header */}
                       <div className="p-4 border-b">
-                        <div className="flex items-center">
+                        <div className="flex items-center p-3">
                           <img
                             src={item.business.logo}
                             alt={item.business.name}
-                            className="w-12 h-12 rounded-full mr-3"
+                            className="w-12 h-12 rounded-full m-3"
                           />
                           <div>
-                            <h3 className="text-lg font-bold">{item.business.name}</h3>
-                            <p className="text-sm text-gray-500">{item.caption}</p>
+                            <h3 className="text-xl font-bold text-gray-500">{item.business.name}</h3>
+                            <p className="text-lg ">{item.caption}</p>
                           </div>
                         </div>
                       </div>
 
                       {/* Images */}
                       <div className="p-4">
-                        <div className="relative w-full h-[321px]">
+                        <div className="relative w-full h-60 md:h-[420px]">
                           <Image
                             src={item.media_files[0].original}
                             alt={`Image ${index}`}
