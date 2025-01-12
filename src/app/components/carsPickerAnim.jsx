@@ -13,6 +13,46 @@ const imageList = [
   "/assets/gallery/tiggo8pro/PCTiggo8PROwhite.png",
 ];
 export default function CarsAnim() {
+
+  const styleWheelFRONT = () => {
+    switch (selectedCar) {
+      
+      case 0 :    return "w-[14%] h-[14%]  top-[57%] left-[9%]";
+      case 1 :  return "md:w-[220px] md:h-[220px] top-[60%] left-[11.0%]"; 
+      case 2 : return "md:w-[200px] md:h-[200px] top-[61%] left-[11.6%]"; 
+      case 4 :  return "md:w-[222px] md:h-[222px] top-[58%] left-[10%]"; 
+      case 5 :  return "md:w-[222px] md:h-[222px] top-[58%] left-[10.7%]"; 
+      case 6 :  return "md:w-[222px] md:h-[222px] top-[57%] left-[10%]"; 
+      case 7 :  return "md:w-[222px] md:h-[222px] top-[57%] left-[11%]"; 
+      case 8 :  return "md:w-[228px] md:h-[228px] top-[60%] left-[10.6%]"; 
+      case 9 : return "md:w-[200px] md:h-[200px] top-[61%] left-[11.6%]"; 
+      case 10 :  return "md:w-[200px] md:h-[200px] top-[61%] left-[11%]"; 
+      default:
+       
+        return "w-[14%] h-[14%]  top-[58%] left-[9.6%]";
+    }
+  };
+
+  const styleWheelREAR = () => {
+    switch (selectedCar) {
+      
+      case 0 :  return "w-[14%] h-[14%]   top-[57%] right-[8%]"; 
+      case 1 :  return "w-[18%] h-[18%]  top-[56%] right-[7%]"; 
+      case 2 :  return "md:w-[200px] md:h-[200px] top-[61%] left-[69.1%]"; 
+      case 4 :  return "md:w-[222px] md:h-[222px] top-[58%] left-[69%]"; 
+      case 5 :  return "md:w-[222px] md:h-[222px] top-[58%] left-[69.1%]"; 
+      case 6 :  return "md:w-[222px] md:h-[222px] top-[57%] left-[68%]"; 
+      case 7 :  return "md:w-[222px] md:h-[222px] top-[57%] left-[69%]"; 
+      case 8 :  return "md:w-[228px] md:h-[228px] top-[60%] left-[68.9%]"; 
+      case 9 :  return "md:w-[200px] md:h-[200px] top-[61%] left-[69%]"; 
+      case 10 :  return "md:w-[200px] md:h-[200px] top-[61%] left-[70%]"; 
+
+      default:
+       
+        return "w-[14%] h-[14%] top-[61%] left-[69.1%]";
+    }
+  };
+
   const [rotation, setRotation] = useState(false); // ذخیره مقدار چرخش فعلی
   const [isMoving, setIsMoving] = useState(false);
   const [color, setColor] = useState(0); // شروع با رنگ قرمز
@@ -43,7 +83,7 @@ export default function CarsAnim() {
           setIsInter(false);
           setRotation(false);
           setCurrentRotation(currentRotation-900);
-        }, 1500);
+        }, 100);
       },1500);
     }
   }
@@ -100,9 +140,9 @@ const handleSetCar = (ind) => {
 
    <div className="h-[600px] w-screen relative">
     <motion.div className={` h-[600px] w-screen relative   ${isEnter && "hidden"} `}
-   initial={{x:isEnter ? 0  : "-50%" }}
-   animate={{ x: isOut ? -(window.innerWidth) : isEnter ? window.innerWidth : "0%" }}
- transition={{ ease: "easeInOut", duration: 1.5 , delay:0.15 }}
+     initial={{x:0 }}
+     animate={{ x: isOut ? -(window.innerWidth) : isEnter ? window.innerWidth : "0%" }}
+   transition={{ ease: "easeInOut", duration: isEnter ? 0 : 1.5   }}
     >
       
       {/* تصویر ماشین */}
@@ -123,7 +163,9 @@ const handleSetCar = (ind) => {
       {/* چرخ اول */}
       <div className="absolute bottom-[6.2%] md:bottom-[10%] left-[3%] md:left-[-6%] w-full h-full">
         <motion.div
-          className={`absolute w-[14%] h-[14%] md:w-[30%] md:h-[30%] transform bottom-[29%] left-[8%] md:bottom-[5%] md:left-[10%] xl:h-[35%] xl:w-[35%] xl:bottom-[5%] xl:left-[12%] 2xl:left-[10%] 2xl:bottom-[6%] 2xl:h-[30%] 2xl:w-[30%]
+          className={`absolute 
+            ${styleWheelFRONT()}
+            md:w-[30%] md:h-[30%] transform md:bottom-[5%] md:left-[10%] xl:h-[35%] xl:w-[35%] xl:bottom-[5%] xl:left-[12%] 2xl:left-[10%] 2xl:bottom-[6%] 2xl:h-[30%] 2xl:w-[30%]
            
             `}
             initial={{ rotate: currentRotation, }}
@@ -145,9 +187,11 @@ const handleSetCar = (ind) => {
       </div>
 
       {/* چرخ دوم */}
-      <div className="absolute bottom-[6.2%] md:bottom-[10%] right-[8%] md:right-[-2%] w-full h-full">
+      <div className="absolute right-[8%] bottom-[6.2%] md:bottom-[10%]  md:right-[-2%] w-full h-full">
         <motion.div
-          className="absolute w-[14%] h-[14%] md:w-[30%] md:h-[30%] transform bottom-[29%] right-[8%] md:bottom-[5%] md:right-[10%] xl:h-[35%] xl:w-[35%] xl:bottom-[5%] xl:right-[12%] 2xl:right-[10%] 2xl:bottom-[6%] 2xl:h-[30%] 2xl:w-[30%]"
+          className={`absolute  transform
+          ${styleWheelREAR()}
+          md:w-[30%] md:h-[30%] md:bottom-[5%] md:right-[10%] xl:h-[35%] xl:w-[35%] xl:bottom-[5%] xl:right-[12%] 2xl:right-[10%] 2xl:bottom-[6%] 2xl:h-[30%] 2xl:w-[30%]`}
           initial={{ rotate: currentRotation, }}
           animate={{
             rotate: rotation ? (currentRotation-360) : currentRotation, // چرخش همزمان با حرکت
