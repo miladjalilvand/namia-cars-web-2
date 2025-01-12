@@ -18,15 +18,16 @@ export default function CarsAnim() {
     switch (selectedCar) {
       
       case 0 :    return "w-[14%] h-[14%]  top-[57%] left-[9%]";
-      case 1 :  return "md:w-[220px] md:h-[220px] top-[60%] left-[11.0%]"; 
-      case 2 : return "md:w-[200px] md:h-[200px] top-[61%] left-[11.6%]"; 
-      case 4 :  return "md:w-[222px] md:h-[222px] top-[58%] left-[10%]"; 
-      case 5 :  return "md:w-[222px] md:h-[222px] top-[58%] left-[10.7%]"; 
-      case 6 :  return "md:w-[222px] md:h-[222px] top-[57%] left-[10%]"; 
-      case 7 :  return "md:w-[222px] md:h-[222px] top-[57%] left-[11%]"; 
-      case 8 :  return "md:w-[228px] md:h-[228px] top-[60%] left-[10.6%]"; 
-      case 9 : return "md:w-[200px] md:h-[200px] top-[61%] left-[11.6%]"; 
-      case 10 :  return "md:w-[200px] md:h-[200px] top-[61%] left-[11%]"; 
+      case 1 :  return "w-[17%] h-[17%] top-[55.5%] left-[7.1%]"; 
+      case 2 : return "w-[14%] h-[14%]  top-[57%] left-[9%]";
+      case 3 :   return "w-[14%] h-[14%]  top-[57%] left-[8.9%]";
+      case 4 :   return "w-[15%] h-[15%]  top-[56%] left-[8%]";
+      case 5 :   return "w-[15%] h-[15%]  top-[56%] left-[8%]";
+      case 6 :   return "w-[15%] h-[15%]  top-[56%] left-[8%]";
+      case 7 :  return "w-[15%] h-[15%]  top-[56%] left-[8%]";
+      case 8 :   return "w-[17%] h-[17%] top-[55.5%] left-[7.1%]"; 
+      case 9 : return "w-[14%] h-[14%]  top-[57%] left-[9%]";
+      case 10 :  return "w-[14%] h-[14%]  top-[57%] left-[9%]";
       default:
        
         return "w-[14%] h-[14%]  top-[58%] left-[9.6%]";
@@ -37,16 +38,16 @@ export default function CarsAnim() {
     switch (selectedCar) {
       
       case 0 :  return "w-[14%] h-[14%]   top-[57%] right-[8%]"; 
-      case 1 :  return "w-[18%] h-[18%]  top-[56%] right-[7%]"; 
-      case 2 :  return "md:w-[200px] md:h-[200px] top-[61%] left-[69.1%]"; 
-      case 4 :  return "md:w-[222px] md:h-[222px] top-[58%] left-[69%]"; 
-      case 5 :  return "md:w-[222px] md:h-[222px] top-[58%] left-[69.1%]"; 
-      case 6 :  return "md:w-[222px] md:h-[222px] top-[57%] left-[68%]"; 
-      case 7 :  return "md:w-[222px] md:h-[222px] top-[57%] left-[69%]"; 
-      case 8 :  return "md:w-[228px] md:h-[228px] top-[60%] left-[68.9%]"; 
-      case 9 :  return "md:w-[200px] md:h-[200px] top-[61%] left-[69%]"; 
-      case 10 :  return "md:w-[200px] md:h-[200px] top-[61%] left-[70%]"; 
-
+      case 1 :  return "w-[17%] h-[17%]  top-[55.5%] right-[7%]"; 
+      case 2 :  return "w-[14%] h-[14%]   top-[57%] right-[8%]"; 
+      case 3 : return "w-[14%] h-[14%]   top-[57%] right-[8.6%]"; 
+      case 4 : return "w-[15%] h-[15%]   top-[56%] right-[6.9%]"; 
+      case 5 : return "w-[15%] h-[15%]   top-[56%] right-[6.9%]"; 
+      case 6 : return "w-[15%] h-[15%]   top-[56%] right-[6.9%]"; 
+      case 7 :  return "w-[15%] h-[15%]   top-[56%] right-[6.9%]"; 
+      case 8 :  return "w-[17%] h-[17%]  top-[55.5%] right-[7%]"; 
+      case 9 :   return "w-[14%] h-[14%]   top-[57%] right-[8%]"; 
+      case 10 : return "w-[14%] h-[14%]   top-[57%] right-[8%]"; 
       default:
        
         return "w-[14%] h-[14%] top-[61%] left-[69.1%]";
