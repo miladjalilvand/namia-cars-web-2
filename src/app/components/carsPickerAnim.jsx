@@ -175,7 +175,7 @@ const handleSetCar = (ind) => {
             }}
             transition={{
               ease: "easeInOut",
-              duration: 1.9,
+              duration: 1.5,
             }}
         >
           <Image
@@ -199,7 +199,7 @@ const handleSetCar = (ind) => {
           }}
           transition={{
             ease: "easeInOut",
-            duration: 1.9,
+            duration: 1.5,
           }}
         >
           <Image
