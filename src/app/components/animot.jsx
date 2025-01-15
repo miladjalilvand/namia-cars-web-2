@@ -57,6 +57,47 @@ export default function AnyMot() {
       default: return "md:w-[120.6px] md:h-[120.6px] top-[61%] left-[69.1%]";
     }
   };
+  const mdstyleWheelFRONT = () => {
+    switch (selectedCar) {
+      
+      case 0 :  return "xl:w-[200px] xl:h-[200px] xl:top-[62%] xl:left-[11%]"; 
+      case 1 :  return "xl:w-[220px] xl:h-[220px] xl:top-[60%] xl:left-[11.0%]"; 
+      case 2 : return "xl:w-[200px] xl:h-[200px] xl:top-[62%] xl:left-[11.6%]"; 
+      case 4 :  return "xl:w-[222px] xl:h-[222px] xl:top-[58%] xl:left-[10%]"; 
+      case 5 :  return "xl:w-[222px] xl:h-[222px] xl:top-[58%] xl:left-[10.7%]"; 
+      case 6 :  return "xl:w-[222px] xl:h-[222px] xl:top-[57%] xl:left-[10%]"; 
+      case 7 :  return "xl:w-[222px] xl:h-[222px] xl:top-[57%] xl:left-[11%]"; 
+      case 8 :  return "xl:w-[234px] xl:h-[234px] xl:top-[60%] xl:left-[10.6%]"; 
+      case 9 : return "xl:w-[200px] xl:h-[200px] xl:top-[61%] xl:left-[11.6%]"; 
+      case 10 :  return "xl:w-[200px] xl:h-[200px] xl:top-[61%] xl:left-[11%]"; 
+      default:
+       
+        return "xl:w-[201px] xl:h-[201px]  xl:top-[60%] xl:left-[11.6%]";
+    }
+  };
+
+  const mdstyleWheelREAR = () => {
+    switch (selectedCar) {
+      
+      case 0 :  return "xl:w-[200px] xl:h-[200px] xl:top-[62%] xl:left-[69.1%]"; 
+      case 1 :  return "xl:w-[220px] xl:h-[220px] xl:top-[60%] xl:left-[69.1%]"; 
+      case 2 :  return "xl:w-[200px] xl:h-[200px] xl:top-[62%] xl:left-[69.1%]"; 
+      case 4 :  return "xl:w-[222px] xl:h-[222px] xl:top-[58%] xl:left-[69%]"; 
+      case 5 :  return "xl:w-[222px] xl:h-[222px] xl:top-[58%] xl:left-[69.1%]"; 
+      case 6 :  return "xl:w-[222px] xl:h-[222px] xl:top-[57%] xl:left-[68%]"; 
+      case 7 :  return "xl:w-[222px] xl:h-[222px] xl:top-[57%] xl:left-[69%]"; 
+      case 8 :  return "xl:w-[234px] xl:h-[234px] xl:top-[60%] xl:left-[68.9%]"; 
+      case 9 :  return "xl:w-[200px] xl:h-[200px] xl:top-[61%] xl:left-[69%]"; 
+      case 10 :  return "xl:w-[200px] xl:h-[200px] xl:top-[61%] xl:left-[70%]"; 
+      case 0 :  return "xl:w-[201px] xl:h-[201px]"; 
+      default:
+       
+        return "xl:w-[201px] xl:h-[201px] xl:top-[61%] xl:left-[69.1%]";
+    }
+  };
+
+  
+
   
 
 
@@ -123,7 +164,7 @@ if(image){
   }
 
   return (
-    <div className=" hidden md:flex flex-col h-screen justify-center items-center ">
+    <div className=" hidden md:flex flex-col h-screen justify-center items-center  xl:my-60">
 <div className="flex flex-wrap sticky z-20 backdrop-blur-md mt-24  gap-6 py-2 mb-12">
   {cars.map((val, ind) => (
     <div onClick={()=>handleSetCar(ind)} key={ind} className={`${selectedCar === ind && "border-3"}  border border-gray-400  rounded-md py-2 px-4 cursor-pointer hover:bg-gray-400 backdrop-opacity-40`}>
@@ -188,8 +229,8 @@ if(image){
       className={` relative  text-center w-[1200px] h-[481px] md:w-[1900px] md:h-[420px] mx-auto  text-6xl overflow-hidden `}>
       {/* {currentRotation} */}
       {/* </motion.div> */} 
-      <div className={` "w-[1200px] h-[481px] md:w-[810px] md:h-[378px]`}>
-    <motion.div className={`relative mx-auto w-[1200px] h-[481px] md:w-[810px] md:h-[378px] text-6xl overflow-hidden `}
+      <div className={`relative "w-[1200px] h-[481px]  xl:w-[1350px] xl:h-[630px] md:w-[810px] md:h-[378px]`}>
+    <motion.div className={` mx-auto w-[1200px] h-[481px] md:w-[810px] md:h-[378px] text-6xl  xl:w-[1350px] xl:h-[630px] overflow-hidden `}
     initial={{x:0 }}
       animate={{ x: isOut ? -(window.innerWidth) : isEnter ? window.innerWidth : "0%" }}
     transition={{ ease: "easeInOut", duration: isEnter ? 0 : 1.5   }}
@@ -202,7 +243,7 @@ if(image){
       key={selectedCar}
 
 
-        className="absolute w-full h-full  flex items-center justify-center"
+        className="absolute z-30   w-full h-full  flex items-center justify-center"
      
       >
         {/* تصویر اصلی ماشین */}
@@ -218,7 +259,7 @@ if(image){
         {/* چرخ جلو */}
         <motion.div
         key={selectedCar*selectedColor}
-          className={`absolute w-[60px] h-[60px] ${styleWheelFRONT()}  flex items-center justify-center ${isEnter && "hidden"}`}
+          className={`absolute z-50 ${mdstyleWheelFRONT()} ${styleWheelFRONT()}  flex items-center justify-center ${isEnter && "hidden"}`}
           initial={{ rotate: currentRotation, }}
           animate={{
             rotate: rotation ? (currentRotation-360) : currentRotation, // چرخش همزمان با حرکت
@@ -237,7 +278,7 @@ if(image){
 
         {/* چرخ عقب */}
         <motion.div
-          className={`absolute w-[60px] h-[60px]   flex items-center justify-center ${styleWheelREAR()}`}
+          className={`absolute z-50 ${mdstyleWheelREAR()}   flex items-center justify-center ${styleWheelREAR()}`}
           initial={{ rotate: currentRotation, }}
           animate={{
             rotate: rotation ? (currentRotation-360) : currentRotation, // چرخش همزمان با حرکت
