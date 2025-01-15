@@ -61,13 +61,14 @@ export default function AnyMot() {
     switch (selectedCar) {
       
       case 0 :  return "xl:w-[200px] xl:h-[200px] xl:top-[62%] xl:left-[11%]"; 
-      case 1 :  return "xl:w-[220px] xl:h-[220px] xl:top-[60%] xl:left-[11.0%]"; 
+      case 1 :  return "xl:w-[220px] xl:h-[220px] xl:top-[59%] xl:left-[10.5%]"; 
       case 2 : return "xl:w-[200px] xl:h-[200px] xl:top-[62%] xl:left-[11.6%]"; 
       case 4 :  return "xl:w-[222px] xl:h-[222px] xl:top-[58%] xl:left-[10%]"; 
-      case 5 :  return "xl:w-[222px] xl:h-[222px] xl:top-[58%] xl:left-[10.7%]"; 
+      case 5 :  return "xl:w-[222px] xl:h-[222px] xl:top-[59%] xl:left-[10.6%]"; 
       case 6 :  return "xl:w-[222px] xl:h-[222px] xl:top-[57%] xl:left-[10%]"; 
       case 7 :  return "xl:w-[222px] xl:h-[222px] xl:top-[57%] xl:left-[11%]"; 
       case 8 :  return "xl:w-[234px] xl:h-[234px] xl:top-[60%] xl:left-[10.6%]"; 
+      case 3 : return "xl:w-[200px] xl:h-[200px] xl:top-[61%] xl:left-[11.6%]"; 
       case 9 : return "xl:w-[200px] xl:h-[200px] xl:top-[61%] xl:left-[11.6%]"; 
       case 10 :  return "xl:w-[200px] xl:h-[200px] xl:top-[61%] xl:left-[11%]"; 
       default:
@@ -80,13 +81,14 @@ export default function AnyMot() {
     switch (selectedCar) {
       
       case 0 :  return "xl:w-[200px] xl:h-[200px] xl:top-[62%] xl:left-[69.1%]"; 
-      case 1 :  return "xl:w-[220px] xl:h-[220px] xl:top-[60%] xl:left-[69.1%]"; 
+      case 1 :  return "xl:w-[220px] xl:h-[220px] xl:top-[59%] xl:left-[68.3%]"; 
       case 2 :  return "xl:w-[200px] xl:h-[200px] xl:top-[62%] xl:left-[69.1%]"; 
       case 4 :  return "xl:w-[222px] xl:h-[222px] xl:top-[58%] xl:left-[69%]"; 
-      case 5 :  return "xl:w-[222px] xl:h-[222px] xl:top-[58%] xl:left-[69.1%]"; 
+      case 5 :  return "xl:w-[222px] xl:h-[222px] xl:top-[59%] xl:left-[68.3%]"; 
       case 6 :  return "xl:w-[222px] xl:h-[222px] xl:top-[57%] xl:left-[68%]"; 
       case 7 :  return "xl:w-[222px] xl:h-[222px] xl:top-[57%] xl:left-[69%]"; 
       case 8 :  return "xl:w-[234px] xl:h-[234px] xl:top-[60%] xl:left-[68.9%]"; 
+      case 3 :  return "xl:w-[200px] xl:h-[200px] xl:top-[61%] xl:left-[69%]"; 
       case 9 :  return "xl:w-[200px] xl:h-[200px] xl:top-[61%] xl:left-[69%]"; 
       case 10 :  return "xl:w-[200px] xl:h-[200px] xl:top-[61%] xl:left-[70%]"; 
       case 0 :  return "xl:w-[201px] xl:h-[201px]"; 
