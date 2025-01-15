@@ -77,7 +77,7 @@ useEffect(()=>{
   };
 
   return (
-    <Skeleton isLoaded={!isLoading} ><div className="flex flex-col md:flex-row justify-center items-center md:mt-0  ">
+    <Skeleton isLoaded={!isLoading} ><div className="flex flex-col md:flex-row justify-center items-center md:mb-3  ">
       <div className="relative h-2/3 w-full md:w-1/2 md:h-1/2 cursor-pointer ">
       
         <Swiper

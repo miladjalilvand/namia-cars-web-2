@@ -28,42 +28,36 @@ export default function AnyMot() {
 
   const styleWheelFRONT = () => {
     switch (selectedCar) {
-      
-      case 0 :  return "md:w-[200px] md:h-[200px] top-[61%] left-[11.6%]"; 
-      case 1 :  return "md:w-[220px] md:h-[220px] top-[60%] left-[11.0%]"; 
-      case 2 : return "md:w-[200px] md:h-[200px] top-[61%] left-[11.6%]"; 
-      case 4 :  return "md:w-[222px] md:h-[222px] top-[58%] left-[10%]"; 
-      case 5 :  return "md:w-[222px] md:h-[222px] top-[58%] left-[10.7%]"; 
-      case 6 :  return "md:w-[222px] md:h-[222px] top-[57%] left-[10%]"; 
-      case 7 :  return "md:w-[222px] md:h-[222px] top-[57%] left-[11%]"; 
-      case 8 :  return "md:w-[234px] md:h-[234px] top-[60%] left-[10.6%]"; 
-      case 9 : return "md:w-[200px] md:h-[200px] top-[61%] left-[11.6%]"; 
-      case 10 :  return "md:w-[200px] md:h-[200px] top-[61%] left-[11%]"; 
-      default:
-       
-        return "md:w-[201px] md:h-[201px]  top-[60%] left-[11.6%]";
+      case 0: return "md:w-[120px] md:h-[120px] top-[61%] left-[11.6%]";
+      case 1: return "md:w-[132px] md:h-[132px] top-[60%] left-[11.0%]";
+      case 2: return "md:w-[120px] md:h-[120px] top-[61%] left-[11.6%]";
+      case 4: return "md:w-[133.2px] md:h-[133.2px] top-[58%] left-[10%]";
+      case 5: return "md:w-[133.2px] md:h-[133.2px] top-[58%] left-[10.7%]";
+      case 6: return "md:w-[133.2px] md:h-[133.2px] top-[57%] left-[10%]";
+      case 7: return "md:w-[133.2px] md:h-[133.2px] top-[57%] left-[11%]";
+      case 8: return "md:w-[133.4px] md:h-[133.4px] top-[60%] left-[10.6%]";
+      case 9: return "md:w-[120px] md:h-[120px] top-[61%] left-[11.6%]";
+      case 10: return "md:w-[120px] md:h-[120px] top-[61%] left-[11%]";
+      default: return "md:w-[120.6px] md:h-[120.6px] top-[60%] left-[11.6%]";
     }
   };
-
+  
   const styleWheelREAR = () => {
     switch (selectedCar) {
-      
-      case 0 :  return "md:w-[200px] md:h-[200px] top-[61%] left-[69.1%]"; 
-      case 1 :  return "md:w-[220px] md:h-[220px] top-[60%] left-[69.1%]"; 
-      case 2 :  return "md:w-[200px] md:h-[200px] top-[61%] left-[69.1%]"; 
-      case 4 :  return "md:w-[222px] md:h-[222px] top-[58%] left-[69%]"; 
-      case 5 :  return "md:w-[222px] md:h-[222px] top-[58%] left-[69.1%]"; 
-      case 6 :  return "md:w-[222px] md:h-[222px] top-[57%] left-[68%]"; 
-      case 7 :  return "md:w-[222px] md:h-[222px] top-[57%] left-[69%]"; 
-      case 8 :  return "md:w-[234px] md:h-[234px] top-[60%] left-[68.9%]"; 
-      case 9 :  return "md:w-[200px] md:h-[200px] top-[61%] left-[69%]"; 
-      case 10 :  return "md:w-[200px] md:h-[200px] top-[61%] left-[70%]"; 
-      case 0 :  return "md:w-[201px] md:h-[201px]"; 
-      default:
-       
-        return "md:w-[201px] md:h-[201px] top-[61%] left-[69.1%]";
+      case 0: return "md:w-[120px] md:h-[120px] top-[61%] left-[69.1%]";
+      case 1: return "md:w-[132px] md:h-[132px] top-[60%] left-[69.1%]";
+      case 2: return "md:w-[120px] md:h-[120px] top-[61%] left-[69.1%]";
+      case 4: return "md:w-[133.2px] md:h-[133.2px] top-[58%] left-[69%]";
+      case 5: return "md:w-[133.2px] md:h-[133.2px] top-[58%] left-[69.1%]";
+      case 6: return "md:w-[133.2px] md:h-[133.2px] top-[57%] left-[68%]";
+      case 7: return "md:w-[133.2px] md:h-[133.2px] top-[57%] left-[69%]";
+      case 8: return "md:w-[133.4px] md:h-[133.4px] top-[60%] left-[68.9%]";
+      case 9: return "md:w-[120px] md:h-[120px] top-[61%] left-[69%]";
+      case 10: return "md:w-[120px] md:h-[120px] top-[61%] left-[70%]";
+      default: return "md:w-[120.6px] md:h-[120.6px] top-[61%] left-[69.1%]";
     }
   };
+  
 
 
   const handleChange= (indexColor) => {
@@ -194,8 +188,8 @@ if(image){
       className={` relative  text-center w-[1200px] h-[481px] md:w-[1900px] md:h-[420px] mx-auto  text-6xl overflow-hidden `}>
       {/* {currentRotation} */}
       {/* </motion.div> */} 
-      <div className={` "w-[1200px] h-[481px] md:w-[1350px] md:h-[630px]`}>
-    <motion.div className={`relative mx-auto w-[1200px] h-[481px] md:w-[1350px] md:h-[630px] text-6xl overflow-hidden `}
+      <div className={` "w-[1200px] h-[481px] md:w-[810px] md:h-[378px]`}>
+    <motion.div className={`relative mx-auto w-[1200px] h-[481px] md:w-[810px] md:h-[378px] text-6xl overflow-hidden `}
     initial={{x:0 }}
       animate={{ x: isOut ? -(window.innerWidth) : isEnter ? window.innerWidth : "0%" }}
     transition={{ ease: "easeInOut", duration: isEnter ? 0 : 1.5   }}

@@ -137,10 +137,10 @@ const {isOpen , onOpen , onOpenChange}= useDisclosure();
                       {/* Footer */}
                       <div className="p-4 border-t flex justify-between items-center text-sm text-gray-600">
                         <div className="flex items-center gap-2">
-                          <span>❤️ {item.likes_count}</span>
-                          <span>💬 {item.comments_count}</span>
+                          {/* <span>❤️ {item.likes_count}</span>
+                          <span>💬 {item.comments_count}</span> */}
                         </div>
-                      { item.media_files.length > 0 &&  (<span onClick={()=>imageGalleryHandleCLick(item.media_files)} className="cursor-pointer hover:text-blue-600" >مشاهده عکس ها </span>)}
+                      { item.media_files.length > 0 &&  (<span onClick={()=>imageGalleryHandleCLick(item.media_files)} className="cursor-pointer hover:text-blue-600" >مشاهده عکس ها 👁</span>)}
                          <Drawer hideCloseButton={true} size="full" placement="bottom" key={`drawer-${index}`} isOpen={isOpen} onOpenChange={onOpenChange} >
                           <DrawerContent>
                             {(onClose) => (
@@ -156,7 +156,7 @@ const {isOpen , onOpen , onOpenChange}= useDisclosure();
                             )}
                           </DrawerContent>
                          </Drawer>
-                        <span>👁 {item.views_count}</span>
+                        {/* <span>👁 {item.views_count}</span> */}
                        
                       </div>
                       
