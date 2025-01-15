@@ -1,7 +1,13 @@
+"use client"
 import Link from 'next/link';
 import { FaMapMarkedAlt } from 'react-icons/fa';
 
 const Footer = ({ data }) => {
+
+  const handleClickGEO = (lat , lon) => {
+    const mapUrl = `https://www.google.com/maps?q=${lat},${lon}`;
+    window.open(mapUrl, "_blank");
+  };
   return (
     <footer className="bg-redasli text-white py-8 mt-60">
       <div className="max-w-6xl mx-auto px-6">
@@ -26,7 +32,7 @@ const Footer = ({ data }) => {
               <FaMapMarkedAlt className="text-red-500" />
             </li>
             <li>
-              <span className='text-blue-400 hover:text-blue-600 cursor-pointer'> {data.addresses[0].address}</span> {/* اطلاعات موقعیت مکانی */}
+              <span onClick={()=>handleClickGEO(data.addresses[0].lat , data.addresses[0].lng)} className='text-blue-400 hover:text-blue-600 cursor-pointer'> {data.addresses[0].address}</span> {/* اطلاعات موقعیت مکانی */}
             </li>
           </ul>
         </div>

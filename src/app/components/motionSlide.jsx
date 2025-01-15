@@ -37,7 +37,7 @@ const ItemSlidesImage = () => {
   }, []);
 
   return (
-    <div className="bg-background">
+    <div className="bg-background ">
       {items.map((val, key) => {
         const isInView = visibleItems[key];
 
