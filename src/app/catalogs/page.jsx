@@ -35,7 +35,7 @@ export default function GalleryPage() {
   return (
     <div className="p-4 pt-12  ">
       {loading ? (
-        <p className="text-center">Loading...</p>
+        <p className="text-center">درحال بارگزاری...</p>
       ) : (
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {images.map((image, index) => (

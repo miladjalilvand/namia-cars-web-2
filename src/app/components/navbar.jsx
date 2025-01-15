@@ -119,7 +119,7 @@ useEffect(() => {
 
                   </div>
 
-                  <div className="mt-12 border-b ">  </div>
+                  <div className="mt-12  ">  </div>
                   {/* <div className="mt-12 ml-2 mr-2 
   flex items-center bg-black p-2
    bg-opacity-60 rounded-sm ">
@@ -152,15 +152,15 @@ useEffect(() => {
                 
 
 
-              <div className="flex flex-row border-t-1 items-center justify-around border-t-white ">
-              <div className="m-4 text-txtl text-2xl font-semibold cursor-pointer" 
+              <div className="flex flex-row items-center justify-around ">
+              {/* <div className="m-4 text-txtl text-2xl font-semibold cursor-pointer" 
 
            onClick={() => pushin('https://sdfn.ir/f/namya/view.php?id=84231')}>طرح تعویض</div>
                       <div className="m-4 text-txtl text-2xl font-semibold cursor-pointer" 
 
             onClick={() => pushin('https://sdfn.ir/f/namya/view.php?id=82738')}>تست درایو</div>
             <div className="m-4 text-txtl text-2xl font-semibold cursor-pointer" 
-            onClick={() => pushin('https://sdfn.ir/f/namya/view.php?id=82738')}>پیش ثبت‌نام   </div>
+            onClick={() => pushin('https://sdfn.ir/f/namya/view.php?id=82738')}>پیش ثبت‌نام   </div> */}
                         {/* <div className="m-4 text-txtl text-2xl font-semibold cursor-pointer" 
                         >وبلاگ</div> */}
            </div>

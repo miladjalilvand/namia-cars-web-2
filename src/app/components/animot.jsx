@@ -169,7 +169,7 @@ if(image){
     <div className=" hidden md:flex flex-col h-screen justify-center items-center  xl:my-60">
 <div className="flex flex-wrap sticky z-20 backdrop-blur-md mt-24  gap-6 py-2 mb-12">
   {cars.map((val, ind) => (
-    <div onClick={()=>handleSetCar(ind)} key={ind} className={`${selectedCar === ind && "border-3"}  border border-gray-400  rounded-md py-2 px-4 cursor-pointer hover:bg-gray-400 backdrop-opacity-40`}>
+    <div onClick={()=>handleSetCar(ind)} key={ind} className={`${selectedCar === ind && "bg-gray-400"}  border border-gray-400  rounded-md py-2 px-4 cursor-pointer hover:bg-gray-400 backdrop-opacity-40`}>
       {val.name}
     </div>
   ))}

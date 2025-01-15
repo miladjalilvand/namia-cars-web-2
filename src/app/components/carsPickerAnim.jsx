@@ -218,7 +218,7 @@ const handleSetCar = (ind) => {
     <TextMotionCustom text={'mvm xr-550'} />
     <div className="flex flex-wrap  gap-6 py-2 mb-12">
   {cars.map((val, ind) => (
-    <div onClick={()=>handleSetCar(ind)} key={ind} className={`${selectedCar === ind && "border-5"}  border border-gray-400  rounded-md py-2 px-4 cursor-pointer hover:bg-gray-400 backdrop-opacity-40`}>
+    <div onClick={()=>handleSetCar(ind)} key={ind} className={`${selectedCar === ind && "bg-gray-400"}  border border-gray-400  rounded-md py-2 px-4 cursor-pointer hover:bg-gray-400 backdrop-opacity-40`}>
       {val.name}
     </div>
   ))}

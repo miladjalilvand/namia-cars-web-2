@@ -5,9 +5,9 @@ import { motion } from "framer-motion";
 
 const items = [
   { image: '/assets/svg/agency.svg', title: 'محصولات چری', subtitle: 'محصولات مدیران خودرو' },
-  { image: '/assets/svg/parts.svg', title: 'شرایط فروش چری', subtitle: 'شرایط فروش مدیران خودرو' },
-  { image: '/assets/svg/price-list.svg', title: 'قطعات چری', subtitle: 'قطعات مدیران خودرو' },
-  { image: '/assets/svg/services.svg', title: 'نمایندگی چری', subtitle: 'نمایندگی مدیران خودرو' },
+  { image: '/assets/svg/parts.svg', title: 'طرح تعویض  ', subtitle: ' طرح تعویض مدیران خودرو' },
+  { image: '/assets/svg/price-list.svg', title: ' تست درایو', subtitle: 'تست درایو مدیران خودرو' },
+  { image: '/assets/svg/services.svg', title: ' جزییات شعبه ها ', subtitle: 'نمایندگی مدیران خودرو' },
 
 ];
 
@@ -89,7 +89,7 @@ export default ItemSlidesImage;
 
 function PicCon({ src }) {
   return (
-    <div className="h-[400px] w-[400px] md:h-[600px] md:w-[600px] relative ">
+    <div className="h-[400px] w-[400px] md:h-[500px] md:w-[500px] relative ">
 
     <Image src={src} alt="Item Image" fill style={{}} className="rounded-lg m-4" />
     

@@ -150,7 +150,7 @@ const {isOpen , onOpen , onOpenChange}= useDisclosure();
                                  <div className="">بستن </div>
                                 
                                 </div>
-                                <ImageGallery  lazyLoad
+                                <ImageGallery  isRTL lazyLoad
                 disableThumbnailScroll={false}
                 slideOnThumbnailOver items={imageGallery}/></div>
                             )}
