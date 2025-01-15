@@ -124,16 +124,16 @@ if(image){
 
   return (
     <div className=" hidden md:flex flex-col h-screen justify-center items-center ">
-<div className="flex flex-wrap  gap-6 py-2 mb-12">
+<div className="flex flex-wrap sticky z-20 backdrop-blur-md mt-24  gap-6 py-2 mb-12">
   {cars.map((val, ind) => (
-    <div onClick={()=>handleSetCar(ind)} key={ind} className={`${selectedCar === ind && "border-5"}  border border-gray-400  rounded-md py-2 px-4 cursor-pointer hover:bg-gray-400 backdrop-opacity-40`}>
+    <div onClick={()=>handleSetCar(ind)} key={ind} className={`${selectedCar === ind && "border-3"}  border border-gray-400  rounded-md py-2 px-4 cursor-pointer hover:bg-gray-400 backdrop-opacity-40`}>
       {val.name}
     </div>
   ))}
 </div>
 
        <div key={selectedCar}>  <TextMotionCustom text={cars[selectedCar].foreignName} /></div>
-  <div className="flex flex-row gap-4 m-4 bg-gray-500 bg-opacity-30 rounded-full ">
+  <div className="flex flex-row gap-4 m-4 bg- bg-gray-500 bg-opacity-30 rounded-full ">
 
   {cars[selectedCar].images.map((val, ind) => (
     <div key={ind} className="flex flex-col ">
