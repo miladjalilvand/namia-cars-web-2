@@ -40,10 +40,10 @@ const Footer = ({ data }) => {
         <div>
           <h3 className="text-xl font-semibold mb-3"> شبکه های اجتماعی</h3>
           <ul className="flex space-x-4">
-            <li><Link href="https://twitter.com" className="text-blue-400 hover:text-blue-600 px-3" target="_blank"  >  واتس اپ </Link></li>
+            <li><Link href={`https://wa.me/${data.addresses[0].whatsapp}`}  target="_blank" className="text-blue-400 hover:text-blue-600 px-3"   >  واتس اپ </Link></li>
             <br />
 
-            <li><Link href="https://instagram.com" className="text-blue-400 hover:text-blue-600" target="_blank">اینستاگرام</Link></li>
+            <li><Link href={`https://instagram.com/${data.addresses[0].instagram}`} className="text-blue-400 hover:text-blue-600">اینستاگرام</Link></li>
           </ul>
         </div>
       </div>

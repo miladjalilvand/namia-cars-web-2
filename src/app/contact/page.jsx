@@ -44,12 +44,18 @@ const BranchDetails = () => {
               <h3 className="text-lg font-semibold">شماره تماس:</h3>
               <ul className="list-none pl-5">
                 {val.mobiles && val.mobiles.length > 0 ? (
-                  val.mobiles.map((mobile, index) => <li key={index}>{mobile}</li>)
+                  val.mobiles.map((mobile, index) => <li key={index}>
+
+<a href={`tel:${mobile}`} className="cursor-pointer hover:text-blue-500">{mobile}</a>
+                  </li>)
                 ) : (
                   <li>تلفن همراهی موجود نیست</li>
                 )}
                 {val.phones && val.phones.length > 0 ? (
-                  val.phones.map((phone, index) => <li key={index}>{phone}</li>)
+                  val.phones.map((phone, index) => <li key={index}>
+
+<a href={`tel:${phone}`} className="cursor-pointer hover:text-blue-500">{phone}</a>
+                  </li>)
                 ) : (
                   <li>تلفن ثابتی موجود نیست</li>
                 )}

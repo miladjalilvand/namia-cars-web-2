@@ -1,6 +1,14 @@
+"use client"
 import React from "react";
 
 const BranchDetails = ({ data }) => {
+
+
+  const handleClickGEO = (lat , lon) => {
+    const mapUrl = `https://www.google.com/maps?q=${lat},${lon}`;
+    window.open(mapUrl, "_blank");
+  };
+
   if (!data) {
     return <div>در حال بارگذاری...</div>;
   }
@@ -11,18 +19,26 @@ const BranchDetails = ({ data }) => {
     <div className="flex flex-col overflow-y-scroll  p-4 rounded shadow-md  ">
       <h2 className="text-2xl font-bold mb-4">{title}</h2>
       <div className="mb-4">
-        <p className="">آدرس: {address}</p>
-        <p className="">وضعیت: {is_open ? "باز" : "بسته"}</p>
+        <p onClick={()=>handleClickGEO(lat , lng)} className="cursor-pointer hover:text-blue-500">آدرس: {address}</p>
+        <p className={`mb-4 font-bold ${
+                is_open ? "text-green-600" : "text-red-600"
+              }`}>وضعیت: {is_open ? "باز" : "بسته"}</p>
       </div>
 
       <div className="mb-4">
         <h3 className="text-lg font-semibold">شماره تماس:</h3>
         <ul className="list-disc pl-5">
           {mobiles.map((mobile, index) => (
-            <li key={index}>{mobile}</li>
+            <li key={index}>
+              <a href={`tel:${mobile}`} className="cursor-pointer hover:text-blue-500">{mobile}</a>
+
+            </li>
           ))}
           {phones.map((phone, index) => (
-            <li key={index}>{phone}</li>
+            <li key={index}>
+  <a href={`tel:${phone}`} className="cursor-pointer hover:text-blue-500">{phone}</a>
+
+            </li>
           ))}
         </ul>
       </div>

@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FaWhatsapp, FaInstagram, FaLinkedin, FaRegWindowClose } from "react-icons/fa";
 import { useBusiness } from "../providers/businessContext";
 import BranchDetails from "./newC/tabAddresses";
+import Link from "next/link";
 
 export default function ModalWithTabs({ isOpen, onClose }) {
   const [activeTab, setActiveTab] = useState(0);
@@ -53,18 +54,22 @@ export default function ModalWithTabs({ isOpen, onClose }) {
             >
               <div>
                 <div className="flex flex-row justify-between items-center">
-                  <button onClick={onClose} className="absolute top-2 right-2">
+                  <button onClick={onClose} className="absolute top-2 left-2">
                     <FaRegWindowClose />
                   </button>
-                  <div className="flex flex-row space-x-2">
-                    <button className="absolute top-2 left-2">
+                  <div className="flex flex-row gap-3 space-x-2">
+                  <Link href={`https://instagram.com/${businessData?.data?.instagram}`} className="text-blue-400 hover:text-blue-600" target="_blank">
+
+
                       <FaInstagram />
                       {/* {businessData?.data?.instagram} */}
-                    </button>
-                    <button className="absolute top-2 left-6">
+                      </Link>
+                      <Link href={`https://wa.me/${businessData?.data?.whatsapp}`} className="text-blue-400 hover:text-blue-600" target="_blank">
+
+
                       <FaWhatsapp />
                       {/* {businessData?.data?.whatsapp} */}
-                    </button>
+                      </Link>
                    
                   </div>
                 </div>
