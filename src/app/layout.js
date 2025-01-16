@@ -3,53 +3,54 @@ import "./globals.css";
 import { NextUIProvider } from "@nextui-org/react";
 import { ThemeProvider } from "next-themes";
 import NavbarCustom from "./components/navbar";
-import { BusinessProvider } from "./providers/businessContext";
 import Footer from "./components/footer";
+import { BusinessProvider } from "./providers/businessContext";
 
+// فونت‌ها
 const vazir = localFont({
   src: "./fonts/Vazir-FD.woff2",
   display: "swap",
 });
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
 
-export const metadata = {
-  title: "مدیران خودرو ایوبی یزد",
-  description: "نمایندگی مدیران خودرو ",
-};
+export async function generateMetadata() {
+  const response = await fetch('https://namya.ir/api/v3/businesses/1165');
+  const businessData = await response.json();
 
-// Fetch داده‌ها در سمت سرور
-async function fetchBusinessData() {
-  try {
-    const response = await fetch('https://namya.ir/api/v3/businesses/1165', {
-      cache: "force-cache", // استفاده از کش برای بهبود عملکرد
-    });
-    if (!response.ok) {
-      throw new Error("Failed to fetch business data");
-    }
-    return await response.json();
-  } catch (error) {
-    console.error("Error fetching business data:", error);
-    return null; // مدیریت خطاها
-  }
+  return {
+    title: businessData?.data?.name || "مدیران خودرو ایوبی یزد",
+    description: businessData?.data?.aboutus || "نمایندگی رسمی مدیران خودرو ایوبی در یزد",
+    keywords: businessData?.data?.tags?.join(", ") || "مدیران خودرو, یزد, خودرو",
+    openGraph: {
+      title: businessData?.data?.name || "مدیران خودرو ایوبی یزد",
+      description: businessData?.data?.aboutus || "نمایندگی رسمی مدیران خودرو ایوبی در یزد",
+      url: businessData?.website || "https://yourdomain.com",
+      images: [
+        {
+          url: businessData?.data?.logo || "https://yourdomain.com/images/cover.jpg",
+          width: 800,
+          height: 600,
+          alt: businessData?.data?.name || "مدیران خودرو ایوبی یزد",
+        },
+      ],
+      siteName: "مدیران خودرو ایوبی",
+    },
+    // twitter: {
+    //   card: "summary_large_image",
+    //   site: "@yourtwitterhandle",
+    //   title: businessData?.data?.name || "مدیران خودرو ایوبی یزد",
+    //   description: businessData?.data?.aboutus || "نمایندگی رسمی مدیران خودرو ایوبی در یزد",
+    //   images: [businessData?.data?.image || "https://yourdomain.com/images/cover.jpg"],
+    // },
+  };
 }
 
 export default async function RootLayout({ children }) {
-  const businessData = await fetchBusinessData();
+  const response = await fetch('https://namya.ir/api/v3/businesses/1165');
+  const businessData = await response.json();
 
   return (
     <html dir="rtl" lang="fa-IR" suppressHydrationWarning>
-      <body
-        className={`${vazir.className} min-h-screen antialiased bg-background`}
-      >
+      <body className={`${vazir.className} min-h-screen antialiased bg-background`}>
         <ThemeProvider>
           <NextUIProvider>
             <BusinessProvider value={businessData}>
