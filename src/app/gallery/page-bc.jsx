@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
 import { FaPlay } from "react-icons/fa"; // استفاده از آیکن پلی
+import Image from "next/image";
 
 export default function GalleryPage() {
   const [imageMode, setImageMode] = useState(true); // Default to images
@@ -99,11 +100,12 @@ export default function GalleryPage() {
               {videos.map((video, index) => (
                 <div
                   key={index}
-                  className="relative group cursor-pointer"
+                  className="relative group cursor-pointer w-full h-60"
                   onClick={() => window.open(video.original, "_blank")}
                 >
                   {/* Thumbnail */}
-                  <img
+                  <Image
+                  fill
                     src={video.thumbnail}
                     alt={`Video thumbnail ${index}`}
                     className="w-full h-44 object-cover rounded-lg"

@@ -166,8 +166,8 @@ if(image){
   }
 
   return (
-    <div className=" hidden md:flex flex-col h-screen justify-center items-center  xl:my-60">
-<div className="flex flex-wrap sticky z-20 backdrop-blur-md mt-24  gap-6 py-2 mb-12">
+    <div className=" hidden md:flex flex-col h-screen justify-center items-center   ">
+<div className="flex flex-wrap sticky z-20 backdrop-blur-md  gap-6 py-2 mb-12">
   {cars.map((val, ind) => (
     <div onClick={()=>handleSetCar(ind)} key={ind} className={`${selectedCar === ind && "bg-gray-400"}  border border-gray-400  rounded-md py-2 px-4 cursor-pointer hover:bg-gray-400 backdrop-opacity-40`}>
       {val.name}
@@ -230,9 +230,10 @@ if(image){
         transition={{ ease: "easeInOut", duration: isEnter ? 0 : 1.5   }}
       className={` relative  text-center w-[1200px] h-[481px] md:w-[1900px] md:h-[420px] mx-auto  text-6xl overflow-hidden `}>
       {/* {currentRotation} */}
-      {/* </motion.div> */} 
-      <div className={`relative "w-[1200px] h-[481px]  xl:w-[1350px] xl:h-[630px] md:w-[810px] md:h-[378px]`}>
-    <motion.div className={` mx-auto w-[1200px] h-[481px] md:w-[810px] md:h-[378px] text-6xl  xl:w-[1350px] xl:h-[630px] overflow-hidden `}
+      {/* </motion.div> */}
+       {/* xl:w-[1350px] xl:h-[630px]  */}
+      <div className={`relative "w-[1200px] h-[481px]   md:w-[810px] md:h-[378px]`}>
+    <motion.div className={` mx-auto w-[1200px] h-[481px] md:w-[810px] md:h-[378px] text-6xl  overflow-hidden `}
     initial={{x:0 }}
       animate={{ x: isOut ? -(window.innerWidth) : isEnter ? window.innerWidth : "0%" }}
     transition={{ ease: "easeInOut", duration: isEnter ? 0 : 1.5   }}
@@ -261,7 +262,7 @@ if(image){
         {/* چرخ جلو */}
         <motion.div
         key={selectedCar*selectedColor}
-          className={`absolute z-50 ${mdstyleWheelFRONT()} ${styleWheelFRONT()}  flex items-center justify-center ${isEnter && "hidden"}`}
+          className={`absolute z-50  ${styleWheelFRONT()}  flex items-center justify-center ${isEnter && "hidden"}`}
           initial={{ rotate: currentRotation, }}
           animate={{
             rotate: rotation ? (currentRotation-360) : currentRotation, // چرخش همزمان با حرکت
@@ -280,7 +281,7 @@ if(image){
 
         {/* چرخ عقب */}
         <motion.div
-          className={`absolute z-50 ${mdstyleWheelREAR()}   flex items-center justify-center ${styleWheelREAR()}`}
+          className={`absolute z-50    flex items-center justify-center ${styleWheelREAR()}`}
           initial={{ rotate: currentRotation, }}
           animate={{
             rotate: rotation ? (currentRotation-360) : currentRotation, // چرخش همزمان با حرکت

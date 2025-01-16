@@ -109,7 +109,8 @@ const {isOpen , onOpen , onOpenChange}= useDisclosure();
                       {/* Header */}
                       <div className="p-4 border-b">
                         <div className="flex items-center p-3">
-                          <img
+                          <Image
+                          fill
                             src={item.business.logo}
                             alt={item.business.name}
                             className="w-12 h-12 rounded-full m-3"
@@ -176,7 +177,7 @@ const {isOpen , onOpen , onOpenChange}= useDisclosure();
                   onClick={() => window.open(video.original, "_blank")}
                 >
                   {/* Thumbnail */}
-                  <img
+                  <Image
                     src={video.thumbnail}
                     alt={`Video thumbnail ${index}`}
                     className="w-full h-60 object-cover rounded-lg"

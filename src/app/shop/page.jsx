@@ -199,7 +199,8 @@ const Shop = () => {
             className="border h-min flex flex-col border-gray-400 bg-background 
                 rounded-lg shadow-md overflow-hidden cursor-pointer transform transition hover:scale-"
           >
-            <img
+            <Image
+            fill
               src={product.url}
               alt={product.name}
               className="w-full h-48 object-cover"

@@ -1,6 +1,6 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
@@ -20,10 +20,10 @@ const [currentImage, setCurrentImage] = useState(0);
       nextImage();
     }, 5000);
     return () => clearInterval(interval); // Clean up on unmount
-  }, [currentImage]);
+  }, [nextImage,currentImage]);
 
   // Next image handler
-  const nextImage = () => {    
+  const nextImage = useCallback( () => {    
     if (swiperRef.current && swiperRef.current.swiper) {
       swiperRef.current.swiper.slideNext();
       if (currentImage === images.length - 1) {
@@ -32,7 +32,7 @@ const [currentImage, setCurrentImage] = useState(0);
       setCurrentImage(currentImage + 1); // Move to the next image
     }
     }
-  };
+  },[currentImage , images.length]);
 
   // Previous image handler
   const prevImage = () => {

@@ -97,7 +97,9 @@ export default function GalleryPage({ posts }) {
               >
                 <header className="p-4 border-b">
                   <div className="flex items-center p-3">
-                    <img
+                    <Image
+                    width={24}
+                    height={24}
                       src={item.business.logo}
                       alt={item.business.name}
                       className="w-12 h-12 rounded-full m-3"
@@ -146,15 +148,16 @@ export default function GalleryPage({ posts }) {
               {videos.map((video, index) => (
                 <article
                   key={index}
-                  className="relative group cursor-pointer"
+                  className="relative group cursor-pointer w-full h-60"
                   onClick={() => window.open(video.original, "_blank")}
                   aria-label={`مشاهده ویدیو ${index}`}
                 >
                   {/* Thumbnail */}
-                  <img
+                  <Image
+                  fill
                     src={video.thumbnail}
                     alt={`ویدیو ${index} - پیش‌نمایش`}
-                    className="w-full h-60 object-cover rounded-lg"
+                    className=" object-cover rounded-lg"
                   />
                   {/* Play Icon */}
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50 rounded-lg">

@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --background: #e4e4e4; /* پس‌زمینه برای تم روشن */
-  --foreground: #333333; /* متن برای تم روشن */
+  --background: #e0e0e0; /* پس‌زمینه برای تم روشن */
+  --foreground: #111111; /* متن برای تم روشن */
   --primary: #3a8857;    /* رنگ اصلی */
   --secondary: #28303e;  /* رنگ ثانویه */
   --danger: #ef4444;   
@@ -15,8 +15,8 @@
 }
 
 [data-theme='dark'] {
-  --background: #333333;
-  --foreground: #e4e4e4;
+  --background: #111111;
+  --foreground: #e0e0e0;
   --primary: #f647c2;    /* رنگ اصلی در حالت تاریک */
   --secondary: #6c9bff;  /* رنگ ثانویه در حالت تاریک */
   --danger: #dc2626; 
@@ -26,8 +26,8 @@
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #333333;
-    --foreground: #e4e4e4;
+    --background: #111111;
+    --foreground: #e0e0e0;
   }
 }
 
