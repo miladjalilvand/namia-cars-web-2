@@ -20,10 +20,14 @@ export default function AnyMot() {
   const [selectedCar , setCarSelected]=useState(0);
   const [selectedColor ,setSelectedColor ]=useState(0);
 
+  const [startCar , setStartCar]=useState(false);
+
   const [isOut,setIsout]=useState(false);
   const [isEnter,setIsInter]=useState(false);
 
   const [currentRotation , setCurrentRotation] = useState(0);
+
+  const [finish , setFinish ]=useState(false);
 
 
   const styleWheelFRONT = () => {
@@ -107,6 +111,10 @@ export default function AnyMot() {
     if(indexColor !== selectedColor){ 
       setIsout(true);
       setRotation(true);
+      setStartCar(true);
+      setTimeout(()=>{
+        setStartCar(false);
+      },300);
      
 
       setTimeout(()=>{
@@ -119,6 +127,11 @@ export default function AnyMot() {
         setTimeout(() => {
           setIsInter(false);
           setRotation(false);
+          setFinish(true);
+         
+          setTimeout(()=>{
+            setFinish(false);
+          },600);
           setCurrentRotation(currentRotation-900);
         }, 100);
       },1000);
@@ -250,14 +263,25 @@ if(image){
      
       >
         {/* تصویر اصلی ماشین */}
-        <div className="relative w-full h-full">
-          <Image
+        <motion.div
+          initial={{rotate:0}}
+          animate={{rotate:startCar ? 1 : finish ? -1 : 0}}
+          transition={{duration:finish ? 1 : 0.3, ease:"easeInOut"}}
+          className="relative w-full h-full  "
+          exit={{rotate:0}}
+          style={{ originX: 0.5, originY: 0.5  }}
+
+          >
+        
+              <Image
           id="img-section"
             src={cars[selectedCar].images[selectedColor].url} // انتخاب تصویر بر اساس رنگ
             alt={`car - ${cars[selectedCar].name}`}
             fill
           />
-        </div>
+       
+        
+         </motion.div>
 
         {/* چرخ جلو */}
         <motion.div
