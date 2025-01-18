@@ -152,16 +152,16 @@ useEffect(() => {
                 
 
 
-              <div className="flex flex-row items-center justify-around ">
-              {/* <div className="m-4 text-txtl text-2xl font-semibold cursor-pointer" 
+              <div className="flex flex-row items-center justify-between md:hidden ">
+              <div className="m-4 text-txtl text-2xl font-semibold cursor-pointer" 
 
            onClick={() => pushin('https://sdfn.ir/f/namya/view.php?id=84231')}>طرح تعویض</div>
                       <div className="m-4 text-txtl text-2xl font-semibold cursor-pointer" 
 
             onClick={() => pushin('https://sdfn.ir/f/namya/view.php?id=82738')}>تست درایو</div>
             <div className="m-4 text-txtl text-2xl font-semibold cursor-pointer" 
-            onClick={() => pushin('https://sdfn.ir/f/namya/view.php?id=82738')}>پیش ثبت‌نام   </div> */}
-                        {/* <div className="m-4 text-txtl text-2xl font-semibold cursor-pointer" 
+            onClick={() => pushin('https://sdfn.ir/f/namya/view.php?id=82434')}>پیش ثبت‌نام   </div> 
+                       {/* <div className="m-4 text-txtl text-2xl font-semibold cursor-pointer" 
                         >وبلاگ</div> */}
            </div>
             </motion.div>
@@ -199,7 +199,7 @@ useEffect(() => {
                <div className="hidden md:flex">
                <div onClick={()=>pushin('https://sdfn.ir/f/namya/view.php?id=84231')} className="rounded-sm mx-3 text-txtl bg-redc cursor-pointer text-lg px-3 py-1">طرح تعویض</div>
                 <div onClick={()=>pushin('https://sdfn.ir/f/namya/view.php?id=82738')} className="rounded-sm mx-3 text-txtl bg-redc cursor-pointer text-lg px-3 py-1"> تست درایو</div>
-                <div onClick={()=>pushin('https://sdfn.ir/f/namya/view.php?id=82738')} className="rounded-sm mx-3 text-txtl bg-redc cursor-pointer text-lg px-3 py-1">پیش ثبت‌نام</div>
+                <div onClick={()=>pushin('https://sdfn.ir/f/namya/view.php?id=82434')} className="rounded-sm mx-3 text-txtl bg-redc cursor-pointer text-lg px-3 py-1">پیش ثبت‌نام</div>
 
 
                </div>

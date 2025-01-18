@@ -21,7 +21,7 @@ const cars = [
       },
       {
         color: "brown",
-        hex: "#2e251d",
+        hex: "#964B00",
         url: "/assets/cars/arizo5/PCArrizo5FLbrown.png"
       },
       {
@@ -90,7 +90,7 @@ const cars = [
       },
       {
         color: "brown",
-        hex: "#141210",
+        hex: "#964B00",
         url: "/assets/cars/arrizo5TurboS/PCArrizo5TurboSbrown.png"
       },
       {
@@ -397,12 +397,12 @@ const cars = [
       },
       {
         color: "blue-grey",
-        hex: "#9096ab",
+       hex : "#3d3d3d",
         url: "/assets/cars/x22/PCX22blue-grey.png"
       },
       {
         color: "grey",
-         hex : "#3d3d3d",
+        hex: "#9096ab",
        url: "/assets/cars/x22/PCX22grey.png"
       },
       {

@@ -1,6 +1,9 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { useBusiness } from "../providers/businessContext";
+import { Accordion,AccordionItem } from "@nextui-org/react";
+import { IoIosCall, IoIosLocate } from "react-icons/io";
+import { FaMap, FaMobileAlt } from "react-icons/fa";
 
 const BranchDetails = () => {
   const businessData = useBusiness();
@@ -20,7 +23,7 @@ const BranchDetails = () => {
   return (
     <div className="flex flex-col min-h-screen pb-6 pt-12 px-4">
       <div className="text-center mb-8">
-        <h1 className="text-3xl font-bold mb-2">جزئیات شعبه‌ها</h1>
+        <h1 className="text-3xl font-bold mb-2 pt-3">جزئیات شعبه‌ها</h1>
         <p className="text-base">اطلاعات شعبه‌های ما در زیر نمایش داده شده است</p>
       </div>
 
@@ -28,10 +31,11 @@ const BranchDetails = () => {
         {data.map((val, ind) => (
           <div
             key={ind}
-            className="flex flex-col p-6 rounded border border-gray-300"
+            className="flex flex-col p-6 rounded border border-gray-500"
           >
             <h2 className="text-xl font-semibold mb-4 ">{val.title}</h2>
-            <p onClick={()=>handleClickGEO(val.lat , val.lng)} className="mb-2 hover:text-blue-500 cursor-pointer">آدرس: {val.address}</p>
+            <p onClick={()=>handleClickGEO(val.lat , val.lng)} className="flex flex-row
+            mb-2 hover:text-blue-500 cursor-pointer gap-2"><FaMap/>  آدرس: {val.address}</p>
             <p
               className={`mb-4 font-bold ${
                 val.is_open ? "text-green-600" : "text-red-600"
@@ -46,7 +50,7 @@ const BranchDetails = () => {
                 {val.mobiles && val.mobiles.length > 0 ? (
                   val.mobiles.map((mobile, index) => <li key={index}>
 
-<a href={`tel:${mobile}`} className="cursor-pointer hover:text-blue-500">{mobile}</a>
+<a href={`tel:${mobile}`} className="cursor-pointer hover:text-blue-500 flex flex-row"><FaMobileAlt/>{mobile}</a>
                   </li>)
                 ) : (
                   <li>تلفن همراهی موجود نیست</li>
@@ -54,7 +58,7 @@ const BranchDetails = () => {
                 {val.phones && val.phones.length > 0 ? (
                   val.phones.map((phone, index) => <li key={index}>
 
-<a href={`tel:${phone}`} className="cursor-pointer hover:text-blue-500">{phone}</a>
+<a href={`tel:${phone}`} className="cursor-pointer hover:text-blue-500 flex flex-row"><IoIosCall/>{phone}</a>
                   </li>)
                 ) : (
                   <li>تلفن ثابتی موجود نیست</li>
@@ -63,8 +67,11 @@ const BranchDetails = () => {
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold">جدول زمان‌بندی:</h3>
-              <table className="w-full border-collapse border border-gray-300 mt-2">
+              <Accordion >
+                <AccordionItem  className="border border-gray-300 px-4 py-2 text-center"
+                
+                title=" ساعت کاری  " key={ind}>
+                <table className="w-full border-collapse border border-gray-300 mt-2">
                 <thead>
                   <tr>
                     <th className="border border-gray-300 px-4 py-2">روز</th>
@@ -99,6 +106,10 @@ const BranchDetails = () => {
                   )}
                 </tbody>
               </table>
+                </AccordionItem>
+              </Accordion>
+              {/* <h3 className="text-lg font-semibold">جدول زمان‌بندی:</h3> */}
+
             </div>
           </div>
         ))}

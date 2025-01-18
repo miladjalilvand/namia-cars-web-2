@@ -2,16 +2,18 @@
 import React, { useRef, useEffect, useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 const items = [
-  { image: '/assets/svg/agency.svg', title: 'محصولات چری', subtitle: 'محصولات مدیران خودرو' },
-  { image: '/assets/svg/parts.svg', title: 'طرح تعویض  ', subtitle: ' طرح تعویض مدیران خودرو' },
-  { image: '/assets/svg/price-list.svg', title: ' تست درایو', subtitle: 'تست درایو مدیران خودرو' },
-  { image: '/assets/svg/services.svg', title: ' جزییات شعبه ها ', subtitle: 'نمایندگی مدیران خودرو' },
+  { image: '/assets/svg/agency.svg', title: ' پیش ثبت نام', subtitle: 'محصولات مدیران خودرو' , url :"https://sdfn.ir/f/namya/view.php?id=82738" },
+  { image: '/assets/svg/parts.svg', title: 'طرح تعویض  ', subtitle: ' طرح تعویض مدیران خودرو', url :"https://sdfn.ir/f/namya/view.php?id=84231"  },
+  { image: '/assets/svg/price-list.svg', title: ' تست درایو', subtitle: 'تست درایو مدیران خودرو' , url :"https://sdfn.ir/f/namya/view.php?id=82738" },
+  { image: '/assets/svg/services.svg', title: ' جزییات شعبه ها ', subtitle: 'نمایندگی مدیران خودرو', url :"/contact"  },
 
 ];
 
 const ItemSlidesImage = () => {
+ 
   const itemRefs = useRef([]);
   const [visibleItems, setVisibleItems] = useState(Array(items.length).fill(false));
 
@@ -29,7 +31,7 @@ const ItemSlidesImage = () => {
           }
         });
       },
-      { threshold: 0.69 }
+      { threshold: 0.68}
     );
 
     itemRefs.current.forEach((ref) => ref && observer.observe(ref));
@@ -76,6 +78,7 @@ const ItemSlidesImage = () => {
                 text={"hi i am"}
                 isInView={isInView}
                 textButton={val.title}
+                url={val.url}
               />
             </div>
           </div>
@@ -97,8 +100,13 @@ function PicCon({ src }) {
   );
 }
 
-const AnimatedText = ({ text, isInView, button, ind, textButton }) => {
+const AnimatedText = ({ text, isInView, button, ind, textButton , url }) => {
   const words = text.split(" ");
+  const router = useRouter();
+  const handleNavigationClick = (path) => {
+    router.push(path);
+
+  }
 
   return (
     <div className="flex flex-col p-2">
@@ -137,9 +145,10 @@ const AnimatedText = ({ text, isInView, button, ind, textButton }) => {
           }}
         >
           <div
+          onClick={()=>handleNavigationClick(url)}
             className={`text-center  w-1/2 cursor-pointer rounded-sm px-2 py-1 ${
               ind % 2 === 0 ? "bg-background text-redasli" : "bg-redasli text-txtl"
-            }`}
+            }`} 
           >
             {textButton}
           </div>

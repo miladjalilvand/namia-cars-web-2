@@ -29,7 +29,8 @@ export default function GalleryPage({ catalogs }) {
                 alt={`کاتالوگ ${catalog.title}`}
                 title={`کاتالوگ ${catalog.title}`}
                 fill
-                className="object-contain hover:scale-105 transition-transform duration-300"
+                objectFit="cover"
+                className="hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
                 <div className="flex flex-row gap-1 text-lg animate-bounce text-white font-bold">

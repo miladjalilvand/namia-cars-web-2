@@ -1,5 +1,7 @@
 "use client"
 import React from "react";
+import { FaMap, FaMobile, FaMobileAlt } from "react-icons/fa";
+import { IoMdCall } from "react-icons/io";
 
 const BranchDetails = ({ data }) => {
 
@@ -19,7 +21,8 @@ const BranchDetails = ({ data }) => {
     <div className="flex flex-col overflow-y-scroll  p-4 rounded shadow-md  ">
       <h2 className="text-2xl font-bold mb-4">{title}</h2>
       <div className="mb-4">
-        <p onClick={()=>handleClickGEO(lat , lng)} className="cursor-pointer hover:text-blue-500">آدرس: {address}</p>
+        <p onClick={()=>handleClickGEO(lat , lng)} className="cursor-pointer hover:text-blue-500
+        flex flex-row gap-3"><FaMap/>آدرس: {address}</p>
         <p className={`mb-4 font-bold ${
                 is_open ? "text-green-600" : "text-red-600"
               }`}>وضعیت: {is_open ? "باز" : "بسته"}</p>
@@ -27,16 +30,16 @@ const BranchDetails = ({ data }) => {
 
       <div className="mb-4">
         <h3 className="text-lg font-semibold">شماره تماس:</h3>
-        <ul className="list-disc pl-5">
+        <ul className="list-none pl-5">
           {mobiles.map((mobile, index) => (
             <li key={index}>
-              <a href={`tel:${mobile}`} className="cursor-pointer hover:text-blue-500">{mobile}</a>
+              <a href={`tel:${mobile}`} className="cursor-pointer hover:text-blue-500 flex flex-row"><FaMobileAlt/>{mobile}</a>
 
             </li>
           ))}
           {phones.map((phone, index) => (
             <li key={index}>
-  <a href={`tel:${phone}`} className="cursor-pointer hover:text-blue-500">{phone}</a>
+  <a href={`tel:${phone}`} className="cursor-pointer hover:text-blue-500 flex flex-row"><IoMdCall/>{phone}</a>
 
             </li>
           ))}

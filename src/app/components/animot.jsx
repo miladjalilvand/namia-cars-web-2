@@ -131,7 +131,7 @@ export default function AnyMot() {
          
           setTimeout(()=>{
             setFinish(false);
-          },600);
+          },1500);
           setCurrentRotation(currentRotation-900);
         }, 100);
       },1000);
@@ -265,8 +265,8 @@ if(image){
         {/* تصویر اصلی ماشین */}
         <motion.div
           initial={{rotate:0}}
-          animate={{rotate:startCar ? 1 : finish ? -1 : 0}}
-          transition={{duration:finish ? 1 : 0.3, ease:"easeInOut"}}
+          animate={{rotate:startCar ? 1 : finish ? -0.5 : 0}}
+          transition={{duration:finish ? 1 : 0.3, ease:"easeInOut",}}
           className="relative w-full h-full  "
           exit={{rotate:0}}
           style={{ originX: 0.5, originY: 0.5  }}

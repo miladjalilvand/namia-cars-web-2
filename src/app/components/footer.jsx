@@ -1,6 +1,7 @@
 "use client"
 import Link from 'next/link';
-import { FaMapMarkedAlt } from 'react-icons/fa';
+import { FaInstagram, FaMapMarkedAlt, FaWhatsapp } from 'react-icons/fa';
+import { IoMdCall } from 'react-icons/io';
 
 const Footer = ({ data }) => {
 
@@ -21,8 +22,8 @@ const Footer = ({ data }) => {
         <div className="mb-6">
           <h3 className="text-xl font-semibold mb-3">تماس با ما</h3>
           <ul>
-            <li><a href="tel:+9821xxxxxxxx" className="text-blue-400 hover:underline">: {data.addresses[0].phones[0]}  </a></li>
-            <li><a href="mailto:info@example.com" className="text-blue-400 hover:underline">ایمیل: info@example.com</a></li>
+            <li><a href="tel:+9821xxxxxxxx" className="text-blue-400 hover:underline flex flex-row"><IoMdCall/> {data.addresses[0].phones[0]}  </a></li>
+            {/* <li><a href="mailto:info@example.com" className="text-blue-400 hover:underline">ایمیل: info@example.com</a></li> */}
           </ul>
         </div>
         <div className="mb-6">
@@ -40,10 +41,10 @@ const Footer = ({ data }) => {
         <div>
           <h3 className="text-xl font-semibold mb-3"> شبکه های اجتماعی</h3>
           <ul className="flex space-x-4">
-            <li><Link href={`https://wa.me/${data.addresses[0].whatsapp}`}  target="_blank" className="text-blue-400 hover:text-blue-600 px-3"   >  واتس اپ </Link></li>
+            <li><Link href={`https://wa.me/${data.addresses[0].whatsapp}`}  target="_blank" className="text-blue-400 hover:text-blue-600 px-3 items-center justify-center flex flex-row"   ><FaWhatsapp/>  واتس اپ </Link></li>
             <br />
 
-            <li><Link href={`https://instagram.com/${data.addresses[0].instagram}`} className="text-blue-400 hover:text-blue-600">اینستاگرام</Link></li>
+            <li><Link href={`https://instagram.com/${data.addresses[0].instagram}`} className="text-blue-400 hover:text-blue-600items-center justify-center flex flex-row"   ><FaInstagram/>اینستاگرام</Link></li>
           </ul>
         </div>
       </div>
