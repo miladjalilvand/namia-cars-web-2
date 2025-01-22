@@ -15,8 +15,11 @@ export default function Home() {
 
 
 <ImageSlider />
+<div className="h-20 md:h-24"></div>
    <AnyMot />
-    <CarsAnim/>
+
+    {/* <CarsAnim/> */}
+    <div className="h-3"></div>
     <ItemSlidesImage/>
 
 

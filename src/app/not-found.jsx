@@ -15,12 +15,13 @@ export default function NotFound() {
       <p className="text-lg mt-4 text-center">
         متأسفیم، صفحه‌ای که به دنبال آن هستید وجود ندارد.
       </p>
-      <Link  className="mt-6 px-4 py-2 bg-purple-500 text-white rounded hover:bg-purple-700"
-       href={"/"} />
+      <Link  className="mt-6 px-4 py-2 bg-purple-500 text-white rounded
+       hover:bg-purple-700"
+       href={"/"} >
     
       
         بازگشت به صفحه اصلی
-
+</Link>
     </div>
   );
 }

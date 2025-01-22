@@ -32,33 +32,33 @@ export default function AnyMot() {
 
   const styleWheelFRONT = () => {
     switch (selectedCar) {
-      case 0: return "md:w-[120px] md:h-[120px] top-[61%] left-[11.6%]";
-      case 1: return "md:w-[132px] md:h-[132px] top-[60%] left-[11.0%]";
-      case 2: return "md:w-[120px] md:h-[120px] top-[61%] left-[11.6%]";
-      case 4: return "md:w-[133.2px] md:h-[133.2px] top-[58%] left-[10%]";
-      case 5: return "md:w-[133.2px] md:h-[133.2px] top-[58%] left-[10.7%]";
-      case 6: return "md:w-[133.2px] md:h-[133.2px] top-[57%] left-[10%]";
-      case 7: return "md:w-[133.2px] md:h-[133.2px] top-[57%] left-[11%]";
-      case 8: return "md:w-[133.4px] md:h-[133.4px] top-[60%] left-[10.6%]";
-      case 9: return "md:w-[120px] md:h-[120px] top-[61%] left-[11.6%]";
-      case 10: return "md:w-[120px] md:h-[120px] top-[61%] left-[11%]";
-      default: return "md:w-[120.6px] md:h-[120.6px] top-[60%] left-[11.6%]";
+      case 0: return "w-[30px] h-[30px] top-[61%] left-[11.6%] md:w-[120px] md:h-[120px] md:top-[61%] md:left-[11.6%]";
+      case 1: return "w-[30px] h-[30px] md:w-[132px] md:h-[132px] top-[60%] left-[11.0%]";
+      case 2: return "w-[30px] h-[30px] md:w-[120px] md:h-[120px] top-[61%] left-[11.6%]";
+      case 4: return "w-[30px] h-[30px] md:w-[133.2px] md:h-[133.2px] top-[58%] left-[10%]";
+      case 5: return "w-[30px] h-[30px] md:w-[133.2px] md:h-[133.2px] top-[58%] left-[10.7%]";
+      case 6: return "w-[30px] h-[30px] md:w-[133.2px] md:h-[133.2px] top-[57%] left-[10%]";
+      case 7: return "w-[30px] h-[30px] md:w-[133.2px] md:h-[133.2px] top-[57%] left-[11%]";
+      case 8: return "w-[30px] h-[30px] md:w-[133.4px] md:h-[133.4px] top-[60%] left-[10.6%]";
+      case 9: return "w-[30px] h-[30px] md:w-[120px] md:h-[120px] top-[61%] left-[11.6%]";
+      case 10: return "w-[30px] h-[30px] md:w-[120px] md:h-[120px] top-[61%] left-[11%]";
+      default: return "w-[30px] h-[30px] md:w-[120.6px] md:h-[120.6px] top-[60%] left-[11.6%]";
     }
   };
   
   const styleWheelREAR = () => {
     switch (selectedCar) {
-      case 0: return "md:w-[120px] md:h-[120px] top-[61%] left-[69.1%]";
-      case 1: return "md:w-[132px] md:h-[132px] top-[60%] left-[69.1%]";
-      case 2: return "md:w-[120px] md:h-[120px] top-[61%] left-[69.1%]";
-      case 4: return "md:w-[133.2px] md:h-[133.2px] top-[58%] left-[69%]";
-      case 5: return "md:w-[133.2px] md:h-[133.2px] top-[58%] left-[69.1%]";
-      case 6: return "md:w-[133.2px] md:h-[133.2px] top-[57%] left-[68%]";
-      case 7: return "md:w-[133.2px] md:h-[133.2px] top-[57%] left-[69%]";
-      case 8: return "md:w-[133.4px] md:h-[133.4px] top-[60%] left-[68.9%]";
-      case 9: return "md:w-[120px] md:h-[120px] top-[61%] left-[69%]";
-      case 10: return "md:w-[120px] md:h-[120px] top-[61%] left-[70%]";
-      default: return "md:w-[120.6px] md:h-[120.6px] top-[61%] left-[69.1%]";
+      case 0: return "w-[30px] h-[30px] md:w-[120px] md:h-[120px] top-[61%] left-[69.1%]";
+      case 1: return "w-[30px] h-[30px] md:w-[132px] md:h-[132px] top-[60%] left-[69.1%]";
+      case 2: return "w-[30px] h-[30px] md:w-[120px] md:h-[120px] top-[61%] left-[69.1%]";
+      case 4: return "w-[30px] h-[30px] md:w-[133.2px] md:h-[133.2px] top-[58%] left-[69%]";
+      case 5: return "w-[30px] h-[30px] md:w-[133.2px] md:h-[133.2px] top-[58%] left-[69.1%]";
+      case 6: return "w-[30px] h-[30px] md:w-[133.2px] md:h-[133.2px] top-[57%] left-[68%]";
+      case 7: return "w-[30px] h-[30px] md:w-[133.2px] md:h-[133.2px] top-[57%] left-[69%]";
+      case 8: return "w-[30px] h-[30px] md:w-[133.4px] md:h-[133.4px] top-[60%] left-[68.9%]";
+      case 9: return "w-[30px] h-[30px] md:w-[120px] md:h-[120px] top-[61%] left-[69%]";
+      case 10: return "w-[30px] h-[30px] md:w-[120px] md:h-[120px] top-[61%] left-[70%]";
+      default: return "w-[30px] h-[30px] md:w-[120.6px] md:h-[120.6px] top-[61%] left-[69.1%]";
     }
   };
   const mdstyleWheelFRONT = () => {
@@ -179,7 +179,7 @@ if(image){
   }
 
   return (
-    <div className=" hidden md:flex flex-col h-screen justify-center items-center   ">
+    <div className="  flex flex-col h-screen justify-center items-center   ">
 <div className="flex flex-wrap sticky z-20 backdrop-blur-md  gap-6 py-2 mb-12">
   {cars.map((val, ind) => (
     <div onClick={()=>handleSetCar(ind)} key={ind} className={`${selectedCar === ind && "bg-gray-400"}  border border-gray-400  rounded-md py-2 px-4 cursor-pointer hover:bg-gray-400 backdrop-opacity-40`}>
@@ -196,7 +196,7 @@ if(image){
   <div
     
     onClick={() => handleChange(ind)}
-    className={`rounded-full cursor-pointer h-7 w-7 border-2 transition-transform 
+    className={`rounded-full cursor-pointer  h-3.5 w-3.5  md:h-7 md:w-7 border-2 transition-transform 
       duration-300 ${selectedColor === ind ? "border-gray-500 scale-125" : ""} `}
       style={{
         backgroundColor: cars[selectedCar].images[ind].hex, // استفاده از رنگ هگز
@@ -245,8 +245,8 @@ if(image){
       {/* {currentRotation} */}
       {/* </motion.div> */}
        {/* xl:w-[1350px] xl:h-[630px]  */}
-      <div className={`relative "w-[1200px] h-[481px]   md:w-[810px] md:h-[378px]`}>
-    <motion.div className={` mx-auto w-[1200px] h-[481px] md:w-[810px] md:h-[378px] text-6xl  overflow-hidden `}
+      <div className={`relative " md:w-[810px] md:h-[378px] w-[202.5px] h-[94.5px]`}>
+    <motion.div className={` mx-auto w-[202.5px] h-[94.5px] md:w-[810px] md:h-[378px] text-6xl  overflow-hidden `}
     initial={{x:0 }}
       animate={{ x: isOut ? -(window.innerWidth) : isEnter ? window.innerWidth : "0%" }}
     transition={{ ease: "easeInOut", duration: isEnter ? 0 : 1.5   }}
@@ -286,7 +286,7 @@ if(image){
         {/* چرخ جلو */}
         <motion.div
         key={selectedCar*selectedColor}
-          className={`absolute z-50  ${styleWheelFRONT()}  flex items-center justify-center ${isEnter && "hidden"}`}
+          className={`absolute z-30  ${styleWheelFRONT()}  flex items-center justify-center ${isEnter && "hidden"}`}
           initial={{ rotate: currentRotation, }}
           animate={{
             rotate: rotation ? (currentRotation-360) : currentRotation, // چرخش همزمان با حرکت
@@ -305,7 +305,7 @@ if(image){
 
         {/* چرخ عقب */}
         <motion.div
-          className={`absolute z-50    flex items-center justify-center ${styleWheelREAR()}`}
+          className={`absolute z-30    flex items-center justify-center ${styleWheelREAR()}`}
           initial={{ rotate: currentRotation, }}
           animate={{
             rotate: rotation ? (currentRotation-360) : currentRotation, // چرخش همزمان با حرکت
