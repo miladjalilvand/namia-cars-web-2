@@ -10,8 +10,8 @@ const Footer = ({ data }) => {
     window.open(mapUrl, "_blank");
   };
   return (
-    <footer className="bg-redasli text-white py-8 mt-60">
-      <div className="max-w-6xl mx-auto px-6">
+    <footer className="bg-redasli text-white py-8 mt-60 ">
+      <div className="max-w-6xl mx-auto px-6 ">
         {/* توضیحات */}
         <div className="mb-6">
           <p className="text-lg leading-relaxed">
@@ -41,10 +41,10 @@ const Footer = ({ data }) => {
         <div>
           <h3 className="text-xl font-semibold mb-3"> شبکه های اجتماعی</h3>
           <ul className="flex space-x-4">
-            <li><Link href={`https://wa.me/${data.addresses[0].whatsapp}`}  target="_blank" className="text-blue-400 hover:text-blue-600 px-3 items-center justify-center flex flex-row"   ><FaWhatsapp/>  واتس اپ </Link></li>
+            <li><Link href={`https://wa.me/${data.whatsapp}`}  target="_blank" className="text-blue-400 hover:text-blue-600 px-3 items-center justify-center flex flex-row"   ><FaWhatsapp/>  واتس اپ </Link></li>
             <br />
 
-            <li><Link href={`https://instagram.com/${data.addresses[0].instagram}`} className="text-blue-400 hover:text-blue-600items-center justify-center flex flex-row"   ><FaInstagram/>اینستاگرام</Link></li>
+            <li><Link href={`https://instagram.com/${data.instagram}`} className="text-blue-400 hover:text-blue-600items-center justify-center flex flex-row"   ><FaInstagram/>اینستاگرام</Link></li>
           </ul>
         </div>
       </div>

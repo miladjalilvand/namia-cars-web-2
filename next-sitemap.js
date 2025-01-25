@@ -33,14 +33,34 @@ module.exports = {
     // اضافه کردن مسیر جدید
     const customUrls = [
       {
-        loc: `${config.siteUrl}/about`, // مسیر جدید
+        loc: `${config.siteUrl}/about`, // مسیر درباره ما
         lastmod: new Date().toISOString(), // تاریخ آخرین به‌روزرسانی
         priority: 0.6, // اولویت مسیر
         changefreq: "monthly", // فرکانس تغییر
       },
+      {
+        loc: `${config.siteUrl}/catalogs`, // مسیر کاتالوگ‌ها
+        lastmod: new Date().toISOString(), // تاریخ آخرین به‌روزرسانی
+        priority: 0.7, // اولویت مسیر
+        changefreq: "weekly", // فرکانس تغییر
+      },
+      {
+        loc: `${config.siteUrl}/gallery`, // مسیر گالری
+        lastmod: new Date().toISOString(), // تاریخ آخرین به‌روزرسانی
+        priority: 0.5, // اولویت مسیر
+        changefreq: "monthly", // فرکانس تغییر
+      },
+      {
+        loc: `${config.siteUrl}/contact`, // مسیر تماس با ما
+        lastmod: new Date().toISOString(), // تاریخ آخرین به‌روزرسانی
+        priority: 0.8, // اولویت مسیر
+        changefreq: "daily", // فرکانس تغییر
+      },
     ];
 
     // ترکیب همه مسیرها
-    return [...catalogsUrls, ...postsUrls, ...customUrls];
+    // return [...catalogsUrls, ...postsUrls, ...customUrls];
+    return customUrls;
+
   },
 };
