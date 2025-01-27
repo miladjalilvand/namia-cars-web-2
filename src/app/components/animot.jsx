@@ -171,7 +171,7 @@ if(colorPicked != color){
 if(image){
     image.scrollIntoView({
       behavior: "smooth",
-      block: "end",
+      block: "center",
       
     });
   }

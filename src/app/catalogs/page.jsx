@@ -7,7 +7,7 @@ import GalleryPage from "./component";
 
 export default async function Page() {
   const response = await fetch("https://namya.ir/api/v1/businesses/1165/catalogs", {
-    next: { revalidate: 60 }, // کش کردن داده‌ها
+    // next: { revalidate: 60 }, // کش کردن داده‌ها
   });
   const catalogs = await response.json();
 

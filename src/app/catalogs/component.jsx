@@ -23,7 +23,7 @@ export default function GalleryPage({ catalogs }) {
               className="relative cursor-pointer rounded-md overflow-hidden w-full h-64 md:h-96"
             //   onClick={() => handleImageClick(catalog.url)}
             >
-                   <a href={catalog.url} target="_blank" rel="noopener noreferrer">
+                   <a href={`http://localhost:3000/catalogs/${catalog.id}`} target="_blank" rel="noopener noreferrer">
               <Image
                 src={catalog.preview}
                 alt={`کاتالوگ ${catalog.title}`}
